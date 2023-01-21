@@ -34,7 +34,243 @@ impl From<crate::W<XTAL32K_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `reserved_0_1` reader - "]
+pub type RESERVED_0_1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal32k_ext_sel` reader - "]
+pub type XTAL32K_EXT_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `xtal32k_ext_sel` writer - "]
+pub type XTAL32K_EXT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `xtal32k_amp_ctrl` reader - "]
+pub type XTAL32K_AMP_CTRL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal32k_amp_ctrl` writer - "]
+pub type XTAL32K_AMP_CTRL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 2, O>;
+#[doc = "Field `xtal32k_reg` reader - "]
+pub type XTAL32K_REG_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal32k_reg` writer - "]
+pub type XTAL32K_REG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 2, O>;
+#[doc = "Field `xtal32k_outbuf_stre` reader - "]
+pub type XTAL32K_OUTBUF_STRE_R = crate::BitReader<bool>;
+#[doc = "Field `xtal32k_outbuf_stre` writer - "]
+pub type XTAL32K_OUTBUF_STRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `xtal32k_otf_short` reader - "]
+pub type XTAL32K_OTF_SHORT_R = crate::BitReader<bool>;
+#[doc = "Field `xtal32k_otf_short` writer - "]
+pub type XTAL32K_OTF_SHORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `xtal32k_inv_stre` reader - "]
+pub type XTAL32K_INV_STRE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal32k_inv_stre` writer - "]
+pub type XTAL32K_INV_STRE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 2, O>;
+#[doc = "Field `xtal32k_capbank` reader - "]
+pub type XTAL32K_CAPBANK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal32k_capbank` writer - "]
+pub type XTAL32K_CAPBANK_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 6, O>;
+#[doc = "Field `xtal32k_ac_cap_short` reader - "]
+pub type XTAL32K_AC_CAP_SHORT_R = crate::BitReader<bool>;
+#[doc = "Field `xtal32k_ac_cap_short` writer - "]
+pub type XTAL32K_AC_CAP_SHORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `pu_xtal32k_buf` reader - "]
+pub type PU_XTAL32K_BUF_R = crate::BitReader<bool>;
+#[doc = "Field `pu_xtal32k_buf` writer - "]
+pub type PU_XTAL32K_BUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `pu_xtal32k` reader - "]
+pub type PU_XTAL32K_R = crate::BitReader<bool>;
+#[doc = "Field `pu_xtal32k` writer - "]
+pub type PU_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `xtal32k_hiz_en` reader - "]
+pub type XTAL32K_HIZ_EN_R = crate::BitReader<bool>;
+#[doc = "Field `xtal32k_hiz_en` writer - "]
+pub type XTAL32K_HIZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `reserved_21` reader - "]
+pub type RESERVED_21_R = crate::BitReader<bool>;
+#[doc = "Field `dten_xtal32k` reader - "]
+pub type DTEN_XTAL32K_R = crate::BitReader<bool>;
+#[doc = "Field `dten_xtal32k` writer - "]
+pub type DTEN_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `ten_xtal32k` reader - "]
+pub type TEN_XTAL32K_R = crate::BitReader<bool>;
+#[doc = "Field `ten_xtal32k` writer - "]
+pub type TEN_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `f32k_sel_rtc` reader - "]
+pub type F32K_SEL_RTC_R = crate::BitReader<bool>;
+#[doc = "Field `f32k_sel_rtc` writer - "]
+pub type F32K_SEL_RTC_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+#[doc = "Field `reserved_25_31` reader - "]
+pub type RESERVED_25_31_R = crate::FieldReader<u8, u8>;
+impl R {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    pub fn reserved_0_1(&self) -> RESERVED_0_1_R {
+        RESERVED_0_1_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn xtal32k_ext_sel(&self) -> XTAL32K_EXT_SEL_R {
+        XTAL32K_EXT_SEL_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:4"]
+    #[inline(always)]
+    pub fn xtal32k_amp_ctrl(&self) -> XTAL32K_AMP_CTRL_R {
+        XTAL32K_AMP_CTRL_R::new(((self.bits >> 3) & 3) as u8)
+    }
+    #[doc = "Bits 5:6"]
+    #[inline(always)]
+    pub fn xtal32k_reg(&self) -> XTAL32K_REG_R {
+        XTAL32K_REG_R::new(((self.bits >> 5) & 3) as u8)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn xtal32k_outbuf_stre(&self) -> XTAL32K_OUTBUF_STRE_R {
+        XTAL32K_OUTBUF_STRE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn xtal32k_otf_short(&self) -> XTAL32K_OTF_SHORT_R {
+        XTAL32K_OTF_SHORT_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bits 9:10"]
+    #[inline(always)]
+    pub fn xtal32k_inv_stre(&self) -> XTAL32K_INV_STRE_R {
+        XTAL32K_INV_STRE_R::new(((self.bits >> 9) & 3) as u8)
+    }
+    #[doc = "Bits 11:16"]
+    #[inline(always)]
+    pub fn xtal32k_capbank(&self) -> XTAL32K_CAPBANK_R {
+        XTAL32K_CAPBANK_R::new(((self.bits >> 11) & 0x3f) as u8)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn xtal32k_ac_cap_short(&self) -> XTAL32K_AC_CAP_SHORT_R {
+        XTAL32K_AC_CAP_SHORT_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn pu_xtal32k_buf(&self) -> PU_XTAL32K_BUF_R {
+        PU_XTAL32K_BUF_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn pu_xtal32k(&self) -> PU_XTAL32K_R {
+        PU_XTAL32K_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn xtal32k_hiz_en(&self) -> XTAL32K_HIZ_EN_R {
+        XTAL32K_HIZ_EN_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn reserved_21(&self) -> RESERVED_21_R {
+        RESERVED_21_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn dten_xtal32k(&self) -> DTEN_XTAL32K_R {
+        DTEN_XTAL32K_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn ten_xtal32k(&self) -> TEN_XTAL32K_R {
+        TEN_XTAL32K_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn f32k_sel_rtc(&self) -> F32K_SEL_RTC_R {
+        F32K_SEL_RTC_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bits 25:31"]
+    #[inline(always)]
+    pub fn reserved_25_31(&self) -> RESERVED_25_31_R {
+        RESERVED_25_31_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
 impl W {
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_ext_sel(&mut self) -> XTAL32K_EXT_SEL_W<2> {
+        XTAL32K_EXT_SEL_W::new(self)
+    }
+    #[doc = "Bits 3:4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_amp_ctrl(&mut self) -> XTAL32K_AMP_CTRL_W<3> {
+        XTAL32K_AMP_CTRL_W::new(self)
+    }
+    #[doc = "Bits 5:6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_reg(&mut self) -> XTAL32K_REG_W<5> {
+        XTAL32K_REG_W::new(self)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_outbuf_stre(&mut self) -> XTAL32K_OUTBUF_STRE_W<7> {
+        XTAL32K_OUTBUF_STRE_W::new(self)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_otf_short(&mut self) -> XTAL32K_OTF_SHORT_W<8> {
+        XTAL32K_OTF_SHORT_W::new(self)
+    }
+    #[doc = "Bits 9:10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_inv_stre(&mut self) -> XTAL32K_INV_STRE_W<9> {
+        XTAL32K_INV_STRE_W::new(self)
+    }
+    #[doc = "Bits 11:16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_capbank(&mut self) -> XTAL32K_CAPBANK_W<11> {
+        XTAL32K_CAPBANK_W::new(self)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_ac_cap_short(&mut self) -> XTAL32K_AC_CAP_SHORT_W<17> {
+        XTAL32K_AC_CAP_SHORT_W::new(self)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pu_xtal32k_buf(&mut self) -> PU_XTAL32K_BUF_W<18> {
+        PU_XTAL32K_BUF_W::new(self)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pu_xtal32k(&mut self) -> PU_XTAL32K_W<19> {
+        PU_XTAL32K_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal32k_hiz_en(&mut self) -> XTAL32K_HIZ_EN_W<20> {
+        XTAL32K_HIZ_EN_W::new(self)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_xtal32k(&mut self) -> DTEN_XTAL32K_W<22> {
+        DTEN_XTAL32K_W::new(self)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ten_xtal32k(&mut self) -> TEN_XTAL32K_W<23> {
+        TEN_XTAL32K_W::new(self)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn f32k_sel_rtc(&mut self) -> F32K_SEL_RTC_W<24> {
+        F32K_SEL_RTC_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -42,7 +278,7 @@ impl W {
         self
     }
 }
-#[doc = "External crystal oscillator control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k](index.html) module"]
+#[doc = "xtal32k\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k](index.html) module"]
 pub struct XTAL32K_SPEC;
 impl crate::RegisterSpec for XTAL32K_SPEC {
     type Ux = u32;
@@ -57,7 +293,7 @@ impl crate::Writable for XTAL32K_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets xtal32k to value 0"]
+#[doc = "`reset()` method sets xtal32k to value 0x0015_0228"]
 impl crate::Resettable for XTAL32K_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0x0015_0228;
 }
