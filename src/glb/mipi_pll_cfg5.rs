@@ -51,18 +51,6 @@ pub type MIPIPLL_VCO_VDD_CTRL_EXTRA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, MIPI_PLL_CFG5_SPEC, bool, O>;
 #[doc = "Field `reserved_6` reader - "]
 pub type RESERVED_6_R = crate::BitReader<bool>;
-#[doc = "Field `mipipll_vco_postdiv_sel` reader - "]
-pub type MIPIPLL_VCO_POSTDIV_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `mipipll_vco_postdiv_sel` writer - "]
-pub type MIPIPLL_VCO_POSTDIV_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MIPI_PLL_CFG5_SPEC, u8, u8, 3, O>;
-#[doc = "Field `mipipll_vco_postdiv_clk_en` reader - "]
-pub type MIPIPLL_VCO_POSTDIV_CLK_EN_R = crate::BitReader<bool>;
-#[doc = "Field `mipipll_vco_postdiv_clk_en` writer - "]
-pub type MIPIPLL_VCO_POSTDIV_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MIPI_PLL_CFG5_SPEC, bool, O>;
-#[doc = "Field `reserved_11_31` reader - "]
-pub type RESERVED_11_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -84,21 +72,6 @@ impl R {
     pub fn reserved_6(&self) -> RESERVED_6_R {
         RESERVED_6_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bits 7:9"]
-    #[inline(always)]
-    pub fn mipipll_vco_postdiv_sel(&self) -> MIPIPLL_VCO_POSTDIV_SEL_R {
-        MIPIPLL_VCO_POSTDIV_SEL_R::new(((self.bits >> 7) & 7) as u8)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn mipipll_vco_postdiv_clk_en(&self) -> MIPIPLL_VCO_POSTDIV_CLK_EN_R {
-        MIPIPLL_VCO_POSTDIV_CLK_EN_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bits 11:31"]
-    #[inline(always)]
-    pub fn reserved_11_31(&self) -> RESERVED_11_31_R {
-        RESERVED_11_31_R::new((self.bits >> 11) & 0x001f_ffff)
-    }
 }
 impl W {
     #[doc = "Bits 0:2"]
@@ -118,18 +91,6 @@ impl W {
     #[must_use]
     pub fn mipipll_vco_vdd_ctrl_extra(&mut self) -> MIPIPLL_VCO_VDD_CTRL_EXTRA_W<5> {
         MIPIPLL_VCO_VDD_CTRL_EXTRA_W::new(self)
-    }
-    #[doc = "Bits 7:9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn mipipll_vco_postdiv_sel(&mut self) -> MIPIPLL_VCO_POSTDIV_SEL_W<7> {
-        MIPIPLL_VCO_POSTDIV_SEL_W::new(self)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    #[must_use]
-    pub fn mipipll_vco_postdiv_clk_en(&mut self) -> MIPIPLL_VCO_POSTDIV_CLK_EN_W<10> {
-        MIPIPLL_VCO_POSTDIV_CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -153,7 +114,7 @@ impl crate::Writable for MIPI_PLL_CFG5_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets mipi_pll_cfg5 to value 0x0415"]
+#[doc = "`reset()` method sets mipi_pll_cfg5 to value 0x15"]
 impl crate::Resettable for MIPI_PLL_CFG5_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0415;
+    const RESET_VALUE: Self::Ux = 0x15;
 }

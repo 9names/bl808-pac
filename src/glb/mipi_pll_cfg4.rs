@@ -60,20 +60,6 @@ pub type MIPIPLL_LOCK_CLK_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, MIPI_PLL_CFG4_SPEC, u8, u8, 2, O>;
 #[doc = "Field `reserved_11` reader - "]
 pub type RESERVED_11_R = crate::BitReader<bool>;
-#[doc = "Field `mipipll_lock_clk_inv_en` reader - "]
-pub type MIPIPLL_LOCK_CLK_INV_EN_R = crate::BitReader<bool>;
-#[doc = "Field `mipipll_lock_clk_inv_en` writer - "]
-pub type MIPIPLL_LOCK_CLK_INV_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MIPI_PLL_CFG4_SPEC, bool, O>;
-#[doc = "Field `reserved_13_14` reader - "]
-pub type RESERVED_13_14_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `mipipll_lock_win_sel` reader - "]
-pub type MIPIPLL_LOCK_WIN_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `mipipll_lock_win_sel` writer - "]
-pub type MIPIPLL_LOCK_WIN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MIPI_PLL_CFG4_SPEC, u8, u8, 2, O>;
-#[doc = "Field `reserved_17_31` reader - "]
-pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -110,26 +96,6 @@ impl R {
     pub fn reserved_11(&self) -> RESERVED_11_R {
         RESERVED_11_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn mipipll_lock_clk_inv_en(&self) -> MIPIPLL_LOCK_CLK_INV_EN_R {
-        MIPIPLL_LOCK_CLK_INV_EN_R::new(((self.bits >> 12) & 1) != 0)
-    }
-    #[doc = "Bits 13:14"]
-    #[inline(always)]
-    pub fn reserved_13_14(&self) -> RESERVED_13_14_R {
-        RESERVED_13_14_R::new(((self.bits >> 13) & 3) as u8)
-    }
-    #[doc = "Bits 15:16"]
-    #[inline(always)]
-    pub fn mipipll_lock_win_sel(&self) -> MIPIPLL_LOCK_WIN_SEL_R {
-        MIPIPLL_LOCK_WIN_SEL_R::new(((self.bits >> 15) & 3) as u8)
-    }
-    #[doc = "Bits 17:31"]
-    #[inline(always)]
-    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
-        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
-    }
 }
 impl W {
     #[doc = "Bits 0:1"]
@@ -156,18 +122,6 @@ impl W {
     pub fn mipipll_lock_clk_sel(&mut self) -> MIPIPLL_LOCK_CLK_SEL_W<9> {
         MIPIPLL_LOCK_CLK_SEL_W::new(self)
     }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    #[must_use]
-    pub fn mipipll_lock_clk_inv_en(&mut self) -> MIPIPLL_LOCK_CLK_INV_EN_W<12> {
-        MIPIPLL_LOCK_CLK_INV_EN_W::new(self)
-    }
-    #[doc = "Bits 15:16"]
-    #[inline(always)]
-    #[must_use]
-    pub fn mipipll_lock_win_sel(&mut self) -> MIPIPLL_LOCK_WIN_SEL_W<15> {
-        MIPIPLL_LOCK_WIN_SEL_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -190,7 +144,7 @@ impl crate::Writable for MIPI_PLL_CFG4_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets mipi_pll_cfg4 to value 0x8311"]
+#[doc = "`reset()` method sets mipi_pll_cfg4 to value 0x0311"]
 impl crate::Resettable for MIPI_PLL_CFG4_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8311;
+    const RESET_VALUE: Self::Ux = 0x0311;
 }

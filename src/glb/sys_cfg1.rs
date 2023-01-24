@@ -34,7 +34,79 @@ impl From<crate::W<SYS_CFG1_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `reg_bclk_div_act_pulse` writer - "]
+pub type REG_BCLK_DIV_ACT_PULSE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SYS_CFG1_SPEC, bool, O>;
+#[doc = "Field `reg_bclk_div_bypass` reader - "]
+pub type REG_BCLK_DIV_BYPASS_R = crate::BitReader<bool>;
+#[doc = "Field `reg_bclk_div_bypass` writer - "]
+pub type REG_BCLK_DIV_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CFG1_SPEC, bool, O>;
+#[doc = "Field `sts_bclk_prot_done` reader - "]
+pub type STS_BCLK_PROT_DONE_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_3` reader - "]
+pub type RESERVED_3_R = crate::BitReader<bool>;
+#[doc = "Field `reg_bclk_sw_done_cnt` reader - "]
+pub type REG_BCLK_SW_DONE_CNT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_bclk_sw_done_cnt` writer - "]
+pub type REG_BCLK_SW_DONE_CNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYS_CFG1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `reserved_8_15` reader - "]
+pub type RESERVED_8_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_pico_clk_div_act_pulse` writer - "]
+pub type REG_PICO_CLK_DIV_ACT_PULSE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SYS_CFG1_SPEC, bool, O>;
+impl R {
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn reg_bclk_div_bypass(&self) -> REG_BCLK_DIV_BYPASS_R {
+        REG_BCLK_DIV_BYPASS_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn sts_bclk_prot_done(&self) -> STS_BCLK_PROT_DONE_R {
+        STS_BCLK_PROT_DONE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn reserved_3(&self) -> RESERVED_3_R {
+        RESERVED_3_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    pub fn reg_bclk_sw_done_cnt(&self) -> REG_BCLK_SW_DONE_CNT_R {
+        REG_BCLK_SW_DONE_CNT_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 8:15"]
+    #[inline(always)]
+    pub fn reserved_8_15(&self) -> RESERVED_8_15_R {
+        RESERVED_8_15_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
 impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_bclk_div_act_pulse(&mut self) -> REG_BCLK_DIV_ACT_PULSE_W<0> {
+        REG_BCLK_DIV_ACT_PULSE_W::new(self)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_bclk_div_bypass(&mut self) -> REG_BCLK_DIV_BYPASS_W<1> {
+        REG_BCLK_DIV_BYPASS_W::new(self)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_bclk_sw_done_cnt(&mut self) -> REG_BCLK_SW_DONE_CNT_W<4> {
+        REG_BCLK_SW_DONE_CNT_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_pico_clk_div_act_pulse(&mut self) -> REG_PICO_CLK_DIV_ACT_PULSE_W<16> {
+        REG_PICO_CLK_DIV_ACT_PULSE_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -57,7 +129,7 @@ impl crate::Writable for SYS_CFG1_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets sys_cfg1 to value 0"]
+#[doc = "`reset()` method sets sys_cfg1 to value 0x54"]
 impl crate::Resettable for SYS_CFG1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0x54;
 }

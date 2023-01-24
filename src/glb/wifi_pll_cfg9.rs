@@ -75,28 +75,6 @@ pub type DTEN_WIFIPLL_DIV10_R = crate::BitReader<bool>;
 #[doc = "Field `dten_wifipll_div10` writer - "]
 pub type DTEN_WIFIPLL_DIV10_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, WIFI_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `dten_wifipll_postdiv_clk` reader - "]
-pub type DTEN_WIFIPLL_POSTDIV_CLK_R = crate::BitReader<bool>;
-#[doc = "Field `dten_wifipll_postdiv_clk` writer - "]
-pub type DTEN_WIFIPLL_POSTDIV_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `usbpll_dtest_pclk_en` reader - "]
-pub type USBPLL_DTEST_PCLK_EN_R = crate::BitReader<bool>;
-#[doc = "Field `usbpll_dtest_pclk_en` writer - "]
-pub type USBPLL_DTEST_PCLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `usbpll_dtest_clkout_en` reader - "]
-pub type USBPLL_DTEST_CLKOUT_EN_R = crate::BitReader<bool>;
-#[doc = "Field `usbpll_dtest_clkout_en` writer - "]
-pub type USBPLL_DTEST_CLKOUT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `dtest_wifipll_pulldown` reader - "]
-pub type DTEST_WIFIPLL_PULLDOWN_R = crate::BitReader<bool>;
-#[doc = "Field `dtest_wifipll_pulldown` writer - "]
-pub type DTEST_WIFIPLL_PULLDOWN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `reserved_13_31` reader - "]
-pub type RESERVED_13_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -142,31 +120,6 @@ impl R {
     #[inline(always)]
     pub fn dten_wifipll_div10(&self) -> DTEN_WIFIPLL_DIV10_R {
         DTEN_WIFIPLL_DIV10_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn dten_wifipll_postdiv_clk(&self) -> DTEN_WIFIPLL_POSTDIV_CLK_R {
-        DTEN_WIFIPLL_POSTDIV_CLK_R::new(((self.bits >> 9) & 1) != 0)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn usbpll_dtest_pclk_en(&self) -> USBPLL_DTEST_PCLK_EN_R {
-        USBPLL_DTEST_PCLK_EN_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    pub fn usbpll_dtest_clkout_en(&self) -> USBPLL_DTEST_CLKOUT_EN_R {
-        USBPLL_DTEST_CLKOUT_EN_R::new(((self.bits >> 11) & 1) != 0)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn dtest_wifipll_pulldown(&self) -> DTEST_WIFIPLL_PULLDOWN_R {
-        DTEST_WIFIPLL_PULLDOWN_R::new(((self.bits >> 12) & 1) != 0)
-    }
-    #[doc = "Bits 13:31"]
-    #[inline(always)]
-    pub fn reserved_13_31(&self) -> RESERVED_13_31_R {
-        RESERVED_13_31_R::new((self.bits >> 13) & 0x0007_ffff)
     }
 }
 impl W {
@@ -218,30 +171,6 @@ impl W {
     pub fn dten_wifipll_div10(&mut self) -> DTEN_WIFIPLL_DIV10_W<8> {
         DTEN_WIFIPLL_DIV10_W::new(self)
     }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn dten_wifipll_postdiv_clk(&mut self) -> DTEN_WIFIPLL_POSTDIV_CLK_W<9> {
-        DTEN_WIFIPLL_POSTDIV_CLK_W::new(self)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    #[must_use]
-    pub fn usbpll_dtest_pclk_en(&mut self) -> USBPLL_DTEST_PCLK_EN_W<10> {
-        USBPLL_DTEST_PCLK_EN_W::new(self)
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    #[must_use]
-    pub fn usbpll_dtest_clkout_en(&mut self) -> USBPLL_DTEST_CLKOUT_EN_W<11> {
-        USBPLL_DTEST_CLKOUT_EN_W::new(self)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    #[must_use]
-    pub fn dtest_wifipll_pulldown(&mut self) -> DTEST_WIFIPLL_PULLDOWN_W<12> {
-        DTEST_WIFIPLL_PULLDOWN_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -264,7 +193,7 @@ impl crate::Writable for WIFI_PLL_CFG9_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets wifi_pll_cfg9 to value 0x1000"]
+#[doc = "`reset()` method sets wifi_pll_cfg9 to value 0"]
 impl crate::Resettable for WIFI_PLL_CFG9_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1000;
+    const RESET_VALUE: Self::Ux = 0;
 }

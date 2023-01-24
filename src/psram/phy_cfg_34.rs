@@ -39,41 +39,11 @@ pub type REG_TIMER_DQS_START_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `reg_timer_dqs_start` writer - "]
 pub type REG_TIMER_DQS_START_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PHY_CFG_34_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_dqs_array_stop` reader - "]
-pub type REG_TIMER_DQS_ARRAY_STOP_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_dqs_array_stop` writer - "]
-pub type REG_TIMER_DQS_ARRAY_STOP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_34_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_array_write` reader - "]
-pub type REG_TIMER_ARRAY_WRITE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_array_write` writer - "]
-pub type REG_TIMER_ARRAY_WRITE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_34_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_array_read` reader - "]
-pub type REG_TIMER_ARRAY_READ_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_array_read` writer - "]
-pub type REG_TIMER_ARRAY_READ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_34_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn reg_timer_dqs_start(&self) -> REG_TIMER_DQS_START_R {
         REG_TIMER_DQS_START_R::new((self.bits & 0xff) as u8)
-    }
-    #[doc = "Bits 8:15"]
-    #[inline(always)]
-    pub fn reg_timer_dqs_array_stop(&self) -> REG_TIMER_DQS_ARRAY_STOP_R {
-        REG_TIMER_DQS_ARRAY_STOP_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    pub fn reg_timer_array_write(&self) -> REG_TIMER_ARRAY_WRITE_R {
-        REG_TIMER_ARRAY_WRITE_R::new(((self.bits >> 16) & 0xff) as u8)
-    }
-    #[doc = "Bits 24:31"]
-    #[inline(always)]
-    pub fn reg_timer_array_read(&self) -> REG_TIMER_ARRAY_READ_R {
-        REG_TIMER_ARRAY_READ_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
@@ -82,24 +52,6 @@ impl W {
     #[must_use]
     pub fn reg_timer_dqs_start(&mut self) -> REG_TIMER_DQS_START_W<0> {
         REG_TIMER_DQS_START_W::new(self)
-    }
-    #[doc = "Bits 8:15"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_dqs_array_stop(&mut self) -> REG_TIMER_DQS_ARRAY_STOP_W<8> {
-        REG_TIMER_DQS_ARRAY_STOP_W::new(self)
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_array_write(&mut self) -> REG_TIMER_ARRAY_WRITE_W<16> {
-        REG_TIMER_ARRAY_WRITE_W::new(self)
-    }
-    #[doc = "Bits 24:31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_array_read(&mut self) -> REG_TIMER_ARRAY_READ_W<24> {
-        REG_TIMER_ARRAY_READ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -123,7 +75,7 @@ impl crate::Writable for PHY_CFG_34_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets phy_cfg_34 to value 0x0500_0101"]
+#[doc = "`reset()` method sets phy_cfg_34 to value 0x01"]
 impl crate::Resettable for PHY_CFG_34_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0500_0101;
+    const RESET_VALUE: Self::Ux = 0x01;
 }

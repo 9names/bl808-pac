@@ -40,16 +40,6 @@ pub type RESERVED_0_26_R = crate::FieldReader<u32, u32>;
 pub type REG_CAM_REF_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `reg_cam_ref_clk_en` writer - "]
 pub type REG_CAM_REF_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CFG0_SPEC, bool, O>;
-#[doc = "Field `reg_cam_ref_clk_src_sel` reader - "]
-pub type REG_CAM_REF_CLK_SRC_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_cam_ref_clk_src_sel` writer - "]
-pub type REG_CAM_REF_CLK_SRC_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAM_CFG0_SPEC, u8, u8, 2, O>;
-#[doc = "Field `reg_cam_ref_clk_div` reader - "]
-pub type REG_CAM_REF_CLK_DIV_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_cam_ref_clk_div` writer - "]
-pub type REG_CAM_REF_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAM_CFG0_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:26"]
     #[inline(always)]
@@ -61,16 +51,6 @@ impl R {
     pub fn reg_cam_ref_clk_en(&self) -> REG_CAM_REF_CLK_EN_R {
         REG_CAM_REF_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bits 28:29"]
-    #[inline(always)]
-    pub fn reg_cam_ref_clk_src_sel(&self) -> REG_CAM_REF_CLK_SRC_SEL_R {
-        REG_CAM_REF_CLK_SRC_SEL_R::new(((self.bits >> 28) & 3) as u8)
-    }
-    #[doc = "Bits 30:31"]
-    #[inline(always)]
-    pub fn reg_cam_ref_clk_div(&self) -> REG_CAM_REF_CLK_DIV_R {
-        REG_CAM_REF_CLK_DIV_R::new(((self.bits >> 30) & 3) as u8)
-    }
 }
 impl W {
     #[doc = "Bit 27"]
@@ -78,18 +58,6 @@ impl W {
     #[must_use]
     pub fn reg_cam_ref_clk_en(&mut self) -> REG_CAM_REF_CLK_EN_W<27> {
         REG_CAM_REF_CLK_EN_W::new(self)
-    }
-    #[doc = "Bits 28:29"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_cam_ref_clk_src_sel(&mut self) -> REG_CAM_REF_CLK_SRC_SEL_W<28> {
-        REG_CAM_REF_CLK_SRC_SEL_W::new(self)
-    }
-    #[doc = "Bits 30:31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_cam_ref_clk_div(&mut self) -> REG_CAM_REF_CLK_DIV_W<30> {
-        REG_CAM_REF_CLK_DIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

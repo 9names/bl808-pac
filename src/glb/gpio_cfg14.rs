@@ -68,29 +68,6 @@ pub type REG_GPIO_14_FUNC_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, GPIO_CFG14_SPEC, u8, u8, 5, O>;
 #[doc = "Field `reserved_13_15` reader - "]
 pub type RESERVED_13_15_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_gpio_14_int_mode_set` reader - "]
-pub type REG_GPIO_14_INT_MODE_SET_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_gpio_14_int_mode_set` writer - "]
-pub type REG_GPIO_14_INT_MODE_SET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_CFG14_SPEC, u8, u8, 4, O>;
-#[doc = "Field `reg_gpio_14_int_clr` reader - "]
-pub type REG_GPIO_14_INT_CLR_R = crate::BitReader<bool>;
-#[doc = "Field `reg_gpio_14_int_clr` writer - "]
-pub type REG_GPIO_14_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_CFG14_SPEC, bool, O>;
-#[doc = "Field `gpio_14_int_stat` reader - "]
-pub type GPIO_14_INT_STAT_R = crate::BitReader<bool>;
-#[doc = "Field `reg_gpio_14_int_mask` reader - "]
-pub type REG_GPIO_14_INT_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `reg_gpio_14_int_mask` writer - "]
-pub type REG_GPIO_14_INT_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_CFG14_SPEC, bool, O>;
-#[doc = "Field `reserved_23` reader - "]
-pub type RESERVED_23_R = crate::BitReader<bool>;
-#[doc = "Field `reg_gpio_14_o` reader - "]
-pub type REG_GPIO_14_O_R = crate::BitReader<bool>;
-#[doc = "Field `reg_gpio_14_o` writer - "]
-pub type REG_GPIO_14_O_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_CFG14_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -137,36 +114,6 @@ impl R {
     pub fn reserved_13_15(&self) -> RESERVED_13_15_R {
         RESERVED_13_15_R::new(((self.bits >> 13) & 7) as u8)
     }
-    #[doc = "Bits 16:19"]
-    #[inline(always)]
-    pub fn reg_gpio_14_int_mode_set(&self) -> REG_GPIO_14_INT_MODE_SET_R {
-        REG_GPIO_14_INT_MODE_SET_R::new(((self.bits >> 16) & 0x0f) as u8)
-    }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    pub fn reg_gpio_14_int_clr(&self) -> REG_GPIO_14_INT_CLR_R {
-        REG_GPIO_14_INT_CLR_R::new(((self.bits >> 20) & 1) != 0)
-    }
-    #[doc = "Bit 21"]
-    #[inline(always)]
-    pub fn gpio_14_int_stat(&self) -> GPIO_14_INT_STAT_R {
-        GPIO_14_INT_STAT_R::new(((self.bits >> 21) & 1) != 0)
-    }
-    #[doc = "Bit 22"]
-    #[inline(always)]
-    pub fn reg_gpio_14_int_mask(&self) -> REG_GPIO_14_INT_MASK_R {
-        REG_GPIO_14_INT_MASK_R::new(((self.bits >> 22) & 1) != 0)
-    }
-    #[doc = "Bit 23"]
-    #[inline(always)]
-    pub fn reserved_23(&self) -> RESERVED_23_R {
-        RESERVED_23_R::new(((self.bits >> 23) & 1) != 0)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn reg_gpio_14_o(&self) -> REG_GPIO_14_O_R {
-        REG_GPIO_14_O_R::new(((self.bits >> 24) & 1) != 0)
-    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -211,30 +158,6 @@ impl W {
     pub fn reg_gpio_14_func_sel(&mut self) -> REG_GPIO_14_FUNC_SEL_W<8> {
         REG_GPIO_14_FUNC_SEL_W::new(self)
     }
-    #[doc = "Bits 16:19"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_gpio_14_int_mode_set(&mut self) -> REG_GPIO_14_INT_MODE_SET_W<16> {
-        REG_GPIO_14_INT_MODE_SET_W::new(self)
-    }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_gpio_14_int_clr(&mut self) -> REG_GPIO_14_INT_CLR_W<20> {
-        REG_GPIO_14_INT_CLR_W::new(self)
-    }
-    #[doc = "Bit 22"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_gpio_14_int_mask(&mut self) -> REG_GPIO_14_INT_MASK_W<22> {
-        REG_GPIO_14_INT_MASK_W::new(self)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_gpio_14_o(&mut self) -> REG_GPIO_14_O_W<24> {
-        REG_GPIO_14_O_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -257,7 +180,7 @@ impl crate::Writable for GPIO_CFG14_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets gpio_cfg14 to value 0x0040_0b02"]
+#[doc = "`reset()` method sets gpio_cfg14 to value 0x0b02"]
 impl crate::Resettable for GPIO_CFG14_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0040_0b02;
+    const RESET_VALUE: Self::Ux = 0x0b02;
 }

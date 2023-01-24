@@ -42,32 +42,6 @@ pub type TZC_GLB_PWRON_RST_LOCK_R = crate::BitReader<bool>;
 pub type TZC_GLB_CPU_RESET_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_glb_sys_reset_lock` reader - "]
 pub type TZC_GLB_SYS_RESET_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_cpu2_reset_lock` reader - "]
-pub type TZC_GLB_CPU2_RESET_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `reserved_16_20` reader - "]
-pub type RESERVED_16_20_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `tzc_glb_pwr_lock` reader - "]
-pub type TZC_GLB_PWR_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_int_lock` reader - "]
-pub type TZC_GLB_INT_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `reserved_23` reader - "]
-pub type RESERVED_23_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_cpupll_lock` reader - "]
-pub type TZC_GLB_CPUPLL_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_misc_lock` reader - "]
-pub type TZC_GLB_MISC_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_sram_lock` reader - "]
-pub type TZC_GLB_SRAM_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_swrst_lock` reader - "]
-pub type TZC_GLB_SWRST_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_bmx_lock` reader - "]
-pub type TZC_GLB_BMX_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_dbg_lock` reader - "]
-pub type TZC_GLB_DBG_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_mbist_lock` reader - "]
-pub type TZC_GLB_MBIST_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_clk_lock` reader - "]
-pub type TZC_GLB_CLK_LOCK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -88,71 +62,6 @@ impl R {
     #[inline(always)]
     pub fn tzc_glb_sys_reset_lock(&self) -> TZC_GLB_SYS_RESET_LOCK_R {
         TZC_GLB_SYS_RESET_LOCK_R::new(((self.bits >> 14) & 1) != 0)
-    }
-    #[doc = "Bit 15"]
-    #[inline(always)]
-    pub fn tzc_glb_cpu2_reset_lock(&self) -> TZC_GLB_CPU2_RESET_LOCK_R {
-        TZC_GLB_CPU2_RESET_LOCK_R::new(((self.bits >> 15) & 1) != 0)
-    }
-    #[doc = "Bits 16:20"]
-    #[inline(always)]
-    pub fn reserved_16_20(&self) -> RESERVED_16_20_R {
-        RESERVED_16_20_R::new(((self.bits >> 16) & 0x1f) as u8)
-    }
-    #[doc = "Bit 21"]
-    #[inline(always)]
-    pub fn tzc_glb_pwr_lock(&self) -> TZC_GLB_PWR_LOCK_R {
-        TZC_GLB_PWR_LOCK_R::new(((self.bits >> 21) & 1) != 0)
-    }
-    #[doc = "Bit 22"]
-    #[inline(always)]
-    pub fn tzc_glb_int_lock(&self) -> TZC_GLB_INT_LOCK_R {
-        TZC_GLB_INT_LOCK_R::new(((self.bits >> 22) & 1) != 0)
-    }
-    #[doc = "Bit 23"]
-    #[inline(always)]
-    pub fn reserved_23(&self) -> RESERVED_23_R {
-        RESERVED_23_R::new(((self.bits >> 23) & 1) != 0)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn tzc_glb_cpupll_lock(&self) -> TZC_GLB_CPUPLL_LOCK_R {
-        TZC_GLB_CPUPLL_LOCK_R::new(((self.bits >> 24) & 1) != 0)
-    }
-    #[doc = "Bit 25"]
-    #[inline(always)]
-    pub fn tzc_glb_misc_lock(&self) -> TZC_GLB_MISC_LOCK_R {
-        TZC_GLB_MISC_LOCK_R::new(((self.bits >> 25) & 1) != 0)
-    }
-    #[doc = "Bit 26"]
-    #[inline(always)]
-    pub fn tzc_glb_sram_lock(&self) -> TZC_GLB_SRAM_LOCK_R {
-        TZC_GLB_SRAM_LOCK_R::new(((self.bits >> 26) & 1) != 0)
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn tzc_glb_swrst_lock(&self) -> TZC_GLB_SWRST_LOCK_R {
-        TZC_GLB_SWRST_LOCK_R::new(((self.bits >> 27) & 1) != 0)
-    }
-    #[doc = "Bit 28"]
-    #[inline(always)]
-    pub fn tzc_glb_bmx_lock(&self) -> TZC_GLB_BMX_LOCK_R {
-        TZC_GLB_BMX_LOCK_R::new(((self.bits >> 28) & 1) != 0)
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn tzc_glb_dbg_lock(&self) -> TZC_GLB_DBG_LOCK_R {
-        TZC_GLB_DBG_LOCK_R::new(((self.bits >> 29) & 1) != 0)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn tzc_glb_mbist_lock(&self) -> TZC_GLB_MBIST_LOCK_R {
-        TZC_GLB_MBIST_LOCK_R::new(((self.bits >> 30) & 1) != 0)
-    }
-    #[doc = "Bit 31"]
-    #[inline(always)]
-    pub fn tzc_glb_clk_lock(&self) -> TZC_GLB_CLK_LOCK_R {
-        TZC_GLB_CLK_LOCK_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -54,53 +54,6 @@ pub type TZC_GLB_CPU2_RESET_TZSID_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_glb_cpu2_reset_tzsid_lock` writer - "]
 pub type TZC_GLB_CPU2_RESET_TZSID_LOCK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_misc_tzsid_lock` reader - "]
-pub type TZC_GLB_MISC_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_misc_tzsid_lock` writer - "]
-pub type TZC_GLB_MISC_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_sram_tzsid_lock` reader - "]
-pub type TZC_GLB_SRAM_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_sram_tzsid_lock` writer - "]
-pub type TZC_GLB_SRAM_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_swrst_tzsid_lock` reader - "]
-pub type TZC_GLB_SWRST_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_swrst_tzsid_lock` writer - "]
-pub type TZC_GLB_SWRST_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_bmx_tzsid_lock` reader - "]
-pub type TZC_GLB_BMX_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_bmx_tzsid_lock` writer - "]
-pub type TZC_GLB_BMX_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_dbg_tzsid_lock` reader - "]
-pub type TZC_GLB_DBG_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_dbg_tzsid_lock` writer - "]
-pub type TZC_GLB_DBG_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_mbist_tzsid_lock` reader - "]
-pub type TZC_GLB_MBIST_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_mbist_tzsid_lock` writer - "]
-pub type TZC_GLB_MBIST_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_clk_tzsid_lock` reader - "]
-pub type TZC_GLB_CLK_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_clk_tzsid_lock` writer - "]
-pub type TZC_GLB_CLK_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_int_tzsid_lock` reader - "]
-pub type TZC_GLB_INT_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_int_tzsid_lock` writer - "]
-pub type TZC_GLB_INT_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `tzc_glb_pwr_tzsid_lock` reader - "]
-pub type TZC_GLB_PWR_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_glb_pwr_tzsid_lock` writer - "]
-pub type TZC_GLB_PWR_TZSID_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_GLB_CTRL_2_SPEC, bool, O>;
-#[doc = "Field `reserved_13_31` reader - "]
-pub type RESERVED_13_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -121,56 +74,6 @@ impl R {
     #[inline(always)]
     pub fn tzc_glb_cpu2_reset_tzsid_lock(&self) -> TZC_GLB_CPU2_RESET_TZSID_LOCK_R {
         TZC_GLB_CPU2_RESET_TZSID_LOCK_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn tzc_glb_misc_tzsid_lock(&self) -> TZC_GLB_MISC_TZSID_LOCK_R {
-        TZC_GLB_MISC_TZSID_LOCK_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn tzc_glb_sram_tzsid_lock(&self) -> TZC_GLB_SRAM_TZSID_LOCK_R {
-        TZC_GLB_SRAM_TZSID_LOCK_R::new(((self.bits >> 5) & 1) != 0)
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn tzc_glb_swrst_tzsid_lock(&self) -> TZC_GLB_SWRST_TZSID_LOCK_R {
-        TZC_GLB_SWRST_TZSID_LOCK_R::new(((self.bits >> 6) & 1) != 0)
-    }
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn tzc_glb_bmx_tzsid_lock(&self) -> TZC_GLB_BMX_TZSID_LOCK_R {
-        TZC_GLB_BMX_TZSID_LOCK_R::new(((self.bits >> 7) & 1) != 0)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn tzc_glb_dbg_tzsid_lock(&self) -> TZC_GLB_DBG_TZSID_LOCK_R {
-        TZC_GLB_DBG_TZSID_LOCK_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn tzc_glb_mbist_tzsid_lock(&self) -> TZC_GLB_MBIST_TZSID_LOCK_R {
-        TZC_GLB_MBIST_TZSID_LOCK_R::new(((self.bits >> 9) & 1) != 0)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn tzc_glb_clk_tzsid_lock(&self) -> TZC_GLB_CLK_TZSID_LOCK_R {
-        TZC_GLB_CLK_TZSID_LOCK_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    pub fn tzc_glb_int_tzsid_lock(&self) -> TZC_GLB_INT_TZSID_LOCK_R {
-        TZC_GLB_INT_TZSID_LOCK_R::new(((self.bits >> 11) & 1) != 0)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn tzc_glb_pwr_tzsid_lock(&self) -> TZC_GLB_PWR_TZSID_LOCK_R {
-        TZC_GLB_PWR_TZSID_LOCK_R::new(((self.bits >> 12) & 1) != 0)
-    }
-    #[doc = "Bits 13:31"]
-    #[inline(always)]
-    pub fn reserved_13_31(&self) -> RESERVED_13_31_R {
-        RESERVED_13_31_R::new((self.bits >> 13) & 0x0007_ffff)
     }
 }
 impl W {
@@ -197,60 +100,6 @@ impl W {
     #[must_use]
     pub fn tzc_glb_cpu2_reset_tzsid_lock(&mut self) -> TZC_GLB_CPU2_RESET_TZSID_LOCK_W<3> {
         TZC_GLB_CPU2_RESET_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_misc_tzsid_lock(&mut self) -> TZC_GLB_MISC_TZSID_LOCK_W<4> {
-        TZC_GLB_MISC_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_sram_tzsid_lock(&mut self) -> TZC_GLB_SRAM_TZSID_LOCK_W<5> {
-        TZC_GLB_SRAM_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_swrst_tzsid_lock(&mut self) -> TZC_GLB_SWRST_TZSID_LOCK_W<6> {
-        TZC_GLB_SWRST_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_bmx_tzsid_lock(&mut self) -> TZC_GLB_BMX_TZSID_LOCK_W<7> {
-        TZC_GLB_BMX_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_dbg_tzsid_lock(&mut self) -> TZC_GLB_DBG_TZSID_LOCK_W<8> {
-        TZC_GLB_DBG_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_mbist_tzsid_lock(&mut self) -> TZC_GLB_MBIST_TZSID_LOCK_W<9> {
-        TZC_GLB_MBIST_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_clk_tzsid_lock(&mut self) -> TZC_GLB_CLK_TZSID_LOCK_W<10> {
-        TZC_GLB_CLK_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_int_tzsid_lock(&mut self) -> TZC_GLB_INT_TZSID_LOCK_W<11> {
-        TZC_GLB_INT_TZSID_LOCK_W::new(self)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_glb_pwr_tzsid_lock(&mut self) -> TZC_GLB_PWR_TZSID_LOCK_W<12> {
-        TZC_GLB_PWR_TZSID_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

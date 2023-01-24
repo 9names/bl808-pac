@@ -39,21 +39,11 @@ pub type CR_GPIO_DMA_TX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `cr_gpio_dma_tx_en` writer - "]
 pub type CR_GPIO_DMA_TX_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, GPIO_CFG143_SPEC, bool, O>;
-#[doc = "Field `cr_gpio_dma_out_sel_latch` reader - "]
-pub type CR_GPIO_DMA_OUT_SEL_LATCH_R = crate::BitReader<bool>;
-#[doc = "Field `cr_gpio_dma_out_sel_latch` writer - "]
-pub type CR_GPIO_DMA_OUT_SEL_LATCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_CFG143_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn cr_gpio_dma_tx_en(&self) -> CR_GPIO_DMA_TX_EN_R {
         CR_GPIO_DMA_TX_EN_R::new((self.bits & 1) != 0)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn cr_gpio_dma_out_sel_latch(&self) -> CR_GPIO_DMA_OUT_SEL_LATCH_R {
-        CR_GPIO_DMA_OUT_SEL_LATCH_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
@@ -62,12 +52,6 @@ impl W {
     #[must_use]
     pub fn cr_gpio_dma_tx_en(&mut self) -> CR_GPIO_DMA_TX_EN_W<0> {
         CR_GPIO_DMA_TX_EN_W::new(self)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_gpio_dma_out_sel_latch(&mut self) -> CR_GPIO_DMA_OUT_SEL_LATCH_W<1> {
-        CR_GPIO_DMA_OUT_SEL_LATCH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

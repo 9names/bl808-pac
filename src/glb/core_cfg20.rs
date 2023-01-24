@@ -34,7 +34,16 @@ impl From<crate::W<CORE_CFG20_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `np_int_clr0` writer - "]
+pub type NP_INT_CLR0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CORE_CFG20_SPEC, u32, u32, 32, O>;
 impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn np_int_clr0(&mut self) -> NP_INT_CLR0_W<0> {
+        NP_INT_CLR0_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

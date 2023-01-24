@@ -9,8 +9,12 @@ pub struct RegisterBlock {
     pub codec_bus_thre: CODEC_BUS_THRE,
     _reserved3: [u8; 0x04],
     #[doc = "0x10 - codec_bus_dec_err"]
+    pub codec_bus_dec_err: CODEC_BUS_DEC_ERR,
+    #[doc = "0x14 - codec_bus_dec_err_addr"]
+    pub codec_bus_dec_err_addr: CODEC_BUS_DEC_ERR_ADDR,
+    _reserved5: [u8; 0x08],
+    #[doc = "0x20 - blai_lmtr_rd"]
     pub blai_lmtr_rd: BLAI_LMTR_RD,
-    _reserved4: [u8; 0x10],
     #[doc = "0x24 - blai_lmtr_wr"]
     pub blai_lmtr_wr: BLAI_LMTR_WR,
     #[doc = "0x28 - id_selection"]
@@ -28,9 +32,17 @@ pub mod codec_qos_ctrl;
 pub type CODEC_BUS_THRE = crate::Reg<codec_bus_thre::CODEC_BUS_THRE_SPEC>;
 #[doc = "codec_bus_thre"]
 pub mod codec_bus_thre;
+#[doc = "codec_bus_dec_err (rw) register accessor: an alias for `Reg<CODEC_BUS_DEC_ERR_SPEC>`"]
+pub type CODEC_BUS_DEC_ERR = crate::Reg<codec_bus_dec_err::CODEC_BUS_DEC_ERR_SPEC>;
+#[doc = "codec_bus_dec_err"]
+pub mod codec_bus_dec_err;
+#[doc = "codec_bus_dec_err_addr (rw) register accessor: an alias for `Reg<CODEC_BUS_DEC_ERR_ADDR_SPEC>`"]
+pub type CODEC_BUS_DEC_ERR_ADDR = crate::Reg<codec_bus_dec_err_addr::CODEC_BUS_DEC_ERR_ADDR_SPEC>;
+#[doc = "codec_bus_dec_err_addr"]
+pub mod codec_bus_dec_err_addr;
 #[doc = "blai_lmtr_rd (rw) register accessor: an alias for `Reg<BLAI_LMTR_RD_SPEC>`"]
 pub type BLAI_LMTR_RD = crate::Reg<blai_lmtr_rd::BLAI_LMTR_RD_SPEC>;
-#[doc = "codec_bus_dec_err"]
+#[doc = "blai_lmtr_rd"]
 pub mod blai_lmtr_rd;
 #[doc = "blai_lmtr_wr (rw) register accessor: an alias for `Reg<BLAI_LMTR_WR_SPEC>`"]
 pub type BLAI_LMTR_WR = crate::Reg<blai_lmtr_wr::BLAI_LMTR_WR_SPEC>;
