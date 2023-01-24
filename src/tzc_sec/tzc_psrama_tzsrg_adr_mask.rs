@@ -39,28 +39,11 @@ pub type TZC_PSRAMA_TZSRG_ADR_MASK_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `tzc_psrama_tzsrg_adr_mask` writer - "]
 pub type TZC_PSRAMA_TZSRG_ADR_MASK_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, TZC_PSRAMA_TZSRG_ADR_MASK_SPEC, u16, u16, 16, O>;
-#[doc = "Field `tzc_psrama_tzsrg_adr_mask_lock` reader - "]
-pub type TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_psrama_tzsrg_adr_mask_lock` writer - "]
-pub type TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TZC_PSRAMA_TZSRG_ADR_MASK_SPEC, bool, O>;
-#[doc = "Field `reserved_17_31` reader - "]
-pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn tzc_psrama_tzsrg_adr_mask(&self) -> TZC_PSRAMA_TZSRG_ADR_MASK_R {
         TZC_PSRAMA_TZSRG_ADR_MASK_R::new((self.bits & 0xffff) as u16)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn tzc_psrama_tzsrg_adr_mask_lock(&self) -> TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_R {
-        TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_R::new(((self.bits >> 16) & 1) != 0)
-    }
-    #[doc = "Bits 17:31"]
-    #[inline(always)]
-    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
-        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
     }
 }
 impl W {
@@ -69,12 +52,6 @@ impl W {
     #[must_use]
     pub fn tzc_psrama_tzsrg_adr_mask(&mut self) -> TZC_PSRAMA_TZSRG_ADR_MASK_W<0> {
         TZC_PSRAMA_TZSRG_ADR_MASK_W::new(self)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_psrama_tzsrg_adr_mask_lock(&mut self) -> TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_W<16> {
-        TZC_PSRAMA_TZSRG_ADR_MASK_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

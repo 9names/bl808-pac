@@ -34,55 +34,7 @@ impl From<crate::W<TZC_OCRAM_TZSRG_R2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `tzc_ocram_tzsrg_r2_end` reader - "]
-pub type TZC_OCRAM_TZSRG_R2_END_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `tzc_ocram_tzsrg_r2_end` writer - "]
-pub type TZC_OCRAM_TZSRG_R2_END_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TZC_OCRAM_TZSRG_R2_SPEC, u16, u16, 10, O>;
-#[doc = "Field `reserved_10_15` reader - "]
-pub type RESERVED_10_15_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `tzc_ocram_tzsrg_r2_start` reader - "]
-pub type TZC_OCRAM_TZSRG_R2_START_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `tzc_ocram_tzsrg_r2_start` writer - "]
-pub type TZC_OCRAM_TZSRG_R2_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TZC_OCRAM_TZSRG_R2_SPEC, u16, u16, 10, O>;
-#[doc = "Field `reserved_26_31` reader - "]
-pub type RESERVED_26_31_R = crate::FieldReader<u8, u8>;
-impl R {
-    #[doc = "Bits 0:9"]
-    #[inline(always)]
-    pub fn tzc_ocram_tzsrg_r2_end(&self) -> TZC_OCRAM_TZSRG_R2_END_R {
-        TZC_OCRAM_TZSRG_R2_END_R::new((self.bits & 0x03ff) as u16)
-    }
-    #[doc = "Bits 10:15"]
-    #[inline(always)]
-    pub fn reserved_10_15(&self) -> RESERVED_10_15_R {
-        RESERVED_10_15_R::new(((self.bits >> 10) & 0x3f) as u8)
-    }
-    #[doc = "Bits 16:25"]
-    #[inline(always)]
-    pub fn tzc_ocram_tzsrg_r2_start(&self) -> TZC_OCRAM_TZSRG_R2_START_R {
-        TZC_OCRAM_TZSRG_R2_START_R::new(((self.bits >> 16) & 0x03ff) as u16)
-    }
-    #[doc = "Bits 26:31"]
-    #[inline(always)]
-    pub fn reserved_26_31(&self) -> RESERVED_26_31_R {
-        RESERVED_26_31_R::new(((self.bits >> 26) & 0x3f) as u8)
-    }
-}
 impl W {
-    #[doc = "Bits 0:9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_ocram_tzsrg_r2_end(&mut self) -> TZC_OCRAM_TZSRG_R2_END_W<0> {
-        TZC_OCRAM_TZSRG_R2_END_W::new(self)
-    }
-    #[doc = "Bits 16:25"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_ocram_tzsrg_r2_start(&mut self) -> TZC_OCRAM_TZSRG_R2_START_W<16> {
-        TZC_OCRAM_TZSRG_R2_START_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -105,7 +57,7 @@ impl crate::Writable for TZC_OCRAM_TZSRG_R2_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_ocram_tzsrg_r2 to value 0x03ff"]
+#[doc = "`reset()` method sets tzc_ocram_tzsrg_r2 to value 0"]
 impl crate::Resettable for TZC_OCRAM_TZSRG_R2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03ff;
+    const RESET_VALUE: Self::Ux = 0;
 }

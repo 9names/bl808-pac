@@ -67,41 +67,6 @@ pub type HBN_DIS_PWR_OFF_LDO11_R = crate::BitReader<bool>;
 #[doc = "Field `hbn_dis_pwr_off_ldo11` writer - "]
 pub type HBN_DIS_PWR_OFF_LDO11_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `hbn_dis_pwr_off_ldo11_rt` reader - "]
-pub type HBN_DIS_PWR_OFF_LDO11_RT_R = crate::BitReader<bool>;
-#[doc = "Field `hbn_dis_pwr_off_ldo11_rt` writer - "]
-pub type HBN_DIS_PWR_OFF_LDO11_RT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `hbn_ldo11_rt_vout_sel` reader - "]
-pub type HBN_LDO11_RT_VOUT_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `hbn_ldo11_rt_vout_sel` writer - "]
-pub type HBN_LDO11_RT_VOUT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u8, u8, 4, O>;
-#[doc = "Field `hbn_ldo11_aon_vout_sel` reader - "]
-pub type HBN_LDO11_AON_VOUT_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `hbn_ldo11_aon_vout_sel` writer - "]
-pub type HBN_LDO11_AON_VOUT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u8, u8, 4, O>;
-#[doc = "Field `pu_dcdc_aon` reader - "]
-pub type PU_DCDC_AON_R = crate::BitReader<bool>;
-#[doc = "Field `pu_dcdc_aon` writer - "]
-pub type PU_DCDC_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `pu_dcdc18_aon` reader - "]
-pub type PU_DCDC18_AON_R = crate::BitReader<bool>;
-#[doc = "Field `pu_dcdc18_aon` writer - "]
-pub type PU_DCDC18_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `pwr_on_option` reader - "]
-pub type PWR_ON_OPTION_R = crate::BitReader<bool>;
-#[doc = "Field `pwr_on_option` writer - "]
-pub type PWR_ON_OPTION_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `sram_slp_option` reader - "]
-pub type SRAM_SLP_OPTION_R = crate::BitReader<bool>;
-#[doc = "Field `sram_slp_option` writer - "]
-pub type SRAM_SLP_OPTION_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `sram_slp` reader - "]
-pub type SRAM_SLP_R = crate::BitReader<bool>;
-#[doc = "Field `hbn_state` reader - "]
-pub type HBN_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -148,51 +113,6 @@ impl R {
     pub fn hbn_dis_pwr_off_ldo11(&self) -> HBN_DIS_PWR_OFF_LDO11_R {
         HBN_DIS_PWR_OFF_LDO11_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14"]
-    #[inline(always)]
-    pub fn hbn_dis_pwr_off_ldo11_rt(&self) -> HBN_DIS_PWR_OFF_LDO11_RT_R {
-        HBN_DIS_PWR_OFF_LDO11_RT_R::new(((self.bits >> 14) & 1) != 0)
-    }
-    #[doc = "Bits 15:18"]
-    #[inline(always)]
-    pub fn hbn_ldo11_rt_vout_sel(&self) -> HBN_LDO11_RT_VOUT_SEL_R {
-        HBN_LDO11_RT_VOUT_SEL_R::new(((self.bits >> 15) & 0x0f) as u8)
-    }
-    #[doc = "Bits 19:22"]
-    #[inline(always)]
-    pub fn hbn_ldo11_aon_vout_sel(&self) -> HBN_LDO11_AON_VOUT_SEL_R {
-        HBN_LDO11_AON_VOUT_SEL_R::new(((self.bits >> 19) & 0x0f) as u8)
-    }
-    #[doc = "Bit 23"]
-    #[inline(always)]
-    pub fn pu_dcdc_aon(&self) -> PU_DCDC_AON_R {
-        PU_DCDC_AON_R::new(((self.bits >> 23) & 1) != 0)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn pu_dcdc18_aon(&self) -> PU_DCDC18_AON_R {
-        PU_DCDC18_AON_R::new(((self.bits >> 24) & 1) != 0)
-    }
-    #[doc = "Bit 25"]
-    #[inline(always)]
-    pub fn pwr_on_option(&self) -> PWR_ON_OPTION_R {
-        PWR_ON_OPTION_R::new(((self.bits >> 25) & 1) != 0)
-    }
-    #[doc = "Bit 26"]
-    #[inline(always)]
-    pub fn sram_slp_option(&self) -> SRAM_SLP_OPTION_R {
-        SRAM_SLP_OPTION_R::new(((self.bits >> 26) & 1) != 0)
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn sram_slp(&self) -> SRAM_SLP_R {
-        SRAM_SLP_R::new(((self.bits >> 27) & 1) != 0)
-    }
-    #[doc = "Bits 28:31"]
-    #[inline(always)]
-    pub fn hbn_state(&self) -> HBN_STATE_R {
-        HBN_STATE_R::new(((self.bits >> 28) & 0x0f) as u8)
-    }
 }
 impl W {
     #[doc = "Bits 0:3"]
@@ -237,48 +157,6 @@ impl W {
     pub fn hbn_dis_pwr_off_ldo11(&mut self) -> HBN_DIS_PWR_OFF_LDO11_W<13> {
         HBN_DIS_PWR_OFF_LDO11_W::new(self)
     }
-    #[doc = "Bit 14"]
-    #[inline(always)]
-    #[must_use]
-    pub fn hbn_dis_pwr_off_ldo11_rt(&mut self) -> HBN_DIS_PWR_OFF_LDO11_RT_W<14> {
-        HBN_DIS_PWR_OFF_LDO11_RT_W::new(self)
-    }
-    #[doc = "Bits 15:18"]
-    #[inline(always)]
-    #[must_use]
-    pub fn hbn_ldo11_rt_vout_sel(&mut self) -> HBN_LDO11_RT_VOUT_SEL_W<15> {
-        HBN_LDO11_RT_VOUT_SEL_W::new(self)
-    }
-    #[doc = "Bits 19:22"]
-    #[inline(always)]
-    #[must_use]
-    pub fn hbn_ldo11_aon_vout_sel(&mut self) -> HBN_LDO11_AON_VOUT_SEL_W<19> {
-        HBN_LDO11_AON_VOUT_SEL_W::new(self)
-    }
-    #[doc = "Bit 23"]
-    #[inline(always)]
-    #[must_use]
-    pub fn pu_dcdc_aon(&mut self) -> PU_DCDC_AON_W<23> {
-        PU_DCDC_AON_W::new(self)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    #[must_use]
-    pub fn pu_dcdc18_aon(&mut self) -> PU_DCDC18_AON_W<24> {
-        PU_DCDC18_AON_W::new(self)
-    }
-    #[doc = "Bit 25"]
-    #[inline(always)]
-    #[must_use]
-    pub fn pwr_on_option(&mut self) -> PWR_ON_OPTION_W<25> {
-        PWR_ON_OPTION_W::new(self)
-    }
-    #[doc = "Bit 26"]
-    #[inline(always)]
-    #[must_use]
-    pub fn sram_slp_option(&mut self) -> SRAM_SLP_OPTION_W<26> {
-        SRAM_SLP_OPTION_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -301,7 +179,7 @@ impl crate::Writable for RC32K_CTRL0_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets rc32k_ctrl0 to value 0x01d5_0020"]
+#[doc = "`reset()` method sets rc32k_ctrl0 to value 0x20"]
 impl crate::Resettable for RC32K_CTRL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01d5_0020;
+    const RESET_VALUE: Self::Ux = 0x20;
 }

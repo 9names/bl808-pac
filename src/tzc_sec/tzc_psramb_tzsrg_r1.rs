@@ -34,41 +34,7 @@ impl From<crate::W<TZC_PSRAMB_TZSRG_R1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `tzc_psramb_tzsrg_r1_end` reader - "]
-pub type TZC_PSRAMB_TZSRG_R1_END_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `tzc_psramb_tzsrg_r1_end` writer - "]
-pub type TZC_PSRAMB_TZSRG_R1_END_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TZC_PSRAMB_TZSRG_R1_SPEC, u16, u16, 16, O>;
-#[doc = "Field `tzc_psramb_tzsrg_r1_start` reader - "]
-pub type TZC_PSRAMB_TZSRG_R1_START_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `tzc_psramb_tzsrg_r1_start` writer - "]
-pub type TZC_PSRAMB_TZSRG_R1_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TZC_PSRAMB_TZSRG_R1_SPEC, u16, u16, 16, O>;
-impl R {
-    #[doc = "Bits 0:15"]
-    #[inline(always)]
-    pub fn tzc_psramb_tzsrg_r1_end(&self) -> TZC_PSRAMB_TZSRG_R1_END_R {
-        TZC_PSRAMB_TZSRG_R1_END_R::new((self.bits & 0xffff) as u16)
-    }
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    pub fn tzc_psramb_tzsrg_r1_start(&self) -> TZC_PSRAMB_TZSRG_R1_START_R {
-        TZC_PSRAMB_TZSRG_R1_START_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
-}
 impl W {
-    #[doc = "Bits 0:15"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_psramb_tzsrg_r1_end(&mut self) -> TZC_PSRAMB_TZSRG_R1_END_W<0> {
-        TZC_PSRAMB_TZSRG_R1_END_W::new(self)
-    }
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn tzc_psramb_tzsrg_r1_start(&mut self) -> TZC_PSRAMB_TZSRG_R1_START_W<16> {
-        TZC_PSRAMB_TZSRG_R1_START_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -91,7 +57,7 @@ impl crate::Writable for TZC_PSRAMB_TZSRG_R1_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_psramb_tzsrg_r1 to value 0xffff"]
+#[doc = "`reset()` method sets tzc_psramb_tzsrg_r1 to value 0"]
 impl crate::Resettable for TZC_PSRAMB_TZSRG_R1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff;
+    const RESET_VALUE: Self::Ux = 0;
 }

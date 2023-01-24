@@ -52,20 +52,6 @@ pub type AUPLL_SSC_GAIN_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, AUDIO_PLL_CFG10_SPEC, u8, u8, 3, O>;
 #[doc = "Field `reserved_15` reader - "]
 pub type RESERVED_15_R = crate::BitReader<bool>;
-#[doc = "Field `aupll_ssc_start_gate_en` reader - "]
-pub type AUPLL_SSC_START_GATE_EN_R = crate::BitReader<bool>;
-#[doc = "Field `aupll_ssc_start_gate_en` writer - "]
-pub type AUPLL_SSC_START_GATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, AUDIO_PLL_CFG10_SPEC, bool, O>;
-#[doc = "Field `reserved_17_19` reader - "]
-pub type RESERVED_17_19_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `aupll_ssc_start` reader - "]
-pub type AUPLL_SSC_START_R = crate::BitReader<bool>;
-#[doc = "Field `aupll_ssc_start` writer - "]
-pub type AUPLL_SSC_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, AUDIO_PLL_CFG10_SPEC, bool, O>;
-#[doc = "Field `reserved_21_31` reader - "]
-pub type RESERVED_21_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -92,26 +78,6 @@ impl R {
     pub fn reserved_15(&self) -> RESERVED_15_R {
         RESERVED_15_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn aupll_ssc_start_gate_en(&self) -> AUPLL_SSC_START_GATE_EN_R {
-        AUPLL_SSC_START_GATE_EN_R::new(((self.bits >> 16) & 1) != 0)
-    }
-    #[doc = "Bits 17:19"]
-    #[inline(always)]
-    pub fn reserved_17_19(&self) -> RESERVED_17_19_R {
-        RESERVED_17_19_R::new(((self.bits >> 17) & 7) as u8)
-    }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    pub fn aupll_ssc_start(&self) -> AUPLL_SSC_START_R {
-        AUPLL_SSC_START_R::new(((self.bits >> 20) & 1) != 0)
-    }
-    #[doc = "Bits 21:31"]
-    #[inline(always)]
-    pub fn reserved_21_31(&self) -> RESERVED_21_31_R {
-        RESERVED_21_31_R::new(((self.bits >> 21) & 0x07ff) as u16)
-    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -131,18 +97,6 @@ impl W {
     #[must_use]
     pub fn aupll_ssc_gain(&mut self) -> AUPLL_SSC_GAIN_W<12> {
         AUPLL_SSC_GAIN_W::new(self)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    #[must_use]
-    pub fn aupll_ssc_start_gate_en(&mut self) -> AUPLL_SSC_START_GATE_EN_W<16> {
-        AUPLL_SSC_START_GATE_EN_W::new(self)
-    }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    #[must_use]
-    pub fn aupll_ssc_start(&mut self) -> AUPLL_SSC_START_W<20> {
-        AUPLL_SSC_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -166,7 +120,7 @@ impl crate::Writable for AUDIO_PLL_CFG10_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets audio_pll_cfg10 to value 0x0010_4640"]
+#[doc = "`reset()` method sets audio_pll_cfg10 to value 0x4640"]
 impl crate::Resettable for AUDIO_PLL_CFG10_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0010_4640;
+    const RESET_VALUE: Self::Ux = 0x4640;
 }

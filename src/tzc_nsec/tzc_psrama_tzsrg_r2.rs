@@ -34,22 +34,6 @@ impl From<crate::W<TZC_PSRAMA_TZSRG_R2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `tzc_psrama_tzsrg_r2_end` reader - "]
-pub type TZC_PSRAMA_TZSRG_R2_END_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `tzc_psrama_tzsrg_r2_start` reader - "]
-pub type TZC_PSRAMA_TZSRG_R2_START_R = crate::FieldReader<u16, u16>;
-impl R {
-    #[doc = "Bits 0:15"]
-    #[inline(always)]
-    pub fn tzc_psrama_tzsrg_r2_end(&self) -> TZC_PSRAMA_TZSRG_R2_END_R {
-        TZC_PSRAMA_TZSRG_R2_END_R::new((self.bits & 0xffff) as u16)
-    }
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    pub fn tzc_psrama_tzsrg_r2_start(&self) -> TZC_PSRAMA_TZSRG_R2_START_R {
-        TZC_PSRAMA_TZSRG_R2_START_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
-}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -73,7 +57,7 @@ impl crate::Writable for TZC_PSRAMA_TZSRG_R2_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_psrama_tzsrg_r2 to value 0xffff"]
+#[doc = "`reset()` method sets tzc_psrama_tzsrg_r2 to value 0"]
 impl crate::Resettable for TZC_PSRAMA_TZSRG_R2_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff;
+    const RESET_VALUE: Self::Ux = 0;
 }

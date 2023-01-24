@@ -41,21 +41,6 @@ pub type SF_AES_REGION_START_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SF_AES_START_SPEC, u32, u32, 19, O>;
 #[doc = "Field `reserved_19_28` reader - "]
 pub type RESERVED_19_28_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `sf_aes_region_hw_key_en` reader - "]
-pub type SF_AES_REGION_HW_KEY_EN_R = crate::BitReader<bool>;
-#[doc = "Field `sf_aes_region_hw_key_en` writer - "]
-pub type SF_AES_REGION_HW_KEY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SF_AES_START_SPEC, bool, O>;
-#[doc = "Field `sf_aes_region_en` reader - "]
-pub type SF_AES_REGION_EN_R = crate::BitReader<bool>;
-#[doc = "Field `sf_aes_region_en` writer - "]
-pub type SF_AES_REGION_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SF_AES_START_SPEC, bool, O>;
-#[doc = "Field `sf_aes_region_lock` reader - "]
-pub type SF_AES_REGION_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `sf_aes_region_lock` writer - "]
-pub type SF_AES_REGION_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SF_AES_START_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]
@@ -67,21 +52,6 @@ impl R {
     pub fn reserved_19_28(&self) -> RESERVED_19_28_R {
         RESERVED_19_28_R::new(((self.bits >> 19) & 0x03ff) as u16)
     }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn sf_aes_region_hw_key_en(&self) -> SF_AES_REGION_HW_KEY_EN_R {
-        SF_AES_REGION_HW_KEY_EN_R::new(((self.bits >> 29) & 1) != 0)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn sf_aes_region_en(&self) -> SF_AES_REGION_EN_R {
-        SF_AES_REGION_EN_R::new(((self.bits >> 30) & 1) != 0)
-    }
-    #[doc = "Bit 31"]
-    #[inline(always)]
-    pub fn sf_aes_region_lock(&self) -> SF_AES_REGION_LOCK_R {
-        SF_AES_REGION_LOCK_R::new(((self.bits >> 31) & 1) != 0)
-    }
 }
 impl W {
     #[doc = "Bits 0:18"]
@@ -89,24 +59,6 @@ impl W {
     #[must_use]
     pub fn sf_aes_region_start(&mut self) -> SF_AES_REGION_START_W<0> {
         SF_AES_REGION_START_W::new(self)
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    #[must_use]
-    pub fn sf_aes_region_hw_key_en(&mut self) -> SF_AES_REGION_HW_KEY_EN_W<29> {
-        SF_AES_REGION_HW_KEY_EN_W::new(self)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    #[must_use]
-    pub fn sf_aes_region_en(&mut self) -> SF_AES_REGION_EN_W<30> {
-        SF_AES_REGION_EN_W::new(self)
-    }
-    #[doc = "Bit 31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn sf_aes_region_lock(&mut self) -> SF_AES_REGION_LOCK_W<31> {
-        SF_AES_REGION_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

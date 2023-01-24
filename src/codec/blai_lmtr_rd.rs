@@ -83,7 +83,7 @@ impl W {
         self
     }
 }
-#[doc = "codec_bus_dec_err\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blai_lmtr_rd](index.html) module"]
+#[doc = "blai_lmtr_rd\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blai_lmtr_rd](index.html) module"]
 pub struct BLAI_LMTR_RD_SPEC;
 impl crate::RegisterSpec for BLAI_LMTR_RD_SPEC {
     type Ux = u32;

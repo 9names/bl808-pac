@@ -34,62 +34,7 @@ impl From<crate::W<MCU_BUS_CFG0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `reg_mcu_infra_timeout_en` reader - "]
-pub type REG_MCU_INFRA_TIMEOUT_EN_R = crate::BitReader<bool>;
-#[doc = "Field `reg_mcu_infra_timeout_en` writer - "]
-pub type REG_MCU_INFRA_TIMEOUT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MCU_BUS_CFG0_SPEC, bool, O>;
-#[doc = "Field `reg_mcu_infra_timeout_clr` reader - "]
-pub type REG_MCU_INFRA_TIMEOUT_CLR_R = crate::BitReader<bool>;
-#[doc = "Field `reg_mcu_infra_timeout_clr` writer - "]
-pub type REG_MCU_INFRA_TIMEOUT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MCU_BUS_CFG0_SPEC, bool, O>;
-#[doc = "Field `reserved_2_15` reader - "]
-pub type RESERVED_2_15_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `sts_mcu_infra_timeout` reader - "]
-pub type STS_MCU_INFRA_TIMEOUT_R = crate::BitReader<bool>;
-#[doc = "Field `reserved_17_31` reader - "]
-pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
-impl R {
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn reg_mcu_infra_timeout_en(&self) -> REG_MCU_INFRA_TIMEOUT_EN_R {
-        REG_MCU_INFRA_TIMEOUT_EN_R::new((self.bits & 1) != 0)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn reg_mcu_infra_timeout_clr(&self) -> REG_MCU_INFRA_TIMEOUT_CLR_R {
-        REG_MCU_INFRA_TIMEOUT_CLR_R::new(((self.bits >> 1) & 1) != 0)
-    }
-    #[doc = "Bits 2:15"]
-    #[inline(always)]
-    pub fn reserved_2_15(&self) -> RESERVED_2_15_R {
-        RESERVED_2_15_R::new(((self.bits >> 2) & 0x3fff) as u16)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn sts_mcu_infra_timeout(&self) -> STS_MCU_INFRA_TIMEOUT_R {
-        STS_MCU_INFRA_TIMEOUT_R::new(((self.bits >> 16) & 1) != 0)
-    }
-    #[doc = "Bits 17:31"]
-    #[inline(always)]
-    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
-        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
-    }
-}
 impl W {
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_mcu_infra_timeout_en(&mut self) -> REG_MCU_INFRA_TIMEOUT_EN_W<0> {
-        REG_MCU_INFRA_TIMEOUT_EN_W::new(self)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_mcu_infra_timeout_clr(&mut self) -> REG_MCU_INFRA_TIMEOUT_CLR_W<1> {
-        REG_MCU_INFRA_TIMEOUT_CLR_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

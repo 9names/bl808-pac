@@ -41,13 +41,6 @@ pub type CPUPLL_SDM_ORDER_SEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CPU_PLL_CFG7_SPEC, bool, O>;
 #[doc = "Field `reserved_1_15` reader - "]
 pub type RESERVED_1_15_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `cpupll_sdm_sig_dith_sel` reader - "]
-pub type CPUPLL_SDM_SIG_DITH_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `cpupll_sdm_sig_dith_sel` writer - "]
-pub type CPUPLL_SDM_SIG_DITH_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_PLL_CFG7_SPEC, u8, u8, 2, O>;
-#[doc = "Field `reserved_18_31` reader - "]
-pub type RESERVED_18_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -59,16 +52,6 @@ impl R {
     pub fn reserved_1_15(&self) -> RESERVED_1_15_R {
         RESERVED_1_15_R::new(((self.bits >> 1) & 0x7fff) as u16)
     }
-    #[doc = "Bits 16:17"]
-    #[inline(always)]
-    pub fn cpupll_sdm_sig_dith_sel(&self) -> CPUPLL_SDM_SIG_DITH_SEL_R {
-        CPUPLL_SDM_SIG_DITH_SEL_R::new(((self.bits >> 16) & 3) as u8)
-    }
-    #[doc = "Bits 18:31"]
-    #[inline(always)]
-    pub fn reserved_18_31(&self) -> RESERVED_18_31_R {
-        RESERVED_18_31_R::new(((self.bits >> 18) & 0x3fff) as u16)
-    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -76,12 +59,6 @@ impl W {
     #[must_use]
     pub fn cpupll_sdm_order_sel(&mut self) -> CPUPLL_SDM_ORDER_SEL_W<0> {
         CPUPLL_SDM_ORDER_SEL_W::new(self)
-    }
-    #[doc = "Bits 16:17"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cpupll_sdm_sig_dith_sel(&mut self) -> CPUPLL_SDM_SIG_DITH_SEL_W<16> {
-        CPUPLL_SDM_SIG_DITH_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

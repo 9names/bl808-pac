@@ -52,16 +52,6 @@ pub type RESERVED_12_15_R = crate::FieldReader<u8, u8>;
 pub type TZC_BMX_MM_TZSID_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_bmx_dma_tzsid_lock` reader - "]
 pub type TZC_BMX_DMA_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_bmx_dma2_tzsid_lock` reader - "]
-pub type TZC_BMX_DMA2_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_bmx_pwr_tzsid_lock` reader - "]
-pub type TZC_BMX_PWR_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_bmx_sdh_tzsid_lock` reader - "]
-pub type TZC_BMX_SDH_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_bmx_emac_tzsid_lock` reader - "]
-pub type TZC_BMX_EMAC_TZSID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `reserved_22_31` reader - "]
-pub type RESERVED_22_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -107,31 +97,6 @@ impl R {
     #[inline(always)]
     pub fn tzc_bmx_dma_tzsid_lock(&self) -> TZC_BMX_DMA_TZSID_LOCK_R {
         TZC_BMX_DMA_TZSID_LOCK_R::new(((self.bits >> 17) & 1) != 0)
-    }
-    #[doc = "Bit 18"]
-    #[inline(always)]
-    pub fn tzc_bmx_dma2_tzsid_lock(&self) -> TZC_BMX_DMA2_TZSID_LOCK_R {
-        TZC_BMX_DMA2_TZSID_LOCK_R::new(((self.bits >> 18) & 1) != 0)
-    }
-    #[doc = "Bit 19"]
-    #[inline(always)]
-    pub fn tzc_bmx_pwr_tzsid_lock(&self) -> TZC_BMX_PWR_TZSID_LOCK_R {
-        TZC_BMX_PWR_TZSID_LOCK_R::new(((self.bits >> 19) & 1) != 0)
-    }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    pub fn tzc_bmx_sdh_tzsid_lock(&self) -> TZC_BMX_SDH_TZSID_LOCK_R {
-        TZC_BMX_SDH_TZSID_LOCK_R::new(((self.bits >> 20) & 1) != 0)
-    }
-    #[doc = "Bit 21"]
-    #[inline(always)]
-    pub fn tzc_bmx_emac_tzsid_lock(&self) -> TZC_BMX_EMAC_TZSID_LOCK_R {
-        TZC_BMX_EMAC_TZSID_LOCK_R::new(((self.bits >> 21) & 1) != 0)
-    }
-    #[doc = "Bits 22:31"]
-    #[inline(always)]
-    pub fn reserved_22_31(&self) -> RESERVED_22_31_R {
-        RESERVED_22_31_R::new(((self.bits >> 22) & 0x03ff) as u16)
     }
 }
 impl W {

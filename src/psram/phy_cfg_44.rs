@@ -34,73 +34,7 @@ impl From<crate::W<PHY_CFG_44_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `reg_timer_array_read_busy` reader - "]
-pub type REG_TIMER_ARRAY_READ_BUSY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_array_read_busy` writer - "]
-pub type REG_TIMER_ARRAY_READ_BUSY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_44_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_array_write_busy` reader - "]
-pub type REG_TIMER_ARRAY_WRITE_BUSY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_array_write_busy` writer - "]
-pub type REG_TIMER_ARRAY_WRITE_BUSY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_44_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_reg_read_busy` reader - "]
-pub type REG_TIMER_REG_READ_BUSY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_reg_read_busy` writer - "]
-pub type REG_TIMER_REG_READ_BUSY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_44_SPEC, u8, u8, 8, O>;
-#[doc = "Field `reg_timer_reg_write_busy` reader - "]
-pub type REG_TIMER_REG_WRITE_BUSY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `reg_timer_reg_write_busy` writer - "]
-pub type REG_TIMER_REG_WRITE_BUSY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHY_CFG_44_SPEC, u8, u8, 8, O>;
-impl R {
-    #[doc = "Bits 0:7"]
-    #[inline(always)]
-    pub fn reg_timer_array_read_busy(&self) -> REG_TIMER_ARRAY_READ_BUSY_R {
-        REG_TIMER_ARRAY_READ_BUSY_R::new((self.bits & 0xff) as u8)
-    }
-    #[doc = "Bits 8:15"]
-    #[inline(always)]
-    pub fn reg_timer_array_write_busy(&self) -> REG_TIMER_ARRAY_WRITE_BUSY_R {
-        REG_TIMER_ARRAY_WRITE_BUSY_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    pub fn reg_timer_reg_read_busy(&self) -> REG_TIMER_REG_READ_BUSY_R {
-        REG_TIMER_REG_READ_BUSY_R::new(((self.bits >> 16) & 0xff) as u8)
-    }
-    #[doc = "Bits 24:31"]
-    #[inline(always)]
-    pub fn reg_timer_reg_write_busy(&self) -> REG_TIMER_REG_WRITE_BUSY_R {
-        REG_TIMER_REG_WRITE_BUSY_R::new(((self.bits >> 24) & 0xff) as u8)
-    }
-}
 impl W {
-    #[doc = "Bits 0:7"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_array_read_busy(&mut self) -> REG_TIMER_ARRAY_READ_BUSY_W<0> {
-        REG_TIMER_ARRAY_READ_BUSY_W::new(self)
-    }
-    #[doc = "Bits 8:15"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_array_write_busy(&mut self) -> REG_TIMER_ARRAY_WRITE_BUSY_W<8> {
-        REG_TIMER_ARRAY_WRITE_BUSY_W::new(self)
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_reg_read_busy(&mut self) -> REG_TIMER_REG_READ_BUSY_W<16> {
-        REG_TIMER_REG_READ_BUSY_W::new(self)
-    }
-    #[doc = "Bits 24:31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn reg_timer_reg_write_busy(&mut self) -> REG_TIMER_REG_WRITE_BUSY_W<24> {
-        REG_TIMER_REG_WRITE_BUSY_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -123,7 +57,7 @@ impl crate::Writable for PHY_CFG_44_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets phy_cfg_44 to value 0x040b_0308"]
+#[doc = "`reset()` method sets phy_cfg_44 to value 0"]
 impl crate::Resettable for PHY_CFG_44_SPEC {
-    const RESET_VALUE: Self::Ux = 0x040b_0308;
+    const RESET_VALUE: Self::Ux = 0;
 }

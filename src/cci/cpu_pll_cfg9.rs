@@ -74,18 +74,6 @@ pub type DTEN_CPUPLL_DIV5_R = crate::BitReader<bool>;
 #[doc = "Field `dten_cpupll_div5` writer - "]
 pub type DTEN_CPUPLL_DIV5_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CPU_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `dten_cpupll_postdiv_clk` reader - "]
-pub type DTEN_CPUPLL_POSTDIV_CLK_R = crate::BitReader<bool>;
-#[doc = "Field `dten_cpupll_postdiv_clk` writer - "]
-pub type DTEN_CPUPLL_POSTDIV_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `dtest_cpupll_pulldown` reader - "]
-pub type DTEST_CPUPLL_PULLDOWN_R = crate::BitReader<bool>;
-#[doc = "Field `dtest_cpupll_pulldown` writer - "]
-pub type DTEST_CPUPLL_PULLDOWN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PLL_CFG9_SPEC, bool, O>;
-#[doc = "Field `reserved_11_31` reader - "]
-pub type RESERVED_11_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -131,21 +119,6 @@ impl R {
     #[inline(always)]
     pub fn dten_cpupll_div5(&self) -> DTEN_CPUPLL_DIV5_R {
         DTEN_CPUPLL_DIV5_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn dten_cpupll_postdiv_clk(&self) -> DTEN_CPUPLL_POSTDIV_CLK_R {
-        DTEN_CPUPLL_POSTDIV_CLK_R::new(((self.bits >> 9) & 1) != 0)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn dtest_cpupll_pulldown(&self) -> DTEST_CPUPLL_PULLDOWN_R {
-        DTEST_CPUPLL_PULLDOWN_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bits 11:31"]
-    #[inline(always)]
-    pub fn reserved_11_31(&self) -> RESERVED_11_31_R {
-        RESERVED_11_31_R::new((self.bits >> 11) & 0x001f_ffff)
     }
 }
 impl W {
@@ -197,18 +170,6 @@ impl W {
     pub fn dten_cpupll_div5(&mut self) -> DTEN_CPUPLL_DIV5_W<8> {
         DTEN_CPUPLL_DIV5_W::new(self)
     }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn dten_cpupll_postdiv_clk(&mut self) -> DTEN_CPUPLL_POSTDIV_CLK_W<9> {
-        DTEN_CPUPLL_POSTDIV_CLK_W::new(self)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    #[must_use]
-    pub fn dtest_cpupll_pulldown(&mut self) -> DTEST_CPUPLL_PULLDOWN_W<10> {
-        DTEST_CPUPLL_PULLDOWN_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -231,7 +192,7 @@ impl crate::Writable for CPU_PLL_CFG9_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets cpu_pll_cfg9 to value 0x0400"]
+#[doc = "`reset()` method sets cpu_pll_cfg9 to value 0"]
 impl crate::Resettable for CPU_PLL_CFG9_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0400;
+    const RESET_VALUE: Self::Ux = 0;
 }
