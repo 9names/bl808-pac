@@ -61,6 +61,20 @@ pub type TZC_MM_SRAM_TZSID_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_mm_sram_tzsid_lock` writer - "]
 pub type TZC_MM_SRAM_TZSID_LOCK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_MM_CTRL_2_SPEC, bool, O>;
+#[doc = "Field `tzc_mm_swrst_tzsid_lock` reader - "]
+pub type TZC_MM_SWRST_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_mm_swrst_tzsid_lock` writer - "]
+pub type TZC_MM_SWRST_TZSID_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_MM_CTRL_2_SPEC, bool, O>;
+#[doc = "Field `reserved_7_9` reader - "]
+pub type RESERVED_7_9_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mm_clk_tzsid_lock` reader - "]
+pub type TZC_MM_CLK_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_mm_clk_tzsid_lock` writer - "]
+pub type TZC_MM_CLK_TZSID_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_MM_CTRL_2_SPEC, bool, O>;
+#[doc = "Field `reserved_11_31` reader - "]
+pub type RESERVED_11_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -91,6 +105,26 @@ impl R {
     #[inline(always)]
     pub fn tzc_mm_sram_tzsid_lock(&self) -> TZC_MM_SRAM_TZSID_LOCK_R {
         TZC_MM_SRAM_TZSID_LOCK_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn tzc_mm_swrst_tzsid_lock(&self) -> TZC_MM_SWRST_TZSID_LOCK_R {
+        TZC_MM_SWRST_TZSID_LOCK_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bits 7:9"]
+    #[inline(always)]
+    pub fn reserved_7_9(&self) -> RESERVED_7_9_R {
+        RESERVED_7_9_R::new(((self.bits >> 7) & 7) as u8)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn tzc_mm_clk_tzsid_lock(&self) -> TZC_MM_CLK_TZSID_LOCK_R {
+        TZC_MM_CLK_TZSID_LOCK_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bits 11:31"]
+    #[inline(always)]
+    pub fn reserved_11_31(&self) -> RESERVED_11_31_R {
+        RESERVED_11_31_R::new((self.bits >> 11) & 0x001f_ffff)
     }
 }
 impl W {
@@ -123,6 +157,18 @@ impl W {
     #[must_use]
     pub fn tzc_mm_sram_tzsid_lock(&mut self) -> TZC_MM_SRAM_TZSID_LOCK_W<5> {
         TZC_MM_SRAM_TZSID_LOCK_W::new(self)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mm_swrst_tzsid_lock(&mut self) -> TZC_MM_SWRST_TZSID_LOCK_W<6> {
+        TZC_MM_SWRST_TZSID_LOCK_W::new(self)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mm_clk_tzsid_lock(&mut self) -> TZC_MM_CLK_TZSID_LOCK_W<10> {
+        TZC_MM_CLK_TZSID_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -15,6 +15,8 @@ pub struct RegisterBlock {
     pub gpdac_dma_config: GPDAC_DMA_CONFIG,
     #[doc = "0x48 - gpdac_dma_wdata"]
     pub gpdac_dma_wdata: GPDAC_DMA_WDATA,
+    #[doc = "0x4c - gpdac_tx_fifo_status"]
+    pub gpdac_tx_fifo_status: GPDAC_TX_FIFO_STATUS,
 }
 #[doc = "gpadc_config (rw) register accessor: an alias for `Reg<GPADC_CONFIG_SPEC>`"]
 pub type GPADC_CONFIG = crate::Reg<gpadc_config::GPADC_CONFIG_SPEC>;
@@ -40,3 +42,7 @@ pub mod gpdac_dma_config;
 pub type GPDAC_DMA_WDATA = crate::Reg<gpdac_dma_wdata::GPDAC_DMA_WDATA_SPEC>;
 #[doc = "gpdac_dma_wdata"]
 pub mod gpdac_dma_wdata;
+#[doc = "gpdac_tx_fifo_status (rw) register accessor: an alias for `Reg<GPDAC_TX_FIFO_STATUS_SPEC>`"]
+pub type GPDAC_TX_FIFO_STATUS = crate::Reg<gpdac_tx_fifo_status::GPDAC_TX_FIFO_STATUS_SPEC>;
+#[doc = "gpdac_tx_fifo_status"]
+pub mod gpdac_tx_fifo_status;

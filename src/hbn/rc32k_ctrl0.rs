@@ -34,128 +34,152 @@ impl From<crate::W<RC32K_CTRL0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `rtc_ctl` reader - "]
-pub type RTC_CTL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `rtc_ctl` writer - "]
-pub type RTC_CTL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u8, u8, 4, O>;
-#[doc = "Field `rtc_dly_option` reader - "]
-pub type RTC_DLY_OPTION_R = crate::BitReader<bool>;
-#[doc = "Field `rtc_dly_option` writer - "]
-pub type RTC_DLY_OPTION_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `pu_ldo18io_aon` reader - "]
-pub type PU_LDO18IO_AON_R = crate::BitReader<bool>;
-#[doc = "Field `pu_ldo18io_aon` writer - "]
-pub type PU_LDO18IO_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `reserved_6` reader - "]
-pub type RESERVED_6_R = crate::BitReader<bool>;
-#[doc = "Field `hbn_mode` writer - "]
-pub type HBN_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `trap_mode` reader - "]
-pub type TRAP_MODE_R = crate::BitReader<bool>;
-#[doc = "Field `pwrdn_hbn_core` reader - "]
-pub type PWRDN_HBN_CORE_R = crate::BitReader<bool>;
-#[doc = "Field `pwrdn_hbn_core` writer - "]
-pub type PWRDN_HBN_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `reserved_10_11` reader - "]
-pub type RESERVED_10_11_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `sw_rst` reader - "]
-pub type SW_RST_R = crate::BitReader<bool>;
-#[doc = "Field `sw_rst` writer - "]
-pub type SW_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
-#[doc = "Field `hbn_dis_pwr_off_ldo11` reader - "]
-pub type HBN_DIS_PWR_OFF_LDO11_R = crate::BitReader<bool>;
-#[doc = "Field `hbn_dis_pwr_off_ldo11` writer - "]
-pub type HBN_DIS_PWR_OFF_LDO11_W<'a, const O: u8> =
+#[doc = "Field `rc32k_cal_done` reader - "]
+pub type RC32K_CAL_DONE_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_rdy` reader - "]
+pub type RC32K_RDY_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_cal_inprogress` reader - "]
+pub type RC32K_CAL_INPROGRESS_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_cal_div` reader - "]
+pub type RC32K_CAL_DIV_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `rc32k_cal_div` writer - "]
+pub type RC32K_CAL_DIV_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `rc32k_cal_precharge` reader - "]
+pub type RC32K_CAL_PRECHARGE_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_dig_code_fr_cal` reader - "]
+pub type RC32K_DIG_CODE_FR_CAL_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rc32k_vref_dly` reader - "]
+pub type RC32K_VREF_DLY_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `rc32k_vref_dly` writer - "]
+pub type RC32K_VREF_DLY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `rc32k_allow_cal` reader - "]
+pub type RC32K_ALLOW_CAL_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_allow_cal` writer - "]
+pub type RC32K_ALLOW_CAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
+#[doc = "Field `rc32k_ext_code_en` reader - "]
+pub type RC32K_EXT_CODE_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_ext_code_en` writer - "]
+pub type RC32K_EXT_CODE_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
+#[doc = "Field `rc32k_cal_en` reader - "]
+pub type RC32K_CAL_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rc32k_cal_en` writer - "]
+pub type RC32K_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
+#[doc = "Field `pu_rc32k` reader - "]
+pub type PU_RC32K_R = crate::BitReader<bool>;
+#[doc = "Field `pu_rc32k` writer - "]
+pub type PU_RC32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, RC32K_CTRL0_SPEC, bool, O>;
+#[doc = "Field `rc32k_code_fr_ext` reader - "]
+pub type RC32K_CODE_FR_EXT_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rc32k_code_fr_ext` writer - "]
+pub type RC32K_CODE_FR_EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RC32K_CTRL0_SPEC, u16, u16, 10, O>;
 impl R {
-    #[doc = "Bits 0:3"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn rtc_ctl(&self) -> RTC_CTL_R {
-        RTC_CTL_R::new((self.bits & 0x0f) as u8)
+    pub fn rc32k_cal_done(&self) -> RC32K_CAL_DONE_R {
+        RC32K_CAL_DONE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn rtc_dly_option(&self) -> RTC_DLY_OPTION_R {
-        RTC_DLY_OPTION_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rc32k_rdy(&self) -> RC32K_RDY_R {
+        RC32K_RDY_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn rc32k_cal_inprogress(&self) -> RC32K_CAL_INPROGRESS_R {
+        RC32K_CAL_INPROGRESS_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:4"]
+    #[inline(always)]
+    pub fn rc32k_cal_div(&self) -> RC32K_CAL_DIV_R {
+        RC32K_CAL_DIV_R::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn pu_ldo18io_aon(&self) -> PU_LDO18IO_AON_R {
-        PU_LDO18IO_AON_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn rc32k_cal_precharge(&self) -> RC32K_CAL_PRECHARGE_R {
+        RC32K_CAL_PRECHARGE_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Bits 6:15"]
     #[inline(always)]
-    pub fn reserved_6(&self) -> RESERVED_6_R {
-        RESERVED_6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn rc32k_dig_code_fr_cal(&self) -> RC32K_DIG_CODE_FR_CAL_R {
+        RC32K_DIG_CODE_FR_CAL_R::new(((self.bits >> 6) & 0x03ff) as u16)
     }
-    #[doc = "Bit 8"]
+    #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn trap_mode(&self) -> TRAP_MODE_R {
-        TRAP_MODE_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn rc32k_vref_dly(&self) -> RC32K_VREF_DLY_R {
+        RC32K_VREF_DLY_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bit 9"]
+    #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn pwrdn_hbn_core(&self) -> PWRDN_HBN_CORE_R {
-        PWRDN_HBN_CORE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn rc32k_allow_cal(&self) -> RC32K_ALLOW_CAL_R {
+        RC32K_ALLOW_CAL_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bits 10:11"]
+    #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn reserved_10_11(&self) -> RESERVED_10_11_R {
-        RESERVED_10_11_R::new(((self.bits >> 10) & 3) as u8)
+    pub fn rc32k_ext_code_en(&self) -> RC32K_EXT_CODE_EN_R {
+        RC32K_EXT_CODE_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bit 12"]
+    #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn sw_rst(&self) -> SW_RST_R {
-        SW_RST_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn rc32k_cal_en(&self) -> RC32K_CAL_EN_R {
+        RC32K_CAL_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 13"]
+    #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn hbn_dis_pwr_off_ldo11(&self) -> HBN_DIS_PWR_OFF_LDO11_R {
-        HBN_DIS_PWR_OFF_LDO11_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn pu_rc32k(&self) -> PU_RC32K_R {
+        PU_RC32K_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bits 22:31"]
+    #[inline(always)]
+    pub fn rc32k_code_fr_ext(&self) -> RC32K_CODE_FR_EXT_R {
+        RC32K_CODE_FR_EXT_R::new(((self.bits >> 22) & 0x03ff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:3"]
+    #[doc = "Bits 3:4"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_ctl(&mut self) -> RTC_CTL_W<0> {
-        RTC_CTL_W::new(self)
+    pub fn rc32k_cal_div(&mut self) -> RC32K_CAL_DIV_W<3> {
+        RC32K_CAL_DIV_W::new(self)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_dly_option(&mut self) -> RTC_DLY_OPTION_W<4> {
-        RTC_DLY_OPTION_W::new(self)
+    pub fn rc32k_vref_dly(&mut self) -> RC32K_VREF_DLY_W<16> {
+        RC32K_VREF_DLY_W::new(self)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn pu_ldo18io_aon(&mut self) -> PU_LDO18IO_AON_W<5> {
-        PU_LDO18IO_AON_W::new(self)
+    pub fn rc32k_allow_cal(&mut self) -> RC32K_ALLOW_CAL_W<18> {
+        RC32K_ALLOW_CAL_W::new(self)
     }
-    #[doc = "Bit 7"]
+    #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn hbn_mode(&mut self) -> HBN_MODE_W<7> {
-        HBN_MODE_W::new(self)
+    pub fn rc32k_ext_code_en(&mut self) -> RC32K_EXT_CODE_EN_W<19> {
+        RC32K_EXT_CODE_EN_W::new(self)
     }
-    #[doc = "Bit 9"]
+    #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrdn_hbn_core(&mut self) -> PWRDN_HBN_CORE_W<9> {
-        PWRDN_HBN_CORE_W::new(self)
+    pub fn rc32k_cal_en(&mut self) -> RC32K_CAL_EN_W<20> {
+        RC32K_CAL_EN_W::new(self)
     }
-    #[doc = "Bit 12"]
+    #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_rst(&mut self) -> SW_RST_W<12> {
-        SW_RST_W::new(self)
+    pub fn pu_rc32k(&mut self) -> PU_RC32K_W<21> {
+        PU_RC32K_W::new(self)
     }
-    #[doc = "Bit 13"]
+    #[doc = "Bits 22:31"]
     #[inline(always)]
     #[must_use]
-    pub fn hbn_dis_pwr_off_ldo11(&mut self) -> HBN_DIS_PWR_OFF_LDO11_W<13> {
-        HBN_DIS_PWR_OFF_LDO11_W::new(self)
+    pub fn rc32k_code_fr_ext(&mut self) -> RC32K_CODE_FR_EXT_W<22> {
+        RC32K_CODE_FR_EXT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -164,7 +188,7 @@ impl W {
         self
     }
 }
-#[doc = "HBN_CTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rc32k_ctrl0](index.html) module"]
+#[doc = "rc32k_ctrl0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rc32k_ctrl0](index.html) module"]
 pub struct RC32K_CTRL0_SPEC;
 impl crate::RegisterSpec for RC32K_CTRL0_SPEC {
     type Ux = u32;
@@ -179,7 +203,7 @@ impl crate::Writable for RC32K_CTRL0_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets rc32k_ctrl0 to value 0x20"]
+#[doc = "`reset()` method sets rc32k_ctrl0 to value 0x4b28_801b"]
 impl crate::Resettable for RC32K_CTRL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x20;
+    const RESET_VALUE: Self::Ux = 0x4b28_801b;
 }

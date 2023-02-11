@@ -73,6 +73,43 @@ pub type SWRST_S1_EXT_EMI_MISC_R = crate::BitReader<bool>;
 #[doc = "Field `swrst_s1_ext_emi_misc` writer - "]
 pub type SWRST_S1_EXT_EMI_MISC_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_psram0_ctrl` reader - "]
+pub type SWRST_S1_EXT_PSRAM0_CTRL_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_psram0_ctrl` writer - "]
+pub type SWRST_S1_EXT_PSRAM0_CTRL_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_psram1_ctrl` reader - "]
+pub type SWRST_S1_EXT_PSRAM1_CTRL_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_psram1_ctrl` writer - "]
+pub type SWRST_S1_EXT_PSRAM1_CTRL_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_usb` reader - "]
+pub type SWRST_S1_EXT_USB_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_usb` writer - "]
+pub type SWRST_S1_EXT_USB_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_mix2` reader - "]
+pub type SWRST_S1_EXT_MIX2_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_mix2` writer - "]
+pub type SWRST_S1_EXT_MIX2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_audio` reader - "]
+pub type SWRST_S1_EXT_AUDIO_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_audio` writer - "]
+pub type SWRST_S1_EXT_AUDIO_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_sdh` reader - "]
+pub type SWRST_S1_EXT_SDH_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_sdh` writer - "]
+pub type SWRST_S1_EXT_SDH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_emac` reader - "]
+pub type SWRST_S1_EXT_EMAC_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_emac` writer - "]
+pub type SWRST_S1_EXT_EMAC_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s1_ext_dma2` reader - "]
+pub type SWRST_S1_EXT_DMA2_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s1_ext_dma2` writer - "]
+pub type SWRST_S1_EXT_DMA2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `reserved_25_31` reader - "]
+pub type RESERVED_25_31_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -129,6 +166,51 @@ impl R {
     pub fn swrst_s1_ext_emi_misc(&self) -> SWRST_S1_EXT_EMI_MISC_R {
         SWRST_S1_EXT_EMI_MISC_R::new(((self.bits >> 16) & 1) != 0)
     }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_psram0_ctrl(&self) -> SWRST_S1_EXT_PSRAM0_CTRL_R {
+        SWRST_S1_EXT_PSRAM0_CTRL_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_psram1_ctrl(&self) -> SWRST_S1_EXT_PSRAM1_CTRL_R {
+        SWRST_S1_EXT_PSRAM1_CTRL_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_usb(&self) -> SWRST_S1_EXT_USB_R {
+        SWRST_S1_EXT_USB_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_mix2(&self) -> SWRST_S1_EXT_MIX2_R {
+        SWRST_S1_EXT_MIX2_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_audio(&self) -> SWRST_S1_EXT_AUDIO_R {
+        SWRST_S1_EXT_AUDIO_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_sdh(&self) -> SWRST_S1_EXT_SDH_R {
+        SWRST_S1_EXT_SDH_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_emac(&self) -> SWRST_S1_EXT_EMAC_R {
+        SWRST_S1_EXT_EMAC_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn swrst_s1_ext_dma2(&self) -> SWRST_S1_EXT_DMA2_R {
+        SWRST_S1_EXT_DMA2_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bits 25:31"]
+    #[inline(always)]
+    pub fn reserved_25_31(&self) -> RESERVED_25_31_R {
+        RESERVED_25_31_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -178,6 +260,54 @@ impl W {
     #[must_use]
     pub fn swrst_s1_ext_emi_misc(&mut self) -> SWRST_S1_EXT_EMI_MISC_W<16> {
         SWRST_S1_EXT_EMI_MISC_W::new(self)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_psram0_ctrl(&mut self) -> SWRST_S1_EXT_PSRAM0_CTRL_W<17> {
+        SWRST_S1_EXT_PSRAM0_CTRL_W::new(self)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_psram1_ctrl(&mut self) -> SWRST_S1_EXT_PSRAM1_CTRL_W<18> {
+        SWRST_S1_EXT_PSRAM1_CTRL_W::new(self)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_usb(&mut self) -> SWRST_S1_EXT_USB_W<19> {
+        SWRST_S1_EXT_USB_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_mix2(&mut self) -> SWRST_S1_EXT_MIX2_W<20> {
+        SWRST_S1_EXT_MIX2_W::new(self)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_audio(&mut self) -> SWRST_S1_EXT_AUDIO_W<21> {
+        SWRST_S1_EXT_AUDIO_W::new(self)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_sdh(&mut self) -> SWRST_S1_EXT_SDH_W<22> {
+        SWRST_S1_EXT_SDH_W::new(self)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_emac(&mut self) -> SWRST_S1_EXT_EMAC_W<23> {
+        SWRST_S1_EXT_EMAC_W::new(self)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s1_ext_dma2(&mut self) -> SWRST_S1_EXT_DMA2_W<24> {
+        SWRST_S1_EXT_DMA2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

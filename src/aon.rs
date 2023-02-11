@@ -72,6 +72,8 @@ pub struct RegisterBlock {
     pub gpadc_reg_define: GPADC_REG_DEFINE,
     #[doc = "0x93c - hbncore_resv0"]
     pub hbncore_resv0: HBNCORE_RESV0,
+    #[doc = "0x940 - hbncore_resv1"]
+    pub hbncore_resv1: HBNCORE_RESV1,
 }
 #[doc = "aon (rw) register accessor: an alias for `Reg<AON_SPEC>`"]
 pub type AON = crate::Reg<aon::AON_SPEC>;
@@ -205,3 +207,7 @@ pub mod gpadc_reg_define;
 pub type HBNCORE_RESV0 = crate::Reg<hbncore_resv0::HBNCORE_RESV0_SPEC>;
 #[doc = "hbncore_resv0"]
 pub mod hbncore_resv0;
+#[doc = "hbncore_resv1 (rw) register accessor: an alias for `Reg<HBNCORE_RESV1_SPEC>`"]
+pub type HBNCORE_RESV1 = crate::Reg<hbncore_resv1::HBNCORE_RESV1_SPEC>;
+#[doc = "hbncore_resv1"]
+pub mod hbncore_resv1;

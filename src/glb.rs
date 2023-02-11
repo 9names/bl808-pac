@@ -446,6 +446,8 @@ pub struct RegisterBlock {
     pub gpio_cfg142: GPIO_CFG142,
     #[doc = "0xb00 - gpio_cfg143"]
     pub gpio_cfg143: GPIO_CFG143,
+    #[doc = "0xb04 - gpio_cfg144"]
+    pub gpio_cfg144: GPIO_CFG144,
 }
 #[doc = "soc_info0 (rw) register accessor: an alias for `Reg<SOC_INFO0_SPEC>`"]
 pub type SOC_INFO0 = crate::Reg<soc_info0::SOC_INFO0_SPEC>;
@@ -1251,3 +1253,7 @@ pub mod gpio_cfg142;
 pub type GPIO_CFG143 = crate::Reg<gpio_cfg143::GPIO_CFG143_SPEC>;
 #[doc = "gpio_cfg143"]
 pub mod gpio_cfg143;
+#[doc = "gpio_cfg144 (rw) register accessor: an alias for `Reg<GPIO_CFG144_SPEC>`"]
+pub type GPIO_CFG144 = crate::Reg<gpio_cfg144::GPIO_CFG144_SPEC>;
+#[doc = "gpio_cfg144"]
+pub mod gpio_cfg144;

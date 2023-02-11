@@ -38,6 +38,10 @@ impl From<crate::W<TZC_VRAM_TZSRG_R1_SPEC>> for W {
 pub type TZC_VRAM_TZSRG_R1_END_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `reserved_10_15` reader - "]
 pub type RESERVED_10_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_vram_tzsrg_r1_start` reader - "]
+pub type TZC_VRAM_TZSRG_R1_START_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `reserved_26_31` reader - "]
+pub type RESERVED_26_31_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -48,6 +52,16 @@ impl R {
     #[inline(always)]
     pub fn reserved_10_15(&self) -> RESERVED_10_15_R {
         RESERVED_10_15_R::new(((self.bits >> 10) & 0x3f) as u8)
+    }
+    #[doc = "Bits 16:25"]
+    #[inline(always)]
+    pub fn tzc_vram_tzsrg_r1_start(&self) -> TZC_VRAM_TZSRG_R1_START_R {
+        TZC_VRAM_TZSRG_R1_START_R::new(((self.bits >> 16) & 0x03ff) as u16)
+    }
+    #[doc = "Bits 26:31"]
+    #[inline(always)]
+    pub fn reserved_26_31(&self) -> RESERVED_26_31_R {
+        RESERVED_26_31_R::new(((self.bits >> 26) & 0x3f) as u8)
     }
 }
 impl W {

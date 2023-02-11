@@ -34,31 +34,31 @@ impl From<crate::W<TOUCH_DATA_HYSTERSIS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `touch_sleep_cycle` reader - "]
-pub type TOUCH_SLEEP_CYCLE_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `touch_sleep_cycle` writer - "]
-pub type TOUCH_SLEEP_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DATA_HYSTERSIS_SPEC, u32, u32, 23, O>;
-#[doc = "Field `reserved_23_31` reader - "]
-pub type RESERVED_23_31_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `touch_data_hys` reader - "]
+pub type TOUCH_DATA_HYS_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `touch_data_hys` writer - "]
+pub type TOUCH_DATA_HYS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOUCH_DATA_HYSTERSIS_SPEC, u16, u16, 9, O>;
+#[doc = "Field `reserved_9_31` reader - "]
+pub type RESERVED_9_31_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 0:22"]
+    #[doc = "Bits 0:8"]
     #[inline(always)]
-    pub fn touch_sleep_cycle(&self) -> TOUCH_SLEEP_CYCLE_R {
-        TOUCH_SLEEP_CYCLE_R::new(self.bits & 0x007f_ffff)
+    pub fn touch_data_hys(&self) -> TOUCH_DATA_HYS_R {
+        TOUCH_DATA_HYS_R::new((self.bits & 0x01ff) as u16)
     }
-    #[doc = "Bits 23:31"]
+    #[doc = "Bits 9:31"]
     #[inline(always)]
-    pub fn reserved_23_31(&self) -> RESERVED_23_31_R {
-        RESERVED_23_31_R::new(((self.bits >> 23) & 0x01ff) as u16)
+    pub fn reserved_9_31(&self) -> RESERVED_9_31_R {
+        RESERVED_9_31_R::new((self.bits >> 9) & 0x007f_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 0:22"]
+    #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_sleep_cycle(&mut self) -> TOUCH_SLEEP_CYCLE_W<0> {
-        TOUCH_SLEEP_CYCLE_W::new(self)
+    pub fn touch_data_hys(&mut self) -> TOUCH_DATA_HYS_W<0> {
+        TOUCH_DATA_HYS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -67,7 +67,7 @@ impl W {
         self
     }
 }
-#[doc = "Touch_sleep_time\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_data_hystersis](index.html) module"]
+#[doc = "touch_data_hystersis\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_data_hystersis](index.html) module"]
 pub struct TOUCH_DATA_HYSTERSIS_SPEC;
 impl crate::RegisterSpec for TOUCH_DATA_HYSTERSIS_SPEC {
     type Ux = u32;
@@ -82,7 +82,7 @@ impl crate::Writable for TOUCH_DATA_HYSTERSIS_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets touch_data_hystersis to value 0x0007_ffff"]
+#[doc = "`reset()` method sets touch_data_hystersis to value 0"]
 impl crate::Resettable for TOUCH_DATA_HYSTERSIS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0007_ffff;
+    const RESET_VALUE: Self::Ux = 0;
 }

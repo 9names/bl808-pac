@@ -84,6 +84,22 @@ pub type WIFIPLL_SEL_DIV2_DIV4_R = crate::BitReader<bool>;
 #[doc = "Field `wifipll_sel_div2_div4` writer - "]
 pub type WIFIPLL_SEL_DIV2_DIV4_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, WIFI_PLL_CFG8_SPEC, bool, O>;
+#[doc = "Field `en_wifipll_div30_bz_adc` reader - "]
+pub type EN_WIFIPLL_DIV30_BZ_ADC_R = crate::BitReader<bool>;
+#[doc = "Field `en_wifipll_div30_bz_adc` writer - "]
+pub type EN_WIFIPLL_DIV30_BZ_ADC_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WIFI_PLL_CFG8_SPEC, bool, O>;
+#[doc = "Field `reserved_11` reader - "]
+pub type RESERVED_11_R = crate::BitReader<bool>;
+#[doc = "Field `wifipll_en_div2_hw` reader - "]
+pub type WIFIPLL_EN_DIV2_HW_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_13_30` reader - "]
+pub type RESERVED_13_30_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `wifipll_en_ctrl_hw` reader - "]
+pub type WIFIPLL_EN_CTRL_HW_R = crate::BitReader<bool>;
+#[doc = "Field `wifipll_en_ctrl_hw` writer - "]
+pub type WIFIPLL_EN_CTRL_HW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WIFI_PLL_CFG8_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -134,6 +150,31 @@ impl R {
     #[inline(always)]
     pub fn wifipll_sel_div2_div4(&self) -> WIFIPLL_SEL_DIV2_DIV4_R {
         WIFIPLL_SEL_DIV2_DIV4_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn en_wifipll_div30_bz_adc(&self) -> EN_WIFIPLL_DIV30_BZ_ADC_R {
+        EN_WIFIPLL_DIV30_BZ_ADC_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn reserved_11(&self) -> RESERVED_11_R {
+        RESERVED_11_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn wifipll_en_div2_hw(&self) -> WIFIPLL_EN_DIV2_HW_R {
+        WIFIPLL_EN_DIV2_HW_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bits 13:30"]
+    #[inline(always)]
+    pub fn reserved_13_30(&self) -> RESERVED_13_30_R {
+        RESERVED_13_30_R::new((self.bits >> 13) & 0x0003_ffff)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn wifipll_en_ctrl_hw(&self) -> WIFIPLL_EN_CTRL_HW_R {
+        WIFIPLL_EN_CTRL_HW_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
@@ -197,6 +238,18 @@ impl W {
     pub fn wifipll_sel_div2_div4(&mut self) -> WIFIPLL_SEL_DIV2_DIV4_W<9> {
         WIFIPLL_SEL_DIV2_DIV4_W::new(self)
     }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn en_wifipll_div30_bz_adc(&mut self) -> EN_WIFIPLL_DIV30_BZ_ADC_W<10> {
+        EN_WIFIPLL_DIV30_BZ_ADC_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wifipll_en_ctrl_hw(&mut self) -> WIFIPLL_EN_CTRL_HW_W<31> {
+        WIFIPLL_EN_CTRL_HW_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -219,7 +272,7 @@ impl crate::Writable for WIFI_PLL_CFG8_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets wifi_pll_cfg8 to value 0x01ff"]
+#[doc = "`reset()` method sets wifi_pll_cfg8 to value 0x11ff"]
 impl crate::Resettable for WIFI_PLL_CFG8_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01ff;
+    const RESET_VALUE: Self::Ux = 0x11ff;
 }

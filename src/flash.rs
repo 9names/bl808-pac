@@ -14,8 +14,7 @@ pub struct RegisterBlock {
     _reserved_10_sf_: [u8; 0x04],
     _reserved_11_sf: [u8; 0x04],
     _reserved_12_sf: [u8; 0x04],
-    #[doc = "0x34 - sf_if_io_dly_1"]
-    pub sf_if_io_dly_1: SF_IF_IO_DLY_1,
+    _reserved_13_sf: [u8; 0x04],
     #[doc = "0x38 - sf_if_io_dly_2"]
     pub sf_if_io_dly_2: SF_IF_IO_DLY_2,
     #[doc = "0x3c - sf_if_io_dly_3"]
@@ -352,6 +351,16 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn sf_if_io_dly_0(&self) -> &SF_IF_IO_DLY_0 {
         unsafe { &*(self as *const Self).cast::<u8>().add(48usize).cast() }
+    }
+    #[doc = "0x34 - sf_aes_end"]
+    #[inline(always)]
+    pub const fn sf_aes_end(&self) -> &SF_AES_END {
+        unsafe { &*(self as *const Self).cast::<u8>().add(52usize).cast() }
+    }
+    #[doc = "0x34 - sf_if_io_dly_1"]
+    #[inline(always)]
+    pub const fn sf_if_io_dly_1(&self) -> &SF_IF_IO_DLY_1 {
+        unsafe { &*(self as *const Self).cast::<u8>().add(52usize).cast() }
     }
 }
 #[doc = "sf_ctrl_0 (rw) register accessor: an alias for `Reg<SF_CTRL_0_SPEC>`"]
@@ -814,3 +823,7 @@ pub mod sf_aes_iv_w3;
 pub type SF_AES_START = crate::Reg<sf_aes_start::SF_AES_START_SPEC>;
 #[doc = "sf_aes_start"]
 pub mod sf_aes_start;
+#[doc = "sf_aes_end (rw) register accessor: an alias for `Reg<SF_AES_END_SPEC>`"]
+pub type SF_AES_END = crate::Reg<sf_aes_end::SF_AES_END_SPEC>;
+#[doc = "sf_aes_end"]
+pub mod sf_aes_end;

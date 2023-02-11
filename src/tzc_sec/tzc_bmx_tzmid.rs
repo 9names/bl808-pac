@@ -58,10 +58,10 @@ pub type TZC_CCI_TZMID_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZC_BMX_TZ
 pub type TZC_SDHM_TZMID_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_sdhm_tzmid` writer - "]
 pub type TZC_SDHM_TZMID_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZC_BMX_TZMID_SPEC, bool, O>;
-#[doc = "Field `tzc_emacA_tzmid` reader - "]
-pub type TZC_EMAC_A_TZMID_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_emacA_tzmid` writer - "]
-pub type TZC_EMAC_A_TZMID_W<'a, const O: u8> =
+#[doc = "Field `tzc_emaca_tzmid` reader - "]
+pub type TZC_EMACA_TZMID_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_emaca_tzmid` writer - "]
+pub type TZC_EMACA_TZMID_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_BMX_TZMID_SPEC, bool, O>;
 #[doc = "Field `tzc_cpu_tzmid` reader - "]
 pub type TZC_CPU_TZMID_R = crate::BitReader<bool>;
@@ -111,10 +111,10 @@ pub type TZC_SDHM_TZMID_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_sdhm_tzmid_sel` writer - "]
 pub type TZC_SDHM_TZMID_SEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_BMX_TZMID_SPEC, bool, O>;
-#[doc = "Field `tzc_emacA_tzmid_sel` reader - "]
-pub type TZC_EMAC_A_TZMID_SEL_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_emacA_tzmid_sel` writer - "]
-pub type TZC_EMAC_A_TZMID_SEL_W<'a, const O: u8> =
+#[doc = "Field `tzc_emaca_tzmid_sel` reader - "]
+pub type TZC_EMACA_TZMID_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_emaca_tzmid_sel` writer - "]
+pub type TZC_EMACA_TZMID_SEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_BMX_TZMID_SPEC, bool, O>;
 #[doc = "Field `tzc_cpu_tzmid_sel` reader - "]
 pub type TZC_CPU_TZMID_SEL_R = crate::BitReader<bool>;
@@ -171,8 +171,8 @@ impl R {
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn tzc_emac_a_tzmid(&self) -> TZC_EMAC_A_TZMID_R {
-        TZC_EMAC_A_TZMID_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn tzc_emaca_tzmid(&self) -> TZC_EMACA_TZMID_R {
+        TZC_EMACA_TZMID_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -231,8 +231,8 @@ impl R {
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn tzc_emac_a_tzmid_sel(&self) -> TZC_EMAC_A_TZMID_SEL_R {
-        TZC_EMAC_A_TZMID_SEL_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn tzc_emaca_tzmid_sel(&self) -> TZC_EMACA_TZMID_SEL_R {
+        TZC_EMACA_TZMID_SEL_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
@@ -300,8 +300,8 @@ impl W {
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn tzc_emac_a_tzmid(&mut self) -> TZC_EMAC_A_TZMID_W<6> {
-        TZC_EMAC_A_TZMID_W::new(self)
+    pub fn tzc_emaca_tzmid(&mut self) -> TZC_EMACA_TZMID_W<6> {
+        TZC_EMACA_TZMID_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -366,8 +366,8 @@ impl W {
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn tzc_emac_a_tzmid_sel(&mut self) -> TZC_EMAC_A_TZMID_SEL_W<22> {
-        TZC_EMAC_A_TZMID_SEL_W::new(self)
+    pub fn tzc_emaca_tzmid_sel(&mut self) -> TZC_EMACA_TZMID_SEL_W<22> {
+        TZC_EMACA_TZMID_SEL_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]

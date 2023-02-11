@@ -34,40 +34,31 @@ impl From<crate::W<TOUCH_RSVD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `touch_force_data_ch0` reader - "]
-pub type TOUCH_FORCE_DATA_CH0_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `touch_force_data_ch0` writer - "]
-pub type TOUCH_FORCE_DATA_CH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_RSVD_SPEC, u16, u16, 16, O>;
-#[doc = "Field `touch_force_data_ch1` reader - "]
-pub type TOUCH_FORCE_DATA_CH1_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `touch_force_data_ch1` writer - "]
-pub type TOUCH_FORCE_DATA_CH1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_RSVD_SPEC, u16, u16, 16, O>;
+#[doc = "Field `touch_reserved` reader - "]
+pub type TOUCH_RESERVED_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `touch_reserved` writer - "]
+pub type TOUCH_RESERVED_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOUCH_RSVD_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reserved_8_31` reader - "]
+pub type RESERVED_8_31_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 0:15"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn touch_force_data_ch0(&self) -> TOUCH_FORCE_DATA_CH0_R {
-        TOUCH_FORCE_DATA_CH0_R::new((self.bits & 0xffff) as u16)
+    pub fn touch_reserved(&self) -> TOUCH_RESERVED_R {
+        TOUCH_RESERVED_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 16:31"]
+    #[doc = "Bits 8:31"]
     #[inline(always)]
-    pub fn touch_force_data_ch1(&self) -> TOUCH_FORCE_DATA_CH1_R {
-        TOUCH_FORCE_DATA_CH1_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn reserved_8_31(&self) -> RESERVED_8_31_R {
+        RESERVED_8_31_R::new((self.bits >> 8) & 0x00ff_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 0:15"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_force_data_ch0(&mut self) -> TOUCH_FORCE_DATA_CH0_W<0> {
-        TOUCH_FORCE_DATA_CH0_W::new(self)
-    }
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    #[must_use]
-    pub fn touch_force_data_ch1(&mut self) -> TOUCH_FORCE_DATA_CH1_W<16> {
-        TOUCH_FORCE_DATA_CH1_W::new(self)
+    pub fn touch_reserved(&mut self) -> TOUCH_RESERVED_W<0> {
+        TOUCH_RESERVED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -76,7 +67,7 @@ impl W {
         self
     }
 }
-#[doc = "Channel_force_data_0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_rsvd](index.html) module"]
+#[doc = "touch_rsvd\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_rsvd](index.html) module"]
 pub struct TOUCH_RSVD_SPEC;
 impl crate::RegisterSpec for TOUCH_RSVD_SPEC {
     type Ux = u32;
@@ -91,7 +82,7 @@ impl crate::Writable for TOUCH_RSVD_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets touch_rsvd to value 0x0400_0400"]
+#[doc = "`reset()` method sets touch_rsvd to value 0"]
 impl crate::Resettable for TOUCH_RSVD_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0400_0400;
+    const RESET_VALUE: Self::Ux = 0;
 }

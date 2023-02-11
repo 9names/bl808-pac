@@ -64,10 +64,10 @@ pub type TZC_SDHM_TZMID_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_sdhm_tzmid_lock` writer - "]
 pub type TZC_SDHM_TZMID_LOCK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_BMX_TZMID_LOCK_SPEC, bool, O>;
-#[doc = "Field `tzc_emacA_tzmid_lock` reader - "]
-pub type TZC_EMAC_A_TZMID_LOCK_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_emacA_tzmid_lock` writer - "]
-pub type TZC_EMAC_A_TZMID_LOCK_W<'a, const O: u8> =
+#[doc = "Field `tzc_emaca_tzmid_lock` reader - "]
+pub type TZC_EMACA_TZMID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_emaca_tzmid_lock` writer - "]
+pub type TZC_EMACA_TZMID_LOCK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TZC_BMX_TZMID_LOCK_SPEC, bool, O>;
 #[doc = "Field `tzc_cpu_tzmid_lock` reader - "]
 pub type TZC_CPU_TZMID_LOCK_R = crate::BitReader<bool>;
@@ -124,8 +124,8 @@ impl R {
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn tzc_emac_a_tzmid_lock(&self) -> TZC_EMAC_A_TZMID_LOCK_R {
-        TZC_EMAC_A_TZMID_LOCK_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn tzc_emaca_tzmid_lock(&self) -> TZC_EMACA_TZMID_LOCK_R {
+        TZC_EMACA_TZMID_LOCK_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -193,8 +193,8 @@ impl W {
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn tzc_emac_a_tzmid_lock(&mut self) -> TZC_EMAC_A_TZMID_LOCK_W<6> {
-        TZC_EMAC_A_TZMID_LOCK_W::new(self)
+    pub fn tzc_emaca_tzmid_lock(&mut self) -> TZC_EMACA_TZMID_LOCK_W<6> {
+        TZC_EMACA_TZMID_LOCK_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]

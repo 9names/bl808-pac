@@ -38,6 +38,10 @@ impl From<crate::W<TZC_L2SRAM_TZSRG_ADR_MASK_SPEC>> for W {
 pub type TZC_L2SRAM_TZSRG_ADR_MASK_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `reserved_10_15` reader - "]
 pub type RESERVED_10_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_l2sram_tzsrg_adr_mask_lock` reader - "]
+pub type TZC_L2SRAM_TZSRG_ADR_MASK_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_17_31` reader - "]
+pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -48,6 +52,16 @@ impl R {
     #[inline(always)]
     pub fn reserved_10_15(&self) -> RESERVED_10_15_R {
         RESERVED_10_15_R::new(((self.bits >> 10) & 0x3f) as u8)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn tzc_l2sram_tzsrg_adr_mask_lock(&self) -> TZC_L2SRAM_TZSRG_ADR_MASK_LOCK_R {
+        TZC_L2SRAM_TZSRG_ADR_MASK_LOCK_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:31"]
+    #[inline(always)]
+    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
+        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
     }
 }
 impl W {

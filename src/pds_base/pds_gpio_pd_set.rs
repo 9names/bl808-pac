@@ -34,7 +34,25 @@ impl From<crate::W<PDS_GPIO_PD_SET_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `cr_pds_gpio_set_int_mask` reader - "]
+pub type CR_PDS_GPIO_SET_INT_MASK_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `cr_pds_gpio_set_int_mask` writer - "]
+pub type CR_PDS_GPIO_SET_INT_MASK_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PDS_GPIO_PD_SET_SPEC, u32, u32, 32, O>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn cr_pds_gpio_set_int_mask(&self) -> CR_PDS_GPIO_SET_INT_MASK_R {
+        CR_PDS_GPIO_SET_INT_MASK_R::new(self.bits)
+    }
+}
 impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_gpio_set_int_mask(&mut self) -> CR_PDS_GPIO_SET_INT_MASK_W<0> {
+        CR_PDS_GPIO_SET_INT_MASK_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -57,7 +75,7 @@ impl crate::Writable for PDS_GPIO_PD_SET_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets pds_gpio_pd_set to value 0"]
+#[doc = "`reset()` method sets pds_gpio_pd_set to value 0xffff_ffff"]
 impl crate::Resettable for PDS_GPIO_PD_SET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

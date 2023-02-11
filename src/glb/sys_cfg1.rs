@@ -55,6 +55,24 @@ pub type RESERVED_8_15_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `reg_pico_clk_div_act_pulse` writer - "]
 pub type REG_PICO_CLK_DIV_ACT_PULSE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SYS_CFG1_SPEC, bool, O>;
+#[doc = "Field `reg_pico_clk_div_bypass` reader - "]
+pub type REG_PICO_CLK_DIV_BYPASS_R = crate::BitReader<bool>;
+#[doc = "Field `reg_pico_clk_div_bypass` writer - "]
+pub type REG_PICO_CLK_DIV_BYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SYS_CFG1_SPEC, bool, O>;
+#[doc = "Field `sts_pico_clk_prot_done` reader - "]
+pub type STS_PICO_CLK_PROT_DONE_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_19` reader - "]
+pub type RESERVED_19_R = crate::BitReader<bool>;
+#[doc = "Field `reg_pico_clk_sw_done_cnt` reader - "]
+pub type REG_PICO_CLK_SW_DONE_CNT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_pico_clk_sw_done_cnt` writer - "]
+pub type REG_PICO_CLK_SW_DONE_CNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYS_CFG1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `fclk_sw_state` reader - "]
+pub type FCLK_SW_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reserved_27_31` reader - "]
+pub type RESERVED_27_31_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 1"]
     #[inline(always)]
@@ -80,6 +98,36 @@ impl R {
     #[inline(always)]
     pub fn reserved_8_15(&self) -> RESERVED_8_15_R {
         RESERVED_8_15_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn reg_pico_clk_div_bypass(&self) -> REG_PICO_CLK_DIV_BYPASS_R {
+        REG_PICO_CLK_DIV_BYPASS_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn sts_pico_clk_prot_done(&self) -> STS_PICO_CLK_PROT_DONE_R {
+        STS_PICO_CLK_PROT_DONE_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn reserved_19(&self) -> RESERVED_19_R {
+        RESERVED_19_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bits 20:23"]
+    #[inline(always)]
+    pub fn reg_pico_clk_sw_done_cnt(&self) -> REG_PICO_CLK_SW_DONE_CNT_R {
+        REG_PICO_CLK_SW_DONE_CNT_R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:26"]
+    #[inline(always)]
+    pub fn fclk_sw_state(&self) -> FCLK_SW_STATE_R {
+        FCLK_SW_STATE_R::new(((self.bits >> 24) & 7) as u8)
+    }
+    #[doc = "Bits 27:31"]
+    #[inline(always)]
+    pub fn reserved_27_31(&self) -> RESERVED_27_31_R {
+        RESERVED_27_31_R::new(((self.bits >> 27) & 0x1f) as u8)
     }
 }
 impl W {
@@ -107,6 +155,18 @@ impl W {
     pub fn reg_pico_clk_div_act_pulse(&mut self) -> REG_PICO_CLK_DIV_ACT_PULSE_W<16> {
         REG_PICO_CLK_DIV_ACT_PULSE_W::new(self)
     }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_pico_clk_div_bypass(&mut self) -> REG_PICO_CLK_DIV_BYPASS_W<17> {
+        REG_PICO_CLK_DIV_BYPASS_W::new(self)
+    }
+    #[doc = "Bits 20:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_pico_clk_sw_done_cnt(&mut self) -> REG_PICO_CLK_SW_DONE_CNT_W<20> {
+        REG_PICO_CLK_SW_DONE_CNT_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -129,7 +189,7 @@ impl crate::Writable for SYS_CFG1_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets sys_cfg1 to value 0x54"]
+#[doc = "`reset()` method sets sys_cfg1 to value 0x0054_0054"]
 impl crate::Resettable for SYS_CFG1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x54;
+    const RESET_VALUE: Self::Ux = 0x0054_0054;
 }

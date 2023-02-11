@@ -63,6 +63,46 @@ pub type LDO15RF_SSTART_SEL_AON_R = crate::BitReader<bool>;
 #[doc = "Field `ldo15rf_sstart_sel_aon` writer - "]
 pub type LDO15RF_SSTART_SEL_AON_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RF_TOP_AON_SPEC, bool, O>;
+#[doc = "Field `ldo15rf_sstart_delay_aon` reader - "]
+pub type LDO15RF_SSTART_DELAY_AON_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_sstart_delay_aon` writer - "]
+pub type LDO15RF_SSTART_DELAY_AON_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_TOP_AON_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reserved_11` reader - "]
+pub type RESERVED_11_R = crate::BitReader<bool>;
+#[doc = "Field `ldo15rf_pulldown_aon` reader - "]
+pub type LDO15RF_PULLDOWN_AON_R = crate::BitReader<bool>;
+#[doc = "Field `ldo15rf_pulldown_aon` writer - "]
+pub type LDO15RF_PULLDOWN_AON_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, RF_TOP_AON_SPEC, bool, O>;
+#[doc = "Field `ldo15rf_pulldown_sel_aon` reader - "]
+pub type LDO15RF_PULLDOWN_SEL_AON_R = crate::BitReader<bool>;
+#[doc = "Field `ldo15rf_pulldown_sel_aon` writer - "]
+pub type LDO15RF_PULLDOWN_SEL_AON_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, RF_TOP_AON_SPEC, bool, O>;
+#[doc = "Field `reserved_14_15` reader - "]
+pub type RESERVED_14_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_vout_sel_aon` reader - "]
+pub type LDO15RF_VOUT_SEL_AON_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_vout_sel_aon` writer - "]
+pub type LDO15RF_VOUT_SEL_AON_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_TOP_AON_SPEC, u8, u8, 3, O>;
+#[doc = "Field `reserved_19_23` reader - "]
+pub type RESERVED_19_23_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_cc_aon` reader - "]
+pub type LDO15RF_CC_AON_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_cc_aon` writer - "]
+pub type LDO15RF_CC_AON_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_TOP_AON_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reserved_26_27` reader - "]
+pub type RESERVED_26_27_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ldo15rf_bypass_aon` reader - "]
+pub type LDO15RF_BYPASS_AON_R = crate::BitReader<bool>;
+#[doc = "Field `ldo15rf_bypass_aon` writer - "]
+pub type LDO15RF_BYPASS_AON_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, RF_TOP_AON_SPEC, bool, O>;
+#[doc = "Field `reserved_29_31` reader - "]
+pub type RESERVED_29_31_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -104,6 +144,61 @@ impl R {
     pub fn ldo15rf_sstart_sel_aon(&self) -> LDO15RF_SSTART_SEL_AON_R {
         LDO15RF_SSTART_SEL_AON_R::new(((self.bits >> 8) & 1) != 0)
     }
+    #[doc = "Bits 9:10"]
+    #[inline(always)]
+    pub fn ldo15rf_sstart_delay_aon(&self) -> LDO15RF_SSTART_DELAY_AON_R {
+        LDO15RF_SSTART_DELAY_AON_R::new(((self.bits >> 9) & 3) as u8)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn reserved_11(&self) -> RESERVED_11_R {
+        RESERVED_11_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn ldo15rf_pulldown_aon(&self) -> LDO15RF_PULLDOWN_AON_R {
+        LDO15RF_PULLDOWN_AON_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn ldo15rf_pulldown_sel_aon(&self) -> LDO15RF_PULLDOWN_SEL_AON_R {
+        LDO15RF_PULLDOWN_SEL_AON_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bits 14:15"]
+    #[inline(always)]
+    pub fn reserved_14_15(&self) -> RESERVED_14_15_R {
+        RESERVED_14_15_R::new(((self.bits >> 14) & 3) as u8)
+    }
+    #[doc = "Bits 16:18"]
+    #[inline(always)]
+    pub fn ldo15rf_vout_sel_aon(&self) -> LDO15RF_VOUT_SEL_AON_R {
+        LDO15RF_VOUT_SEL_AON_R::new(((self.bits >> 16) & 7) as u8)
+    }
+    #[doc = "Bits 19:23"]
+    #[inline(always)]
+    pub fn reserved_19_23(&self) -> RESERVED_19_23_R {
+        RESERVED_19_23_R::new(((self.bits >> 19) & 0x1f) as u8)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    pub fn ldo15rf_cc_aon(&self) -> LDO15RF_CC_AON_R {
+        LDO15RF_CC_AON_R::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bits 26:27"]
+    #[inline(always)]
+    pub fn reserved_26_27(&self) -> RESERVED_26_27_R {
+        RESERVED_26_27_R::new(((self.bits >> 26) & 3) as u8)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn ldo15rf_bypass_aon(&self) -> LDO15RF_BYPASS_AON_R {
+        LDO15RF_BYPASS_AON_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bits 29:31"]
+    #[inline(always)]
+    pub fn reserved_29_31(&self) -> RESERVED_29_31_R {
+        RESERVED_29_31_R::new(((self.bits >> 29) & 7) as u8)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -142,6 +237,42 @@ impl W {
     pub fn ldo15rf_sstart_sel_aon(&mut self) -> LDO15RF_SSTART_SEL_AON_W<8> {
         LDO15RF_SSTART_SEL_AON_W::new(self)
     }
+    #[doc = "Bits 9:10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_sstart_delay_aon(&mut self) -> LDO15RF_SSTART_DELAY_AON_W<9> {
+        LDO15RF_SSTART_DELAY_AON_W::new(self)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_pulldown_aon(&mut self) -> LDO15RF_PULLDOWN_AON_W<12> {
+        LDO15RF_PULLDOWN_AON_W::new(self)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_pulldown_sel_aon(&mut self) -> LDO15RF_PULLDOWN_SEL_AON_W<13> {
+        LDO15RF_PULLDOWN_SEL_AON_W::new(self)
+    }
+    #[doc = "Bits 16:18"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_vout_sel_aon(&mut self) -> LDO15RF_VOUT_SEL_AON_W<16> {
+        LDO15RF_VOUT_SEL_AON_W::new(self)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_cc_aon(&mut self) -> LDO15RF_CC_AON_W<24> {
+        LDO15RF_CC_AON_W::new(self)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ldo15rf_bypass_aon(&mut self) -> LDO15RF_BYPASS_AON_W<28> {
+        LDO15RF_BYPASS_AON_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -164,7 +295,7 @@ impl crate::Writable for RF_TOP_AON_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets rf_top_aon to value 0x0137"]
+#[doc = "`reset()` method sets rf_top_aon to value 0x0002_0137"]
 impl crate::Resettable for RF_TOP_AON_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0137;
+    const RESET_VALUE: Self::Ux = 0x0002_0137;
 }

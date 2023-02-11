@@ -34,139 +34,63 @@ impl From<crate::W<PDS_GPIO_I_SET_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `cr_np_wfi_mask` reader - "]
-pub type CR_NP_WFI_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `cr_np_wfi_mask` writer - "]
-pub type CR_NP_WFI_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_GPIO_I_SET_SPEC, bool, O>;
-#[doc = "Field `reserved_1` reader - "]
-pub type RESERVED_1_R = crate::BitReader<bool>;
-#[doc = "Field `cr_mm_wfi_mask` reader - "]
-pub type CR_MM_WFI_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `cr_mm_wfi_mask` writer - "]
-pub type CR_MM_WFI_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_GPIO_I_SET_SPEC, bool, O>;
-#[doc = "Field `reserved_3` reader - "]
-pub type RESERVED_3_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pico_wfi_mask` reader - "]
-pub type CR_PICO_WFI_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pico_wfi_mask` writer - "]
-pub type CR_PICO_WFI_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_GPIO_I_SET_SPEC, bool, O>;
-#[doc = "Field `reserved_5_7` reader - "]
-pub type RESERVED_5_7_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `cr_pds_ctrl_usb33` reader - "]
-pub type CR_PDS_CTRL_USB33_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pds_ctrl_usb33` writer - "]
-pub type CR_PDS_CTRL_USB33_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_GPIO_I_SET_SPEC, bool, O>;
-#[doc = "Field `cr_pds_pd_ldo18io` reader - "]
-pub type CR_PDS_PD_LDO18IO_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pds_pd_ldo18io` writer - "]
-pub type CR_PDS_PD_LDO18IO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_GPIO_I_SET_SPEC, bool, O>;
-#[doc = "Field `reserved_10_15` reader - "]
-pub type RESERVED_10_15_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `cr_pds_gpio_keep_en` reader - "]
-pub type CR_PDS_GPIO_KEEP_EN_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `cr_pds_gpio_keep_en` writer - "]
-pub type CR_PDS_GPIO_KEEP_EN_W<'a, const O: u8> =
+#[doc = "Field `cr_pds_gpio_ie_set` reader - "]
+pub type CR_PDS_GPIO_IE_SET_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_pds_gpio_ie_set` writer - "]
+pub type CR_PDS_GPIO_IE_SET_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PDS_GPIO_I_SET_SPEC, u8, u8, 3, O>;
-#[doc = "Field `reserved_19_31` reader - "]
-pub type RESERVED_19_31_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `cr_pds_gpio_pd_set` reader - "]
+pub type CR_PDS_GPIO_PD_SET_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_pds_gpio_pd_set` writer - "]
+pub type CR_PDS_GPIO_PD_SET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PDS_GPIO_I_SET_SPEC, u8, u8, 3, O>;
+#[doc = "Field `cr_pds_gpio_pu_set` reader - "]
+pub type CR_PDS_GPIO_PU_SET_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_pds_gpio_pu_set` writer - "]
+pub type CR_PDS_GPIO_PU_SET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PDS_GPIO_I_SET_SPEC, u8, u8, 3, O>;
+#[doc = "Field `reserved_9_31` reader - "]
+pub type RESERVED_9_31_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bit 0"]
+    #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn cr_np_wfi_mask(&self) -> CR_NP_WFI_MASK_R {
-        CR_NP_WFI_MASK_R::new((self.bits & 1) != 0)
+    pub fn cr_pds_gpio_ie_set(&self) -> CR_PDS_GPIO_IE_SET_R {
+        CR_PDS_GPIO_IE_SET_R::new((self.bits & 7) as u8)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bits 3:5"]
     #[inline(always)]
-    pub fn reserved_1(&self) -> RESERVED_1_R {
-        RESERVED_1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_pds_gpio_pd_set(&self) -> CR_PDS_GPIO_PD_SET_R {
+        CR_PDS_GPIO_PD_SET_R::new(((self.bits >> 3) & 7) as u8)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bits 6:8"]
     #[inline(always)]
-    pub fn cr_mm_wfi_mask(&self) -> CR_MM_WFI_MASK_R {
-        CR_MM_WFI_MASK_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cr_pds_gpio_pu_set(&self) -> CR_PDS_GPIO_PU_SET_R {
+        CR_PDS_GPIO_PU_SET_R::new(((self.bits >> 6) & 7) as u8)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bits 9:31"]
     #[inline(always)]
-    pub fn reserved_3(&self) -> RESERVED_3_R {
-        RESERVED_3_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn cr_pico_wfi_mask(&self) -> CR_PICO_WFI_MASK_R {
-        CR_PICO_WFI_MASK_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bits 5:7"]
-    #[inline(always)]
-    pub fn reserved_5_7(&self) -> RESERVED_5_7_R {
-        RESERVED_5_7_R::new(((self.bits >> 5) & 7) as u8)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn cr_pds_ctrl_usb33(&self) -> CR_PDS_CTRL_USB33_R {
-        CR_PDS_CTRL_USB33_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn cr_pds_pd_ldo18io(&self) -> CR_PDS_PD_LDO18IO_R {
-        CR_PDS_PD_LDO18IO_R::new(((self.bits >> 9) & 1) != 0)
-    }
-    #[doc = "Bits 10:15"]
-    #[inline(always)]
-    pub fn reserved_10_15(&self) -> RESERVED_10_15_R {
-        RESERVED_10_15_R::new(((self.bits >> 10) & 0x3f) as u8)
-    }
-    #[doc = "Bits 16:18"]
-    #[inline(always)]
-    pub fn cr_pds_gpio_keep_en(&self) -> CR_PDS_GPIO_KEEP_EN_R {
-        CR_PDS_GPIO_KEEP_EN_R::new(((self.bits >> 16) & 7) as u8)
-    }
-    #[doc = "Bits 19:31"]
-    #[inline(always)]
-    pub fn reserved_19_31(&self) -> RESERVED_19_31_R {
-        RESERVED_19_31_R::new(((self.bits >> 19) & 0x1fff) as u16)
+    pub fn reserved_9_31(&self) -> RESERVED_9_31_R {
+        RESERVED_9_31_R::new((self.bits >> 9) & 0x007f_ffff)
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn cr_np_wfi_mask(&mut self) -> CR_NP_WFI_MASK_W<0> {
-        CR_NP_WFI_MASK_W::new(self)
+    pub fn cr_pds_gpio_ie_set(&mut self) -> CR_PDS_GPIO_IE_SET_W<0> {
+        CR_PDS_GPIO_IE_SET_W::new(self)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bits 3:5"]
     #[inline(always)]
     #[must_use]
-    pub fn cr_mm_wfi_mask(&mut self) -> CR_MM_WFI_MASK_W<2> {
-        CR_MM_WFI_MASK_W::new(self)
+    pub fn cr_pds_gpio_pd_set(&mut self) -> CR_PDS_GPIO_PD_SET_W<3> {
+        CR_PDS_GPIO_PD_SET_W::new(self)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bits 6:8"]
     #[inline(always)]
     #[must_use]
-    pub fn cr_pico_wfi_mask(&mut self) -> CR_PICO_WFI_MASK_W<4> {
-        CR_PICO_WFI_MASK_W::new(self)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_ctrl_usb33(&mut self) -> CR_PDS_CTRL_USB33_W<8> {
-        CR_PDS_CTRL_USB33_W::new(self)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_pd_ldo18io(&mut self) -> CR_PDS_PD_LDO18IO_W<9> {
-        CR_PDS_PD_LDO18IO_W::new(self)
-    }
-    #[doc = "Bits 16:18"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_gpio_keep_en(&mut self) -> CR_PDS_GPIO_KEEP_EN_W<16> {
-        CR_PDS_GPIO_KEEP_EN_W::new(self)
+    pub fn cr_pds_gpio_pu_set(&mut self) -> CR_PDS_GPIO_PU_SET_W<6> {
+        CR_PDS_GPIO_PU_SET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -175,7 +99,7 @@ impl W {
         self
     }
 }
-#[doc = "PDS_CTL5\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_gpio_i_set](index.html) module"]
+#[doc = "pds_gpio_i_set\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_gpio_i_set](index.html) module"]
 pub struct PDS_GPIO_I_SET_SPEC;
 impl crate::RegisterSpec for PDS_GPIO_I_SET_SPEC {
     type Ux = u32;
@@ -190,7 +114,7 @@ impl crate::Writable for PDS_GPIO_I_SET_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets pds_gpio_i_set to value 0x0007_0000"]
+#[doc = "`reset()` method sets pds_gpio_i_set to value 0"]
 impl crate::Resettable for PDS_GPIO_I_SET_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0007_0000;
+    const RESET_VALUE: Self::Ux = 0;
 }

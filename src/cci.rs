@@ -59,6 +59,8 @@ pub struct RegisterBlock {
     pub cpu_pll_cfg9: CPU_PLL_CFG9,
     #[doc = "0x7f8 - cpu_pll_cfg10"]
     pub cpu_pll_cfg10: CPU_PLL_CFG10,
+    #[doc = "0x7fc - cpu_pll_cfg11"]
+    pub cpu_pll_cfg11: CPU_PLL_CFG11,
 }
 #[doc = "cci_cfg (rw) register accessor: an alias for `Reg<CCI_CFG_SPEC>`"]
 pub type CCI_CFG = crate::Reg<cci_cfg::CCI_CFG_SPEC>;
@@ -172,3 +174,7 @@ pub mod cpu_pll_cfg9;
 pub type CPU_PLL_CFG10 = crate::Reg<cpu_pll_cfg10::CPU_PLL_CFG10_SPEC>;
 #[doc = "cpu_pll_cfg10"]
 pub mod cpu_pll_cfg10;
+#[doc = "cpu_pll_cfg11 (rw) register accessor: an alias for `Reg<CPU_PLL_CFG11_SPEC>`"]
+pub type CPU_PLL_CFG11 = crate::Reg<cpu_pll_cfg11::CPU_PLL_CFG11_SPEC>;
+#[doc = "cpu_pll_cfg11"]
+pub mod cpu_pll_cfg11;

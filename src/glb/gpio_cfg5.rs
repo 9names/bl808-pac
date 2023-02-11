@@ -68,6 +68,43 @@ pub type REG_GPIO_5_FUNC_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, GPIO_CFG5_SPEC, u8, u8, 5, O>;
 #[doc = "Field `reserved_13_15` reader - "]
 pub type RESERVED_13_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_gpio_5_int_mode_set` reader - "]
+pub type REG_GPIO_5_INT_MODE_SET_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_gpio_5_int_mode_set` writer - "]
+pub type REG_GPIO_5_INT_MODE_SET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPIO_CFG5_SPEC, u8, u8, 4, O>;
+#[doc = "Field `reg_gpio_5_int_clr` reader - "]
+pub type REG_GPIO_5_INT_CLR_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_int_clr` writer - "]
+pub type REG_GPIO_5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_CFG5_SPEC, bool, O>;
+#[doc = "Field `gpio_5_int_stat` reader - "]
+pub type GPIO_5_INT_STAT_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_int_mask` reader - "]
+pub type REG_GPIO_5_INT_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_int_mask` writer - "]
+pub type REG_GPIO_5_INT_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_CFG5_SPEC, bool, O>;
+#[doc = "Field `reserved_23` reader - "]
+pub type RESERVED_23_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_o` reader - "]
+pub type REG_GPIO_5_O_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_o` writer - "]
+pub type REG_GPIO_5_O_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_CFG5_SPEC, bool, O>;
+#[doc = "Field `reg_gpio_5_set` writer - "]
+pub type REG_GPIO_5_SET_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_CFG5_SPEC, bool, O>;
+#[doc = "Field `reg_gpio_5_clr` writer - "]
+pub type REG_GPIO_5_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_CFG5_SPEC, bool, O>;
+#[doc = "Field `reserved_27` reader - "]
+pub type RESERVED_27_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_i` reader - "]
+pub type REG_GPIO_5_I_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_29` reader - "]
+pub type RESERVED_29_R = crate::BitReader<bool>;
+#[doc = "Field `reg_gpio_5_mode` reader - "]
+pub type REG_GPIO_5_MODE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_gpio_5_mode` writer - "]
+pub type REG_GPIO_5_MODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPIO_CFG5_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -114,6 +151,56 @@ impl R {
     pub fn reserved_13_15(&self) -> RESERVED_13_15_R {
         RESERVED_13_15_R::new(((self.bits >> 13) & 7) as u8)
     }
+    #[doc = "Bits 16:19"]
+    #[inline(always)]
+    pub fn reg_gpio_5_int_mode_set(&self) -> REG_GPIO_5_INT_MODE_SET_R {
+        REG_GPIO_5_INT_MODE_SET_R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn reg_gpio_5_int_clr(&self) -> REG_GPIO_5_INT_CLR_R {
+        REG_GPIO_5_INT_CLR_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn gpio_5_int_stat(&self) -> GPIO_5_INT_STAT_R {
+        GPIO_5_INT_STAT_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn reg_gpio_5_int_mask(&self) -> REG_GPIO_5_INT_MASK_R {
+        REG_GPIO_5_INT_MASK_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn reserved_23(&self) -> RESERVED_23_R {
+        RESERVED_23_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn reg_gpio_5_o(&self) -> REG_GPIO_5_O_R {
+        REG_GPIO_5_O_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn reserved_27(&self) -> RESERVED_27_R {
+        RESERVED_27_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn reg_gpio_5_i(&self) -> REG_GPIO_5_I_R {
+        REG_GPIO_5_I_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn reserved_29(&self) -> RESERVED_29_R {
+        RESERVED_29_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn reg_gpio_5_mode(&self) -> REG_GPIO_5_MODE_R {
+        REG_GPIO_5_MODE_R::new(((self.bits >> 30) & 3) as u8)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -158,6 +245,48 @@ impl W {
     pub fn reg_gpio_5_func_sel(&mut self) -> REG_GPIO_5_FUNC_SEL_W<8> {
         REG_GPIO_5_FUNC_SEL_W::new(self)
     }
+    #[doc = "Bits 16:19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_int_mode_set(&mut self) -> REG_GPIO_5_INT_MODE_SET_W<16> {
+        REG_GPIO_5_INT_MODE_SET_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_int_clr(&mut self) -> REG_GPIO_5_INT_CLR_W<20> {
+        REG_GPIO_5_INT_CLR_W::new(self)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_int_mask(&mut self) -> REG_GPIO_5_INT_MASK_W<22> {
+        REG_GPIO_5_INT_MASK_W::new(self)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_o(&mut self) -> REG_GPIO_5_O_W<24> {
+        REG_GPIO_5_O_W::new(self)
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_set(&mut self) -> REG_GPIO_5_SET_W<25> {
+        REG_GPIO_5_SET_W::new(self)
+    }
+    #[doc = "Bit 26"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_clr(&mut self) -> REG_GPIO_5_CLR_W<26> {
+        REG_GPIO_5_CLR_W::new(self)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_gpio_5_mode(&mut self) -> REG_GPIO_5_MODE_W<30> {
+        REG_GPIO_5_MODE_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -180,7 +309,7 @@ impl crate::Writable for GPIO_CFG5_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets gpio_cfg5 to value 0x0f03"]
+#[doc = "`reset()` method sets gpio_cfg5 to value 0x0040_0f03"]
 impl crate::Resettable for GPIO_CFG5_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f03;
+    const RESET_VALUE: Self::Ux = 0x0040_0f03;
 }

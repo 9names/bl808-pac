@@ -34,92 +34,58 @@ impl From<crate::W<PDS_STAT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `pds_start_ps` writer - "]
-pub type PDS_START_PS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
-#[doc = "Field `cr_sleep_forever` reader - "]
-pub type CR_SLEEP_FOREVER_R = crate::BitReader<bool>;
-#[doc = "Field `cr_sleep_forever` writer - "]
-pub type CR_SLEEP_FOREVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
-#[doc = "Field `cr_xtal_force_off` reader - "]
-pub type CR_XTAL_FORCE_OFF_R = crate::BitReader<bool>;
-#[doc = "Field `cr_xtal_force_off` writer - "]
-pub type CR_XTAL_FORCE_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
-#[doc = "Field `cr_pds_wifi_save_state` reader - "]
-pub type CR_PDS_WIFI_SAVE_STATE_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pds_wifi_save_state` writer - "]
-pub type CR_PDS_WIFI_SAVE_STATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
-#[doc = "Field `cr_pds_pd_dcdc11` reader - "]
-pub type CR_PDS_PD_DCDC11_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pds_pd_dcdc11` writer - "]
-pub type CR_PDS_PD_DCDC11_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
-#[doc = "Field `cr_pds_pd_bg_sys` reader - "]
-pub type CR_PDS_PD_BG_SYS_R = crate::BitReader<bool>;
-#[doc = "Field `cr_pds_pd_bg_sys` writer - "]
-pub type CR_PDS_PD_BG_SYS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
+#[doc = "Field `ro_pds_state` reader - "]
+pub type RO_PDS_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reserved_5_7` reader - "]
+pub type RESERVED_5_7_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ro_pds_rf_state` reader - "]
+pub type RO_PDS_RF_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reserved_13_23` reader - "]
+pub type RESERVED_13_23_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `pds_reset_event` reader - "]
+pub type PDS_RESET_EVENT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reserved_27_30` reader - "]
+pub type RESERVED_27_30_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `pds_clr_reset_event` writer - "]
+pub type PDS_CLR_RESET_EVENT_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_STAT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1"]
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn cr_sleep_forever(&self) -> CR_SLEEP_FOREVER_R {
-        CR_SLEEP_FOREVER_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ro_pds_state(&self) -> RO_PDS_STATE_R {
+        RO_PDS_STATE_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bits 5:7"]
     #[inline(always)]
-    pub fn cr_xtal_force_off(&self) -> CR_XTAL_FORCE_OFF_R {
-        CR_XTAL_FORCE_OFF_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn reserved_5_7(&self) -> RESERVED_5_7_R {
+        RESERVED_5_7_R::new(((self.bits >> 5) & 7) as u8)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bits 8:12"]
     #[inline(always)]
-    pub fn cr_pds_wifi_save_state(&self) -> CR_PDS_WIFI_SAVE_STATE_R {
-        CR_PDS_WIFI_SAVE_STATE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ro_pds_rf_state(&self) -> RO_PDS_RF_STATE_R {
+        RO_PDS_RF_STATE_R::new(((self.bits >> 8) & 0x1f) as u8)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bits 13:23"]
     #[inline(always)]
-    pub fn cr_pds_pd_dcdc11(&self) -> CR_PDS_PD_DCDC11_R {
-        CR_PDS_PD_DCDC11_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn reserved_13_23(&self) -> RESERVED_13_23_R {
+        RESERVED_13_23_R::new(((self.bits >> 13) & 0x07ff) as u16)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn cr_pds_pd_bg_sys(&self) -> CR_PDS_PD_BG_SYS_R {
-        CR_PDS_PD_BG_SYS_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn pds_reset_event(&self) -> PDS_RESET_EVENT_R {
+        PDS_RESET_EVENT_R::new(((self.bits >> 24) & 7) as u8)
+    }
+    #[doc = "Bits 27:30"]
+    #[inline(always)]
+    pub fn reserved_27_30(&self) -> RESERVED_27_30_R {
+        RESERVED_27_30_R::new(((self.bits >> 27) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn pds_start_ps(&mut self) -> PDS_START_PS_W<0> {
-        PDS_START_PS_W::new(self)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_sleep_forever(&mut self) -> CR_SLEEP_FOREVER_W<1> {
-        CR_SLEEP_FOREVER_W::new(self)
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_xtal_force_off(&mut self) -> CR_XTAL_FORCE_OFF_W<2> {
-        CR_XTAL_FORCE_OFF_W::new(self)
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_wifi_save_state(&mut self) -> CR_PDS_WIFI_SAVE_STATE_W<3> {
-        CR_PDS_WIFI_SAVE_STATE_W::new(self)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_pd_dcdc11(&mut self) -> CR_PDS_PD_DCDC11_W<4> {
-        CR_PDS_PD_DCDC11_W::new(self)
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_pd_bg_sys(&mut self) -> CR_PDS_PD_BG_SYS_W<5> {
-        CR_PDS_PD_BG_SYS_W::new(self)
+    pub fn pds_clr_reset_event(&mut self) -> PDS_CLR_RESET_EVENT_W<31> {
+        PDS_CLR_RESET_EVENT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -128,7 +94,7 @@ impl W {
         self
     }
 }
-#[doc = "PDS_CTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_stat](index.html) module"]
+#[doc = "pds_stat\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_stat](index.html) module"]
 pub struct PDS_STAT_SPEC;
 impl crate::RegisterSpec for PDS_STAT_SPEC {
     type Ux = u32;
