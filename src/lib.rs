@@ -230,6 +230,34 @@ impl core::fmt::Debug for HBN {
 }
 #[doc = "Hibernate (Deep sleep) control"]
 pub mod hbn;
+#[doc = "Inter-processor Channel"]
+pub struct IPC {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for IPC {}
+impl IPC {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const ipc::RegisterBlock = 0x2000_a800 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const ipc::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for IPC {
+    type Target = ipc::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for IPC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IPC").finish()
+    }
+}
+#[doc = "Inter-processor Channel"]
+pub mod ipc;
 #[doc = "Chip Miscellaneous control"]
 pub struct MISC {
     _marker: PhantomData<*const ()>,
@@ -314,6 +342,34 @@ impl core::fmt::Debug for PSRAM {
 }
 #[doc = "Pseudo Static Random Access Memory control"]
 pub mod psram;
+#[doc = "Secure Digital host control"]
+pub struct SDH {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SDH {}
+impl SDH {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const sdh::RegisterBlock = 0x2006_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const sdh::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for SDH {
+    type Target = sdh::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for SDH {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDH").finish()
+    }
+}
+#[doc = "Secure Digital host control"]
+pub mod sdh;
 #[doc = "Quad Serial Flash control"]
 pub struct FLASH {
     _marker: PhantomData<*const ()>,
@@ -417,12 +473,16 @@ pub struct Peripherals {
     pub GPIP: GPIP,
     #[doc = "HBN"]
     pub HBN: HBN,
+    #[doc = "IPC"]
+    pub IPC: IPC,
     #[doc = "MISC"]
     pub MISC: MISC,
     #[doc = "PDS_BASE"]
     pub PDS_BASE: PDS_BASE,
     #[doc = "PSRAM"]
     pub PSRAM: PSRAM,
+    #[doc = "SDH"]
+    pub SDH: SDH,
     #[doc = "FLASH"]
     pub FLASH: FLASH,
     #[doc = "TZC_SEC"]
@@ -472,6 +532,9 @@ impl Peripherals {
             HBN: HBN {
                 _marker: PhantomData,
             },
+            IPC: IPC {
+                _marker: PhantomData,
+            },
             MISC: MISC {
                 _marker: PhantomData,
             },
@@ -479,6 +542,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             PSRAM: PSRAM {
+                _marker: PhantomData,
+            },
+            SDH: SDH {
                 _marker: PhantomData,
             },
             FLASH: FLASH {

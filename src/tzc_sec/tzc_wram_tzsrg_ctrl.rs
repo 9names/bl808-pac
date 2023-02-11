@@ -34,7 +34,208 @@ impl From<crate::W<TZC_WRAM_TZSRG_CTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `tzc_wram_tzsrg_r0_id_en` reader - "]
+pub type TZC_WRAM_TZSRG_R0_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_wram_tzsrg_r0_id_en` writer - "]
+pub type TZC_WRAM_TZSRG_R0_ID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `tzc_wram_tzsrg_r1_id_en` reader - "]
+pub type TZC_WRAM_TZSRG_R1_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_wram_tzsrg_r1_id_en` writer - "]
+pub type TZC_WRAM_TZSRG_R1_ID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `tzc_wram_tzsrg_r2_id_en` reader - "]
+pub type TZC_WRAM_TZSRG_R2_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_wram_tzsrg_r2_id_en` writer - "]
+pub type TZC_WRAM_TZSRG_R2_ID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `tzc_wram_tzsrg_rx_id_en` reader - "]
+pub type TZC_WRAM_TZSRG_RX_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_wram_tzsrg_rx_id_en` writer - "]
+pub type TZC_WRAM_TZSRG_RX_ID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `tzc_wram_tzsrg_r0_en` reader - "]
+pub type TZC_WRAM_TZSRG_R0_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r0_en` writer - "]
+pub type TZC_WRAM_TZSRG_R0_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_r1_en` reader - "]
+pub type TZC_WRAM_TZSRG_R1_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r1_en` writer - "]
+pub type TZC_WRAM_TZSRG_R1_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_r2_en` reader - "]
+pub type TZC_WRAM_TZSRG_R2_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r2_en` writer - "]
+pub type TZC_WRAM_TZSRG_R2_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_rx_en` reader - "]
+pub type TZC_WRAM_TZSRG_RX_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_rx_en` writer - "]
+pub type TZC_WRAM_TZSRG_RX_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_r0_lock` reader - "]
+pub type TZC_WRAM_TZSRG_R0_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r0_lock` writer - "]
+pub type TZC_WRAM_TZSRG_R0_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_r1_lock` reader - "]
+pub type TZC_WRAM_TZSRG_R1_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r1_lock` writer - "]
+pub type TZC_WRAM_TZSRG_R1_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_r2_lock` reader - "]
+pub type TZC_WRAM_TZSRG_R2_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_r2_lock` writer - "]
+pub type TZC_WRAM_TZSRG_R2_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `tzc_wram_tzsrg_rx_lock` reader - "]
+pub type TZC_WRAM_TZSRG_RX_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_wram_tzsrg_rx_lock` writer - "]
+pub type TZC_WRAM_TZSRG_RX_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_WRAM_TZSRG_CTRL_SPEC, bool, O>;
+#[doc = "Field `reserved_24_31` reader - "]
+pub type RESERVED_24_31_R = crate::FieldReader<u8, u8>;
+impl R {
+    #[doc = "Bits 0:3"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r0_id_en(&self) -> TZC_WRAM_TZSRG_R0_ID_EN_R {
+        TZC_WRAM_TZSRG_R0_ID_EN_R::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r1_id_en(&self) -> TZC_WRAM_TZSRG_R1_ID_EN_R {
+        TZC_WRAM_TZSRG_R1_ID_EN_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r2_id_en(&self) -> TZC_WRAM_TZSRG_R2_ID_EN_R {
+        TZC_WRAM_TZSRG_R2_ID_EN_R::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_rx_id_en(&self) -> TZC_WRAM_TZSRG_RX_ID_EN_R {
+        TZC_WRAM_TZSRG_RX_ID_EN_R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r0_en(&self) -> TZC_WRAM_TZSRG_R0_EN_R {
+        TZC_WRAM_TZSRG_R0_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r1_en(&self) -> TZC_WRAM_TZSRG_R1_EN_R {
+        TZC_WRAM_TZSRG_R1_EN_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r2_en(&self) -> TZC_WRAM_TZSRG_R2_EN_R {
+        TZC_WRAM_TZSRG_R2_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_rx_en(&self) -> TZC_WRAM_TZSRG_RX_EN_R {
+        TZC_WRAM_TZSRG_RX_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r0_lock(&self) -> TZC_WRAM_TZSRG_R0_LOCK_R {
+        TZC_WRAM_TZSRG_R0_LOCK_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r1_lock(&self) -> TZC_WRAM_TZSRG_R1_LOCK_R {
+        TZC_WRAM_TZSRG_R1_LOCK_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_r2_lock(&self) -> TZC_WRAM_TZSRG_R2_LOCK_R {
+        TZC_WRAM_TZSRG_R2_LOCK_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn tzc_wram_tzsrg_rx_lock(&self) -> TZC_WRAM_TZSRG_RX_LOCK_R {
+        TZC_WRAM_TZSRG_RX_LOCK_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn reserved_24_31(&self) -> RESERVED_24_31_R {
+        RESERVED_24_31_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
 impl W {
+    #[doc = "Bits 0:3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r0_id_en(&mut self) -> TZC_WRAM_TZSRG_R0_ID_EN_W<0> {
+        TZC_WRAM_TZSRG_R0_ID_EN_W::new(self)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r1_id_en(&mut self) -> TZC_WRAM_TZSRG_R1_ID_EN_W<4> {
+        TZC_WRAM_TZSRG_R1_ID_EN_W::new(self)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r2_id_en(&mut self) -> TZC_WRAM_TZSRG_R2_ID_EN_W<8> {
+        TZC_WRAM_TZSRG_R2_ID_EN_W::new(self)
+    }
+    #[doc = "Bits 12:15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_rx_id_en(&mut self) -> TZC_WRAM_TZSRG_RX_ID_EN_W<12> {
+        TZC_WRAM_TZSRG_RX_ID_EN_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r0_en(&mut self) -> TZC_WRAM_TZSRG_R0_EN_W<16> {
+        TZC_WRAM_TZSRG_R0_EN_W::new(self)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r1_en(&mut self) -> TZC_WRAM_TZSRG_R1_EN_W<17> {
+        TZC_WRAM_TZSRG_R1_EN_W::new(self)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r2_en(&mut self) -> TZC_WRAM_TZSRG_R2_EN_W<18> {
+        TZC_WRAM_TZSRG_R2_EN_W::new(self)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_rx_en(&mut self) -> TZC_WRAM_TZSRG_RX_EN_W<19> {
+        TZC_WRAM_TZSRG_RX_EN_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r0_lock(&mut self) -> TZC_WRAM_TZSRG_R0_LOCK_W<20> {
+        TZC_WRAM_TZSRG_R0_LOCK_W::new(self)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r1_lock(&mut self) -> TZC_WRAM_TZSRG_R1_LOCK_W<21> {
+        TZC_WRAM_TZSRG_R1_LOCK_W::new(self)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_r2_lock(&mut self) -> TZC_WRAM_TZSRG_R2_LOCK_W<22> {
+        TZC_WRAM_TZSRG_R2_LOCK_W::new(self)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_wram_tzsrg_rx_lock(&mut self) -> TZC_WRAM_TZSRG_RX_LOCK_W<23> {
+        TZC_WRAM_TZSRG_RX_LOCK_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -57,7 +258,7 @@ impl crate::Writable for TZC_WRAM_TZSRG_CTRL_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_wram_tzsrg_ctrl to value 0"]
+#[doc = "`reset()` method sets tzc_wram_tzsrg_ctrl to value 0xffff"]
 impl crate::Resettable for TZC_WRAM_TZSRG_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0xffff;
 }

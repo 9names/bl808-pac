@@ -19,6 +19,9 @@ pub struct RegisterBlock {
     pub blai_lmtr_wr: BLAI_LMTR_WR,
     #[doc = "0x28 - id_selection"]
     pub id_selection: ID_SELECTION,
+    _reserved8: [u8; 0xd0],
+    #[doc = "0xfc - CODEC_MISC_Dummy"]
+    pub codec_misc_dummy: CODEC_MISC_DUMMY,
 }
 #[doc = "codec_bus_ctrl (rw) register accessor: an alias for `Reg<CODEC_BUS_CTRL_SPEC>`"]
 pub type CODEC_BUS_CTRL = crate::Reg<codec_bus_ctrl::CODEC_BUS_CTRL_SPEC>;
@@ -52,3 +55,7 @@ pub mod blai_lmtr_wr;
 pub type ID_SELECTION = crate::Reg<id_selection::ID_SELECTION_SPEC>;
 #[doc = "id_selection"]
 pub mod id_selection;
+#[doc = "codec_misc_dummy (rw) register accessor: an alias for `Reg<CODEC_MISC_DUMMY_SPEC>`"]
+pub type CODEC_MISC_DUMMY = crate::Reg<codec_misc_dummy::CODEC_MISC_DUMMY_SPEC>;
+#[doc = "CODEC_MISC_Dummy"]
+pub mod codec_misc_dummy;

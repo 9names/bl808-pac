@@ -34,6 +34,232 @@ impl From<crate::W<TZC_MM_BMX_S_LOCK1_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `tzc_codec_s10_tzsid_lock` reader - "]
+pub type TZC_CODEC_S10_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s11_tzsid_lock` reader - "]
+pub type TZC_CODEC_S11_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s12_tzsid_lock` reader - "]
+pub type TZC_CODEC_S12_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s13_tzsid_lock` reader - "]
+pub type TZC_CODEC_S13_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s14_tzsid_lock` reader - "]
+pub type TZC_CODEC_S14_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s15_tzsid_lock` reader - "]
+pub type TZC_CODEC_S15_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s16_tzsid_lock` reader - "]
+pub type TZC_CODEC_S16_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s17_tzsid_lock` reader - "]
+pub type TZC_CODEC_S17_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s18_tzsid_lock` reader - "]
+pub type TZC_CODEC_S18_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s19_tzsid_lock` reader - "]
+pub type TZC_CODEC_S19_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1a_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1A_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1b_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1B_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1c_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1C_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1d_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1D_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1e_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1E_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_codec_s1f_tzsid_lock` reader - "]
+pub type TZC_CODEC_S1F_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s10_tzsid_lock` reader - "]
+pub type TZC_S10_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s11_tzsid_lock` reader - "]
+pub type TZC_S11_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s12_tzsid_lock` reader - "]
+pub type TZC_S12_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s13_tzsid_lock` reader - "]
+pub type TZC_S13_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s14_tzsid_lock` reader - "]
+pub type TZC_S14_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s15_tzsid_lock` reader - "]
+pub type TZC_S15_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s16_tzsid_lock` reader - "]
+pub type TZC_S16_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s17_tzsid_lock` reader - "]
+pub type TZC_S17_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s18_tzsid_lock` reader - "]
+pub type TZC_S18_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s19_tzsid_lock` reader - "]
+pub type TZC_S19_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1a_tzsid_lock` reader - "]
+pub type TZC_S1A_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1b_tzsid_lock` reader - "]
+pub type TZC_S1B_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1c_tzsid_lock` reader - "]
+pub type TZC_S1C_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1d_tzsid_lock` reader - "]
+pub type TZC_S1D_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1e_tzsid_lock` reader - "]
+pub type TZC_S1E_TZSID_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_s1f_tzsid_lock` reader - "]
+pub type TZC_S1F_TZSID_LOCK_R = crate::BitReader<bool>;
+impl R {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn tzc_codec_s10_tzsid_lock(&self) -> TZC_CODEC_S10_TZSID_LOCK_R {
+        TZC_CODEC_S10_TZSID_LOCK_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn tzc_codec_s11_tzsid_lock(&self) -> TZC_CODEC_S11_TZSID_LOCK_R {
+        TZC_CODEC_S11_TZSID_LOCK_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn tzc_codec_s12_tzsid_lock(&self) -> TZC_CODEC_S12_TZSID_LOCK_R {
+        TZC_CODEC_S12_TZSID_LOCK_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn tzc_codec_s13_tzsid_lock(&self) -> TZC_CODEC_S13_TZSID_LOCK_R {
+        TZC_CODEC_S13_TZSID_LOCK_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn tzc_codec_s14_tzsid_lock(&self) -> TZC_CODEC_S14_TZSID_LOCK_R {
+        TZC_CODEC_S14_TZSID_LOCK_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn tzc_codec_s15_tzsid_lock(&self) -> TZC_CODEC_S15_TZSID_LOCK_R {
+        TZC_CODEC_S15_TZSID_LOCK_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn tzc_codec_s16_tzsid_lock(&self) -> TZC_CODEC_S16_TZSID_LOCK_R {
+        TZC_CODEC_S16_TZSID_LOCK_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn tzc_codec_s17_tzsid_lock(&self) -> TZC_CODEC_S17_TZSID_LOCK_R {
+        TZC_CODEC_S17_TZSID_LOCK_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn tzc_codec_s18_tzsid_lock(&self) -> TZC_CODEC_S18_TZSID_LOCK_R {
+        TZC_CODEC_S18_TZSID_LOCK_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn tzc_codec_s19_tzsid_lock(&self) -> TZC_CODEC_S19_TZSID_LOCK_R {
+        TZC_CODEC_S19_TZSID_LOCK_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn tzc_codec_s1a_tzsid_lock(&self) -> TZC_CODEC_S1A_TZSID_LOCK_R {
+        TZC_CODEC_S1A_TZSID_LOCK_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn tzc_codec_s1b_tzsid_lock(&self) -> TZC_CODEC_S1B_TZSID_LOCK_R {
+        TZC_CODEC_S1B_TZSID_LOCK_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn tzc_codec_s1c_tzsid_lock(&self) -> TZC_CODEC_S1C_TZSID_LOCK_R {
+        TZC_CODEC_S1C_TZSID_LOCK_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn tzc_codec_s1d_tzsid_lock(&self) -> TZC_CODEC_S1D_TZSID_LOCK_R {
+        TZC_CODEC_S1D_TZSID_LOCK_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    pub fn tzc_codec_s1e_tzsid_lock(&self) -> TZC_CODEC_S1E_TZSID_LOCK_R {
+        TZC_CODEC_S1E_TZSID_LOCK_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn tzc_codec_s1f_tzsid_lock(&self) -> TZC_CODEC_S1F_TZSID_LOCK_R {
+        TZC_CODEC_S1F_TZSID_LOCK_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn tzc_s10_tzsid_lock(&self) -> TZC_S10_TZSID_LOCK_R {
+        TZC_S10_TZSID_LOCK_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn tzc_s11_tzsid_lock(&self) -> TZC_S11_TZSID_LOCK_R {
+        TZC_S11_TZSID_LOCK_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn tzc_s12_tzsid_lock(&self) -> TZC_S12_TZSID_LOCK_R {
+        TZC_S12_TZSID_LOCK_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn tzc_s13_tzsid_lock(&self) -> TZC_S13_TZSID_LOCK_R {
+        TZC_S13_TZSID_LOCK_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn tzc_s14_tzsid_lock(&self) -> TZC_S14_TZSID_LOCK_R {
+        TZC_S14_TZSID_LOCK_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn tzc_s15_tzsid_lock(&self) -> TZC_S15_TZSID_LOCK_R {
+        TZC_S15_TZSID_LOCK_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn tzc_s16_tzsid_lock(&self) -> TZC_S16_TZSID_LOCK_R {
+        TZC_S16_TZSID_LOCK_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn tzc_s17_tzsid_lock(&self) -> TZC_S17_TZSID_LOCK_R {
+        TZC_S17_TZSID_LOCK_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn tzc_s18_tzsid_lock(&self) -> TZC_S18_TZSID_LOCK_R {
+        TZC_S18_TZSID_LOCK_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    pub fn tzc_s19_tzsid_lock(&self) -> TZC_S19_TZSID_LOCK_R {
+        TZC_S19_TZSID_LOCK_R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26"]
+    #[inline(always)]
+    pub fn tzc_s1a_tzsid_lock(&self) -> TZC_S1A_TZSID_LOCK_R {
+        TZC_S1A_TZSID_LOCK_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn tzc_s1b_tzsid_lock(&self) -> TZC_S1B_TZSID_LOCK_R {
+        TZC_S1B_TZSID_LOCK_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn tzc_s1c_tzsid_lock(&self) -> TZC_S1C_TZSID_LOCK_R {
+        TZC_S1C_TZSID_LOCK_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn tzc_s1d_tzsid_lock(&self) -> TZC_S1D_TZSID_LOCK_R {
+        TZC_S1D_TZSID_LOCK_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn tzc_s1e_tzsid_lock(&self) -> TZC_S1E_TZSID_LOCK_R {
+        TZC_S1E_TZSID_LOCK_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn tzc_s1f_tzsid_lock(&self) -> TZC_S1F_TZSID_LOCK_R {
+        TZC_S1F_TZSID_LOCK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

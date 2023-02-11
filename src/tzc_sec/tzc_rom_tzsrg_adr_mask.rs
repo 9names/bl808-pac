@@ -34,7 +34,55 @@ impl From<crate::W<TZC_ROM_TZSRG_ADR_MASK_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `tzc_rom_tzsrg_adr_mask` reader - "]
+pub type TZC_ROM_TZSRG_ADR_MASK_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `tzc_rom_tzsrg_adr_mask` writer - "]
+pub type TZC_ROM_TZSRG_ADR_MASK_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_ROM_TZSRG_ADR_MASK_SPEC, u16, u16, 10, O>;
+#[doc = "Field `reserved_10_15` reader - "]
+pub type RESERVED_10_15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_rom_tzsrg_adr_mask_lock` reader - "]
+pub type TZC_ROM_TZSRG_ADR_MASK_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_rom_tzsrg_adr_mask_lock` writer - "]
+pub type TZC_ROM_TZSRG_ADR_MASK_LOCK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TZC_ROM_TZSRG_ADR_MASK_SPEC, bool, O>;
+#[doc = "Field `reserved_17_31` reader - "]
+pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
+impl R {
+    #[doc = "Bits 0:9"]
+    #[inline(always)]
+    pub fn tzc_rom_tzsrg_adr_mask(&self) -> TZC_ROM_TZSRG_ADR_MASK_R {
+        TZC_ROM_TZSRG_ADR_MASK_R::new((self.bits & 0x03ff) as u16)
+    }
+    #[doc = "Bits 10:15"]
+    #[inline(always)]
+    pub fn reserved_10_15(&self) -> RESERVED_10_15_R {
+        RESERVED_10_15_R::new(((self.bits >> 10) & 0x3f) as u8)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn tzc_rom_tzsrg_adr_mask_lock(&self) -> TZC_ROM_TZSRG_ADR_MASK_LOCK_R {
+        TZC_ROM_TZSRG_ADR_MASK_LOCK_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:31"]
+    #[inline(always)]
+    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
+        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
+    }
+}
 impl W {
+    #[doc = "Bits 0:9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_rom_tzsrg_adr_mask(&mut self) -> TZC_ROM_TZSRG_ADR_MASK_W<0> {
+        TZC_ROM_TZSRG_ADR_MASK_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_rom_tzsrg_adr_mask_lock(&mut self) -> TZC_ROM_TZSRG_ADR_MASK_LOCK_W<16> {
+        TZC_ROM_TZSRG_ADR_MASK_LOCK_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

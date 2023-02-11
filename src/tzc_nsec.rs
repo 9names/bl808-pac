@@ -180,6 +180,8 @@ pub struct RegisterBlock {
     pub tzc_se_ctrl_0: TZC_SE_CTRL_0,
     #[doc = "0xf44 - tzc_se_ctrl_1"]
     pub tzc_se_ctrl_1: TZC_SE_CTRL_1,
+    #[doc = "0xf48 - tzc_se_ctrl_2"]
+    pub tzc_se_ctrl_2: TZC_SE_CTRL_2,
 }
 #[doc = "tzc_rom_tzsrg_ctrl (rw) register accessor: an alias for `Reg<TZC_ROM_TZSRG_CTRL_SPEC>`"]
 pub type TZC_ROM_TZSRG_CTRL = crate::Reg<tzc_rom_tzsrg_ctrl::TZC_ROM_TZSRG_CTRL_SPEC>;
@@ -516,3 +518,7 @@ pub mod tzc_se_ctrl_0;
 pub type TZC_SE_CTRL_1 = crate::Reg<tzc_se_ctrl_1::TZC_SE_CTRL_1_SPEC>;
 #[doc = "tzc_se_ctrl_1"]
 pub mod tzc_se_ctrl_1;
+#[doc = "tzc_se_ctrl_2 (rw) register accessor: an alias for `Reg<TZC_SE_CTRL_2_SPEC>`"]
+pub type TZC_SE_CTRL_2 = crate::Reg<tzc_se_ctrl_2::TZC_SE_CTRL_2_SPEC>;
+#[doc = "tzc_se_ctrl_2"]
+pub mod tzc_se_ctrl_2;

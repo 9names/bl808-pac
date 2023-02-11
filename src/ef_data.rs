@@ -127,7 +127,9 @@ pub struct RegisterBlock {
     pub ef_dat_1_rsvd_1: EF_DAT_1_RSVD_1,
     #[doc = "0xf8 - ef_dat_1_rsvd_2"]
     pub ef_dat_1_rsvd_2: EF_DAT_1_RSVD_2,
-    _reserved63: [u8; 0x0704],
+    #[doc = "0xfc - ef_data_1_lock"]
+    pub ef_data_1_lock: EF_DATA_1_LOCK,
+    _reserved64: [u8; 0x0700],
     #[doc = "0x800 - ef_if_ctrl_0"]
     pub ef_if_ctrl_0: EF_IF_CTRL_0,
     #[doc = "0x804 - ef_if_cyc_0"]
@@ -148,21 +150,21 @@ pub struct RegisterBlock {
     pub ef_if_sw_usage_0: EF_IF_SW_USAGE_0,
     #[doc = "0x824 - ef_if_sw_usage_1"]
     pub ef_if_sw_usage_1: EF_IF_SW_USAGE_1,
-    _reserved73: [u8; 0xd8],
+    _reserved74: [u8; 0xd8],
     #[doc = "0x900 - ef_if_ctrl_1"]
     pub ef_if_ctrl_1: EF_IF_CTRL_1,
     #[doc = "0x904 - ef_if_1_manual"]
     pub ef_if_1_manual: EF_IF_1_MANUAL,
     #[doc = "0x908 - ef_if_1_status"]
     pub ef_if_1_status: EF_IF_1_STATUS,
-    _reserved76: [u8; 0x04],
+    _reserved77: [u8; 0x04],
     #[doc = "0x910 - ef_if_ctrl_2"]
     pub ef_if_ctrl_2: EF_IF_CTRL_2,
     #[doc = "0x914 - ef_if_2_manual"]
     pub ef_if_2_manual: EF_IF_2_MANUAL,
     #[doc = "0x918 - ef_if_2_status"]
     pub ef_if_2_status: EF_IF_2_STATUS,
-    _reserved79: [u8; 0xe4],
+    _reserved80: [u8; 0xe4],
     #[doc = "0xa00 - ef_crc_ctrl_0"]
     pub ef_crc_ctrl_0: EF_CRC_CTRL_0,
     #[doc = "0xa04 - ef_crc_ctrl_1"]
@@ -516,3 +518,7 @@ pub mod ef_dat_1_rsvd_1;
 pub type EF_DAT_1_RSVD_2 = crate::Reg<ef_dat_1_rsvd_2::EF_DAT_1_RSVD_2_SPEC>;
 #[doc = "ef_dat_1_rsvd_2"]
 pub mod ef_dat_1_rsvd_2;
+#[doc = "ef_data_1_lock (rw) register accessor: an alias for `Reg<EF_DATA_1_LOCK_SPEC>`"]
+pub type EF_DATA_1_LOCK = crate::Reg<ef_data_1_lock::EF_DATA_1_LOCK_SPEC>;
+#[doc = "ef_data_1_lock"]
+pub mod ef_data_1_lock;

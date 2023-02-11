@@ -71,6 +71,27 @@ pub type CR_PDS_CTRL_WB_RAM_CLK_R = crate::BitReader<bool>;
 #[doc = "Field `cr_pds_ctrl_wb_ram_clk` writer - "]
 pub type CR_PDS_CTRL_WB_RAM_CLK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, PDS_RAM1_SPEC, bool, O>;
+#[doc = "Field `cr_pds_ctrl_usb_ram_clk` reader - "]
+pub type CR_PDS_CTRL_USB_RAM_CLK_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_ctrl_usb_ram_clk` writer - "]
+pub type CR_PDS_CTRL_USB_RAM_CLK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_RAM1_SPEC, bool, O>;
+#[doc = "Field `cr_pds_ctrl_misc_ram_clk` reader - "]
+pub type CR_PDS_CTRL_MISC_RAM_CLK_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_ctrl_misc_ram_clk` writer - "]
+pub type CR_PDS_CTRL_MISC_RAM_CLK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_RAM1_SPEC, bool, O>;
+#[doc = "Field `reserved_29` reader - "]
+pub type RESERVED_29_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_ctrl_ram_clk2` reader - "]
+pub type CR_PDS_CTRL_RAM_CLK2_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_ctrl_ram_clk2` writer - "]
+pub type CR_PDS_CTRL_RAM_CLK2_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_RAM1_SPEC, bool, O>;
+#[doc = "Field `cr_pds_ctrl_ram_clk` reader - "]
+pub type CR_PDS_CTRL_RAM_CLK_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_ctrl_ram_clk` writer - "]
+pub type CR_PDS_CTRL_RAM_CLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_RAM1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -117,6 +138,31 @@ impl R {
     pub fn cr_pds_ctrl_wb_ram_clk(&self) -> CR_PDS_CTRL_WB_RAM_CLK_R {
         CR_PDS_CTRL_WB_RAM_CLK_R::new(((self.bits >> 26) & 1) != 0)
     }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn cr_pds_ctrl_usb_ram_clk(&self) -> CR_PDS_CTRL_USB_RAM_CLK_R {
+        CR_PDS_CTRL_USB_RAM_CLK_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn cr_pds_ctrl_misc_ram_clk(&self) -> CR_PDS_CTRL_MISC_RAM_CLK_R {
+        CR_PDS_CTRL_MISC_RAM_CLK_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn reserved_29(&self) -> RESERVED_29_R {
+        RESERVED_29_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn cr_pds_ctrl_ram_clk2(&self) -> CR_PDS_CTRL_RAM_CLK2_R {
+        CR_PDS_CTRL_RAM_CLK2_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn cr_pds_ctrl_ram_clk(&self) -> CR_PDS_CTRL_RAM_CLK_R {
+        CR_PDS_CTRL_RAM_CLK_R::new(((self.bits >> 31) & 1) != 0)
+    }
 }
 impl W {
     #[doc = "Bits 0:3"]
@@ -160,6 +206,30 @@ impl W {
     #[must_use]
     pub fn cr_pds_ctrl_wb_ram_clk(&mut self) -> CR_PDS_CTRL_WB_RAM_CLK_W<26> {
         CR_PDS_CTRL_WB_RAM_CLK_W::new(self)
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_ctrl_usb_ram_clk(&mut self) -> CR_PDS_CTRL_USB_RAM_CLK_W<27> {
+        CR_PDS_CTRL_USB_RAM_CLK_W::new(self)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_ctrl_misc_ram_clk(&mut self) -> CR_PDS_CTRL_MISC_RAM_CLK_W<28> {
+        CR_PDS_CTRL_MISC_RAM_CLK_W::new(self)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_ctrl_ram_clk2(&mut self) -> CR_PDS_CTRL_RAM_CLK2_W<30> {
+        CR_PDS_CTRL_RAM_CLK2_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_ctrl_ram_clk(&mut self) -> CR_PDS_CTRL_RAM_CLK_W<31> {
+        CR_PDS_CTRL_RAM_CLK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

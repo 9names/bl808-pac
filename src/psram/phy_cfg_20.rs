@@ -34,43 +34,43 @@ impl From<crate::W<PHY_CFG_20_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `dq11_sr` reader - "]
-pub type DQ11_SR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq11_sr` writer - "]
-pub type DQ11_SR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 2, O>;
+#[doc = "Field `dq13_sr` reader - "]
+pub type DQ13_SR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq13_sr` writer - "]
+pub type DQ13_SR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 2, O>;
 #[doc = "Field `reserved_2_7` reader - "]
 pub type RESERVED_2_7_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq11_dly_rx` reader - "]
-pub type DQ11_DLY_RX_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq11_dly_rx` writer - "]
-pub type DQ11_DLY_RX_W<'a, const O: u8> =
+#[doc = "Field `dq13_dly_rx` reader - "]
+pub type DQ13_DLY_RX_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq13_dly_rx` writer - "]
+pub type DQ13_DLY_RX_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 4, O>;
-#[doc = "Field `dq11_dly_drv` reader - "]
-pub type DQ11_DLY_DRV_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq11_dly_drv` writer - "]
-pub type DQ11_DLY_DRV_W<'a, const O: u8> =
+#[doc = "Field `dq13_dly_drv` reader - "]
+pub type DQ13_DLY_DRV_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq13_dly_drv` writer - "]
+pub type DQ13_DLY_DRV_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 4, O>;
-#[doc = "Field `dq10_sr` reader - "]
-pub type DQ10_SR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq10_sr` writer - "]
-pub type DQ10_SR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 2, O>;
+#[doc = "Field `dq12_sr` reader - "]
+pub type DQ12_SR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq12_sr` writer - "]
+pub type DQ12_SR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 2, O>;
 #[doc = "Field `reserved_18_23` reader - "]
 pub type RESERVED_18_23_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq10_dly_rx` reader - "]
-pub type DQ10_DLY_RX_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq10_dly_rx` writer - "]
-pub type DQ10_DLY_RX_W<'a, const O: u8> =
+#[doc = "Field `dq12_dly_rx` reader - "]
+pub type DQ12_DLY_RX_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq12_dly_rx` writer - "]
+pub type DQ12_DLY_RX_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 4, O>;
-#[doc = "Field `dq10_dly_drv` reader - "]
-pub type DQ10_DLY_DRV_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `dq10_dly_drv` writer - "]
-pub type DQ10_DLY_DRV_W<'a, const O: u8> =
+#[doc = "Field `dq12_dly_drv` reader - "]
+pub type DQ12_DLY_DRV_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `dq12_dly_drv` writer - "]
+pub type DQ12_DLY_DRV_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PHY_CFG_20_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn dq11_sr(&self) -> DQ11_SR_R {
-        DQ11_SR_R::new((self.bits & 3) as u8)
+    pub fn dq13_sr(&self) -> DQ13_SR_R {
+        DQ13_SR_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
@@ -79,18 +79,18 @@ impl R {
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn dq11_dly_rx(&self) -> DQ11_DLY_RX_R {
-        DQ11_DLY_RX_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn dq13_dly_rx(&self) -> DQ13_DLY_RX_R {
+        DQ13_DLY_RX_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn dq11_dly_drv(&self) -> DQ11_DLY_DRV_R {
-        DQ11_DLY_DRV_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn dq13_dly_drv(&self) -> DQ13_DLY_DRV_R {
+        DQ13_DLY_DRV_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn dq10_sr(&self) -> DQ10_SR_R {
-        DQ10_SR_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn dq12_sr(&self) -> DQ12_SR_R {
+        DQ12_SR_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:23"]
     #[inline(always)]
@@ -99,51 +99,51 @@ impl R {
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn dq10_dly_rx(&self) -> DQ10_DLY_RX_R {
-        DQ10_DLY_RX_R::new(((self.bits >> 24) & 0x0f) as u8)
+    pub fn dq12_dly_rx(&self) -> DQ12_DLY_RX_R {
+        DQ12_DLY_RX_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn dq10_dly_drv(&self) -> DQ10_DLY_DRV_R {
-        DQ10_DLY_DRV_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn dq12_dly_drv(&self) -> DQ12_DLY_DRV_R {
+        DQ12_DLY_DRV_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn dq11_sr(&mut self) -> DQ11_SR_W<0> {
-        DQ11_SR_W::new(self)
+    pub fn dq13_sr(&mut self) -> DQ13_SR_W<0> {
+        DQ13_SR_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn dq11_dly_rx(&mut self) -> DQ11_DLY_RX_W<8> {
-        DQ11_DLY_RX_W::new(self)
+    pub fn dq13_dly_rx(&mut self) -> DQ13_DLY_RX_W<8> {
+        DQ13_DLY_RX_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
     #[must_use]
-    pub fn dq11_dly_drv(&mut self) -> DQ11_DLY_DRV_W<12> {
-        DQ11_DLY_DRV_W::new(self)
+    pub fn dq13_dly_drv(&mut self) -> DQ13_DLY_DRV_W<12> {
+        DQ13_DLY_DRV_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn dq10_sr(&mut self) -> DQ10_SR_W<16> {
-        DQ10_SR_W::new(self)
+    pub fn dq12_sr(&mut self) -> DQ12_SR_W<16> {
+        DQ12_SR_W::new(self)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
     #[must_use]
-    pub fn dq10_dly_rx(&mut self) -> DQ10_DLY_RX_W<24> {
-        DQ10_DLY_RX_W::new(self)
+    pub fn dq12_dly_rx(&mut self) -> DQ12_DLY_RX_W<24> {
+        DQ12_DLY_RX_W::new(self)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
     #[must_use]
-    pub fn dq10_dly_drv(&mut self) -> DQ10_DLY_DRV_W<28> {
-        DQ10_DLY_DRV_W::new(self)
+    pub fn dq12_dly_drv(&mut self) -> DQ12_DLY_DRV_W<28> {
+        DQ12_DLY_DRV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -152,7 +152,7 @@ impl W {
         self
     }
 }
-#[doc = "phy_cfg_1C\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [phy_cfg_20](index.html) module"]
+#[doc = "phy_cfg_20\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [phy_cfg_20](index.html) module"]
 pub struct PHY_CFG_20_SPEC;
 impl crate::RegisterSpec for PHY_CFG_20_SPEC {
     type Ux = u32;

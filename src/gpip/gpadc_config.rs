@@ -61,6 +61,38 @@ pub type GPADC_FIFO_OVERRUN_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `gpadc_fifo_overrun_clr` writer - "]
 pub type GPADC_FIFO_OVERRUN_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, GPADC_CONFIG_SPEC, bool, O>;
+#[doc = "Field `gpadc_fifo_underrun_clr` reader - "]
+pub type GPADC_FIFO_UNDERRUN_CLR_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_fifo_underrun_clr` writer - "]
+pub type GPADC_FIFO_UNDERRUN_CLR_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPADC_CONFIG_SPEC, bool, O>;
+#[doc = "Field `reserved_11` reader - "]
+pub type RESERVED_11_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_rdy_mask` reader - "]
+pub type GPADC_RDY_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_rdy_mask` writer - "]
+pub type GPADC_RDY_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPADC_CONFIG_SPEC, bool, O>;
+#[doc = "Field `gpadc_fifo_overrun_mask` reader - "]
+pub type GPADC_FIFO_OVERRUN_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_fifo_overrun_mask` writer - "]
+pub type GPADC_FIFO_OVERRUN_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPADC_CONFIG_SPEC, bool, O>;
+#[doc = "Field `gpadc_fifo_underrun_mask` reader - "]
+pub type GPADC_FIFO_UNDERRUN_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_fifo_underrun_mask` writer - "]
+pub type GPADC_FIFO_UNDERRUN_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPADC_CONFIG_SPEC, bool, O>;
+#[doc = "Field `reserved_15` reader - "]
+pub type RESERVED_15_R = crate::BitReader<bool>;
+#[doc = "Field `gpadc_fifo_data_count` reader - "]
+pub type GPADC_FIFO_DATA_COUNT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_fifo_thl` reader - "]
+pub type GPADC_FIFO_THL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_fifo_thl` writer - "]
+pub type GPADC_FIFO_THL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_CONFIG_SPEC, u8, u8, 2, O>;
+#[doc = "Field `rsvd_31_24` reader - "]
+pub type RSVD_31_24_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -107,6 +139,51 @@ impl R {
     pub fn gpadc_fifo_overrun_clr(&self) -> GPADC_FIFO_OVERRUN_CLR_R {
         GPADC_FIFO_OVERRUN_CLR_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn gpadc_fifo_underrun_clr(&self) -> GPADC_FIFO_UNDERRUN_CLR_R {
+        GPADC_FIFO_UNDERRUN_CLR_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn reserved_11(&self) -> RESERVED_11_R {
+        RESERVED_11_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn gpadc_rdy_mask(&self) -> GPADC_RDY_MASK_R {
+        GPADC_RDY_MASK_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn gpadc_fifo_overrun_mask(&self) -> GPADC_FIFO_OVERRUN_MASK_R {
+        GPADC_FIFO_OVERRUN_MASK_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    pub fn gpadc_fifo_underrun_mask(&self) -> GPADC_FIFO_UNDERRUN_MASK_R {
+        GPADC_FIFO_UNDERRUN_MASK_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn reserved_15(&self) -> RESERVED_15_R {
+        RESERVED_15_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bits 16:21"]
+    #[inline(always)]
+    pub fn gpadc_fifo_data_count(&self) -> GPADC_FIFO_DATA_COUNT_R {
+        GPADC_FIFO_DATA_COUNT_R::new(((self.bits >> 16) & 0x3f) as u8)
+    }
+    #[doc = "Bits 22:23"]
+    #[inline(always)]
+    pub fn gpadc_fifo_thl(&self) -> GPADC_FIFO_THL_R {
+        GPADC_FIFO_THL_R::new(((self.bits >> 22) & 3) as u8)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn rsvd_31_24(&self) -> RSVD_31_24_R {
+        RSVD_31_24_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -132,6 +209,36 @@ impl W {
     #[must_use]
     pub fn gpadc_fifo_overrun_clr(&mut self) -> GPADC_FIFO_OVERRUN_CLR_W<9> {
         GPADC_FIFO_OVERRUN_CLR_W::new(self)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_fifo_underrun_clr(&mut self) -> GPADC_FIFO_UNDERRUN_CLR_W<10> {
+        GPADC_FIFO_UNDERRUN_CLR_W::new(self)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_rdy_mask(&mut self) -> GPADC_RDY_MASK_W<12> {
+        GPADC_RDY_MASK_W::new(self)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_fifo_overrun_mask(&mut self) -> GPADC_FIFO_OVERRUN_MASK_W<13> {
+        GPADC_FIFO_OVERRUN_MASK_W::new(self)
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_fifo_underrun_mask(&mut self) -> GPADC_FIFO_UNDERRUN_MASK_W<14> {
+        GPADC_FIFO_UNDERRUN_MASK_W::new(self)
+    }
+    #[doc = "Bits 22:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_fifo_thl(&mut self) -> GPADC_FIFO_THL_W<22> {
+        GPADC_FIFO_THL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

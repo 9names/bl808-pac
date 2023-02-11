@@ -56,6 +56,13 @@ pub type REG_TOP_MUXPLL_80M_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `reg_top_muxpll_80m_sel` writer - "]
 pub type REG_TOP_MUXPLL_80M_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, DIG_CLK_CFG1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reg_top_muxpll_160m_sel` reader - "]
+pub type REG_TOP_MUXPLL_160M_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_top_muxpll_160m_sel` writer - "]
+pub type REG_TOP_MUXPLL_160M_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DIG_CLK_CFG1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reserved_12_31` reader - "]
+pub type RESERVED_12_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -82,6 +89,16 @@ impl R {
     pub fn reg_top_muxpll_80m_sel(&self) -> REG_TOP_MUXPLL_80M_SEL_R {
         REG_TOP_MUXPLL_80M_SEL_R::new(((self.bits >> 8) & 3) as u8)
     }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    pub fn reg_top_muxpll_160m_sel(&self) -> REG_TOP_MUXPLL_160M_SEL_R {
+        REG_TOP_MUXPLL_160M_SEL_R::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Bits 12:31"]
+    #[inline(always)]
+    pub fn reserved_12_31(&self) -> RESERVED_12_31_R {
+        RESERVED_12_31_R::new((self.bits >> 12) & 0x000f_ffff)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -107,6 +124,12 @@ impl W {
     #[must_use]
     pub fn reg_top_muxpll_80m_sel(&mut self) -> REG_TOP_MUXPLL_80M_SEL_W<8> {
         REG_TOP_MUXPLL_80M_SEL_W::new(self)
+    }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_top_muxpll_160m_sel(&mut self) -> REG_TOP_MUXPLL_160M_SEL_W<10> {
+        REG_TOP_MUXPLL_160M_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

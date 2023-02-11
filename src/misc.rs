@@ -25,6 +25,8 @@ pub struct RegisterBlock {
     _reserved9: [u8; 0xe4],
     #[doc = "0x208 - irom1_misr_dataout_0"]
     pub irom1_misr_dataout_0: IROM1_MISR_DATAOUT_0,
+    #[doc = "0x20c - irom1_misr_dataout_1"]
+    pub irom1_misr_dataout_1: IROM1_MISR_DATAOUT_1,
 }
 #[doc = "mcu_bus_cfg0 (rw) register accessor: an alias for `Reg<MCU_BUS_CFG0_SPEC>`"]
 pub type MCU_BUS_CFG0 = crate::Reg<mcu_bus_cfg0::MCU_BUS_CFG0_SPEC>;
@@ -66,3 +68,7 @@ pub mod mcu1_log5;
 pub type IROM1_MISR_DATAOUT_0 = crate::Reg<irom1_misr_dataout_0::IROM1_MISR_DATAOUT_0_SPEC>;
 #[doc = "irom1_misr_dataout_0"]
 pub mod irom1_misr_dataout_0;
+#[doc = "irom1_misr_dataout_1 (rw) register accessor: an alias for `Reg<IROM1_MISR_DATAOUT_1_SPEC>`"]
+pub type IROM1_MISR_DATAOUT_1 = crate::Reg<irom1_misr_dataout_1::IROM1_MISR_DATAOUT_1_SPEC>;
+#[doc = "irom1_misr_dataout_1"]
+pub mod irom1_misr_dataout_1;

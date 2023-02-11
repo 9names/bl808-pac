@@ -46,8 +46,8 @@ pub type TZC_WIFI_TZMID_R = crate::BitReader<bool>;
 pub type TZC_CCI_TZMID_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_sdhm_tzmid` reader - "]
 pub type TZC_SDHM_TZMID_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_emacA_tzmid` reader - "]
-pub type TZC_EMAC_A_TZMID_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_emaca_tzmid` reader - "]
+pub type TZC_EMACA_TZMID_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_cpu_tzmid` reader - "]
 pub type TZC_CPU_TZMID_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_dma_tzmid` reader - "]
@@ -70,8 +70,8 @@ pub type TZC_WIFI_TZMID_SEL_R = crate::BitReader<bool>;
 pub type TZC_CCI_TZMID_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_sdhm_tzmid_sel` reader - "]
 pub type TZC_SDHM_TZMID_SEL_R = crate::BitReader<bool>;
-#[doc = "Field `tzc_emacA_tzmid_sel` reader - "]
-pub type TZC_EMAC_A_TZMID_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_emaca_tzmid_sel` reader - "]
+pub type TZC_EMACA_TZMID_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_cpu_tzmid_sel` reader - "]
 pub type TZC_CPU_TZMID_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `tzc_dma_tzmid_sel` reader - "]
@@ -115,8 +115,8 @@ impl R {
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn tzc_emac_a_tzmid(&self) -> TZC_EMAC_A_TZMID_R {
-        TZC_EMAC_A_TZMID_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn tzc_emaca_tzmid(&self) -> TZC_EMACA_TZMID_R {
+        TZC_EMACA_TZMID_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -175,8 +175,8 @@ impl R {
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn tzc_emac_a_tzmid_sel(&self) -> TZC_EMAC_A_TZMID_SEL_R {
-        TZC_EMAC_A_TZMID_SEL_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn tzc_emaca_tzmid_sel(&self) -> TZC_EMACA_TZMID_SEL_R {
+        TZC_EMACA_TZMID_SEL_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]

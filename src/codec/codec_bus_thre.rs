@@ -34,7 +34,96 @@ impl From<crate::W<CODEC_BUS_THRE_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `reg_x_wthre_blai2sysram` reader - "]
+pub type REG_X_WTHRE_BLAI2SYSRAM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_x_wthre_blai2sysram` writer - "]
+pub type REG_X_WTHRE_BLAI2SYSRAM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CODEC_BUS_THRE_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reg_x_wthre_blai2ext` reader - "]
+pub type REG_X_WTHRE_BLAI2EXT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_x_wthre_blai2ext` writer - "]
+pub type REG_X_WTHRE_BLAI2EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CODEC_BUS_THRE_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reg_x_wthre_vdo2pb` reader - "]
+pub type REG_X_WTHRE_VDO2PB_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_x_wthre_vdo2pb` writer - "]
+pub type REG_X_WTHRE_VDO2PB_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CODEC_BUS_THRE_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reg_x_wthre_vdo2pa` reader - "]
+pub type REG_X_WTHRE_VDO2PA_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_x_wthre_vdo2pa` writer - "]
+pub type REG_X_WTHRE_VDO2PA_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CODEC_BUS_THRE_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reg_x_wthre_vdo2sysram` reader - "]
+pub type REG_X_WTHRE_VDO2SYSRAM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_x_wthre_vdo2sysram` writer - "]
+pub type REG_X_WTHRE_VDO2SYSRAM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CODEC_BUS_THRE_SPEC, u8, u8, 2, O>;
+#[doc = "Field `reserved_10_31` reader - "]
+pub type RESERVED_10_31_R = crate::FieldReader<u32, u32>;
+impl R {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    pub fn reg_x_wthre_blai2sysram(&self) -> REG_X_WTHRE_BLAI2SYSRAM_R {
+        REG_X_WTHRE_BLAI2SYSRAM_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    pub fn reg_x_wthre_blai2ext(&self) -> REG_X_WTHRE_BLAI2EXT_R {
+        REG_X_WTHRE_BLAI2EXT_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn reg_x_wthre_vdo2pb(&self) -> REG_X_WTHRE_VDO2PB_R {
+        REG_X_WTHRE_VDO2PB_R::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 6:7"]
+    #[inline(always)]
+    pub fn reg_x_wthre_vdo2pa(&self) -> REG_X_WTHRE_VDO2PA_R {
+        REG_X_WTHRE_VDO2PA_R::new(((self.bits >> 6) & 3) as u8)
+    }
+    #[doc = "Bits 8:9"]
+    #[inline(always)]
+    pub fn reg_x_wthre_vdo2sysram(&self) -> REG_X_WTHRE_VDO2SYSRAM_R {
+        REG_X_WTHRE_VDO2SYSRAM_R::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bits 10:31"]
+    #[inline(always)]
+    pub fn reserved_10_31(&self) -> RESERVED_10_31_R {
+        RESERVED_10_31_R::new((self.bits >> 10) & 0x003f_ffff)
+    }
+}
 impl W {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_x_wthre_blai2sysram(&mut self) -> REG_X_WTHRE_BLAI2SYSRAM_W<0> {
+        REG_X_WTHRE_BLAI2SYSRAM_W::new(self)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_x_wthre_blai2ext(&mut self) -> REG_X_WTHRE_BLAI2EXT_W<2> {
+        REG_X_WTHRE_BLAI2EXT_W::new(self)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_x_wthre_vdo2pb(&mut self) -> REG_X_WTHRE_VDO2PB_W<4> {
+        REG_X_WTHRE_VDO2PB_W::new(self)
+    }
+    #[doc = "Bits 6:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_x_wthre_vdo2pa(&mut self) -> REG_X_WTHRE_VDO2PA_W<6> {
+        REG_X_WTHRE_VDO2PA_W::new(self)
+    }
+    #[doc = "Bits 8:9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_x_wthre_vdo2sysram(&mut self) -> REG_X_WTHRE_VDO2SYSRAM_W<8> {
+        REG_X_WTHRE_VDO2SYSRAM_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

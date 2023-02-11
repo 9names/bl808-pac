@@ -70,6 +70,20 @@ pub type MIPIPLL_DTEN_PUPLL_R = crate::BitReader<bool>;
 #[doc = "Field `mipipll_dten_pupll` writer - "]
 pub type MIPIPLL_DTEN_PUPLL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, MIPI_PLL_CFG8_SPEC, bool, O>;
+#[doc = "Field `mipipll_dten_pll_locked` reader - "]
+pub type MIPIPLL_DTEN_PLL_LOCKED_R = crate::BitReader<bool>;
+#[doc = "Field `mipipll_dten_pll_locked` writer - "]
+pub type MIPIPLL_DTEN_PLL_LOCKED_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MIPI_PLL_CFG8_SPEC, bool, O>;
+#[doc = "Field `reserved_9` reader - "]
+pub type RESERVED_9_R = crate::BitReader<bool>;
+#[doc = "Field `mipipll_dtest_pull_down` reader - "]
+pub type MIPIPLL_DTEST_PULL_DOWN_R = crate::BitReader<bool>;
+#[doc = "Field `mipipll_dtest_pull_down` writer - "]
+pub type MIPIPLL_DTEST_PULL_DOWN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MIPI_PLL_CFG8_SPEC, bool, O>;
+#[doc = "Field `reserved_11_31` reader - "]
+pub type RESERVED_11_31_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -110,6 +124,26 @@ impl R {
     #[inline(always)]
     pub fn mipipll_dten_pupll(&self) -> MIPIPLL_DTEN_PUPLL_R {
         MIPIPLL_DTEN_PUPLL_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn mipipll_dten_pll_locked(&self) -> MIPIPLL_DTEN_PLL_LOCKED_R {
+        MIPIPLL_DTEN_PLL_LOCKED_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn reserved_9(&self) -> RESERVED_9_R {
+        RESERVED_9_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn mipipll_dtest_pull_down(&self) -> MIPIPLL_DTEST_PULL_DOWN_R {
+        MIPIPLL_DTEST_PULL_DOWN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bits 11:31"]
+    #[inline(always)]
+    pub fn reserved_11_31(&self) -> RESERVED_11_31_R {
+        RESERVED_11_31_R::new((self.bits >> 11) & 0x001f_ffff)
     }
 }
 impl W {
@@ -155,6 +189,18 @@ impl W {
     pub fn mipipll_dten_pupll(&mut self) -> MIPIPLL_DTEN_PUPLL_W<7> {
         MIPIPLL_DTEN_PUPLL_W::new(self)
     }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mipipll_dten_pll_locked(&mut self) -> MIPIPLL_DTEN_PLL_LOCKED_W<8> {
+        MIPIPLL_DTEN_PLL_LOCKED_W::new(self)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mipipll_dtest_pull_down(&mut self) -> MIPIPLL_DTEST_PULL_DOWN_W<10> {
+        MIPIPLL_DTEST_PULL_DOWN_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -177,7 +223,7 @@ impl crate::Writable for MIPI_PLL_CFG8_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets mipi_pll_cfg8 to value 0"]
+#[doc = "`reset()` method sets mipi_pll_cfg8 to value 0x0400"]
 impl crate::Resettable for MIPI_PLL_CFG8_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0x0400;
 }

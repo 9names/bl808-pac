@@ -34,7 +34,73 @@ impl From<crate::W<PSRAM_ROUGH_DELAY_CTRL0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `reg_rough_sel_o_dqs_oen0` reader - "]
+pub type REG_ROUGH_SEL_O_DQS_OEN0_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_dqs_oen0` writer - "]
+pub type REG_ROUGH_SEL_O_DQS_OEN0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL0_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reg_rough_sel_o_ceb` reader - "]
+pub type REG_ROUGH_SEL_O_CEB_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_ceb` writer - "]
+pub type REG_ROUGH_SEL_O_CEB_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL0_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reg_rough_sel_o_clk_n` reader - "]
+pub type REG_ROUGH_SEL_O_CLK_N_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_clk_n` writer - "]
+pub type REG_ROUGH_SEL_O_CLK_N_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL0_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reg_rough_sel_o_clk` reader - "]
+pub type REG_ROUGH_SEL_O_CLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_clk` writer - "]
+pub type REG_ROUGH_SEL_O_CLK_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL0_SPEC, u8, u8, 8, O>;
+impl R {
+    #[doc = "Bits 0:7"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_dqs_oen0(&self) -> REG_ROUGH_SEL_O_DQS_OEN0_R {
+        REG_ROUGH_SEL_O_DQS_OEN0_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_ceb(&self) -> REG_ROUGH_SEL_O_CEB_R {
+        REG_ROUGH_SEL_O_CEB_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_clk_n(&self) -> REG_ROUGH_SEL_O_CLK_N_R {
+        REG_ROUGH_SEL_O_CLK_N_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_clk(&self) -> REG_ROUGH_SEL_O_CLK_R {
+        REG_ROUGH_SEL_O_CLK_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
 impl W {
+    #[doc = "Bits 0:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_dqs_oen0(&mut self) -> REG_ROUGH_SEL_O_DQS_OEN0_W<0> {
+        REG_ROUGH_SEL_O_DQS_OEN0_W::new(self)
+    }
+    #[doc = "Bits 8:15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_ceb(&mut self) -> REG_ROUGH_SEL_O_CEB_W<8> {
+        REG_ROUGH_SEL_O_CEB_W::new(self)
+    }
+    #[doc = "Bits 16:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_clk_n(&mut self) -> REG_ROUGH_SEL_O_CLK_N_W<16> {
+        REG_ROUGH_SEL_O_CLK_N_W::new(self)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_clk(&mut self) -> REG_ROUGH_SEL_O_CLK_W<24> {
+        REG_ROUGH_SEL_O_CLK_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

@@ -80,10 +80,10 @@ pub type REG_BMX_QOS_PLDMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMX_CF
 pub type REG_BMX_QOS_BLEM_R = crate::BitReader<bool>;
 #[doc = "Field `reg_bmx_qos_blem` writer - "]
 pub type REG_BMX_QOS_BLEM_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMX_CFG1_SPEC, bool, O>;
-#[doc = "Field `reg_bmx_qos_emacA` reader - "]
-pub type REG_BMX_QOS_EMAC_A_R = crate::BitReader<bool>;
-#[doc = "Field `reg_bmx_qos_emacA` writer - "]
-pub type REG_BMX_QOS_EMAC_A_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMX_CFG1_SPEC, bool, O>;
+#[doc = "Field `reg_bmx_qos_emaca` reader - "]
+pub type REG_BMX_QOS_EMACA_R = crate::BitReader<bool>;
+#[doc = "Field `reg_bmx_qos_emaca` writer - "]
+pub type REG_BMX_QOS_EMACA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMX_CFG1_SPEC, bool, O>;
 #[doc = "Field `reg_bmx_qos_dma2` reader - "]
 pub type REG_BMX_QOS_DMA2_R = crate::BitReader<bool>;
 #[doc = "Field `reg_bmx_qos_dma2` writer - "]
@@ -159,8 +159,8 @@ impl R {
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn reg_bmx_qos_emac_a(&self) -> REG_BMX_QOS_EMAC_A_R {
-        REG_BMX_QOS_EMAC_A_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn reg_bmx_qos_emaca(&self) -> REG_BMX_QOS_EMACA_R {
+        REG_BMX_QOS_EMACA_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
@@ -248,8 +248,8 @@ impl W {
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_bmx_qos_emac_a(&mut self) -> REG_BMX_QOS_EMAC_A_W<25> {
-        REG_BMX_QOS_EMAC_A_W::new(self)
+    pub fn reg_bmx_qos_emaca(&mut self) -> REG_BMX_QOS_EMACA_W<25> {
+        REG_BMX_QOS_EMACA_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]

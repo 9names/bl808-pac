@@ -52,6 +52,13 @@ pub type MIPIPLL_SSC_GAIN_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, MIPI_PLL_CFG9_SPEC, u8, u8, 3, O>;
 #[doc = "Field `reserved_15` reader - "]
 pub type RESERVED_15_R = crate::BitReader<bool>;
+#[doc = "Field `mipipll_ssc_start_gate_en` reader - "]
+pub type MIPIPLL_SSC_START_GATE_EN_R = crate::BitReader<bool>;
+#[doc = "Field `mipipll_ssc_start_gate_en` writer - "]
+pub type MIPIPLL_SSC_START_GATE_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MIPI_PLL_CFG9_SPEC, bool, O>;
+#[doc = "Field `reserved_17_31` reader - "]
+pub type RESERVED_17_31_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -78,6 +85,16 @@ impl R {
     pub fn reserved_15(&self) -> RESERVED_15_R {
         RESERVED_15_R::new(((self.bits >> 15) & 1) != 0)
     }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn mipipll_ssc_start_gate_en(&self) -> MIPIPLL_SSC_START_GATE_EN_R {
+        MIPIPLL_SSC_START_GATE_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:31"]
+    #[inline(always)]
+    pub fn reserved_17_31(&self) -> RESERVED_17_31_R {
+        RESERVED_17_31_R::new(((self.bits >> 17) & 0x7fff) as u16)
+    }
 }
 impl W {
     #[doc = "Bit 0"]
@@ -97,6 +114,12 @@ impl W {
     #[must_use]
     pub fn mipipll_ssc_gain(&mut self) -> MIPIPLL_SSC_GAIN_W<12> {
         MIPIPLL_SSC_GAIN_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mipipll_ssc_start_gate_en(&mut self) -> MIPIPLL_SSC_START_GATE_EN_W<16> {
+        MIPIPLL_SSC_START_GATE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -120,7 +143,7 @@ impl crate::Writable for MIPI_PLL_CFG9_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets mipi_pll_cfg9 to value 0x5640"]
+#[doc = "`reset()` method sets mipi_pll_cfg9 to value 0x0001_5640"]
 impl crate::Resettable for MIPI_PLL_CFG9_SPEC {
-    const RESET_VALUE: Self::Ux = 0x5640;
+    const RESET_VALUE: Self::Ux = 0x0001_5640;
 }

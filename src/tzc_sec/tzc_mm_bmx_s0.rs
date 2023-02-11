@@ -34,7 +34,265 @@ impl From<crate::W<TZC_MM_BMX_S0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `tzc_mmperi_s10_tzsid_en` reader - "]
+pub type TZC_MMPERI_S10_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s10_tzsid_en` writer - "]
+pub type TZC_MMPERI_S10_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s11_tzsid_en` reader - "]
+pub type TZC_MMPERI_S11_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s11_tzsid_en` writer - "]
+pub type TZC_MMPERI_S11_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s12_tzsid_en` reader - "]
+pub type TZC_MMPERI_S12_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s12_tzsid_en` writer - "]
+pub type TZC_MMPERI_S12_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s13_tzsid_en` reader - "]
+pub type TZC_MMPERI_S13_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s13_tzsid_en` writer - "]
+pub type TZC_MMPERI_S13_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s14_tzsid_en` reader - "]
+pub type TZC_MMPERI_S14_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s14_tzsid_en` writer - "]
+pub type TZC_MMPERI_S14_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s15_tzsid_en` reader - "]
+pub type TZC_MMPERI_S15_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s15_tzsid_en` writer - "]
+pub type TZC_MMPERI_S15_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s16_tzsid_en` reader - "]
+pub type TZC_MMPERI_S16_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s16_tzsid_en` writer - "]
+pub type TZC_MMPERI_S16_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s17_tzsid_en` reader - "]
+pub type TZC_MMPERI_S17_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s17_tzsid_en` writer - "]
+pub type TZC_MMPERI_S17_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s18_tzsid_en` reader - "]
+pub type TZC_MMPERI_S18_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s18_tzsid_en` writer - "]
+pub type TZC_MMPERI_S18_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s19_tzsid_en` reader - "]
+pub type TZC_MMPERI_S19_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s19_tzsid_en` writer - "]
+pub type TZC_MMPERI_S19_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1a_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1A_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1a_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1A_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1b_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1B_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1b_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1B_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1c_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1C_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1c_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1C_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1d_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1D_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1d_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1D_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1e_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1E_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1e_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1E_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `tzc_mmperi_s1f_tzsid_en` reader - "]
+pub type TZC_MMPERI_S1F_TZSID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_mmperi_s1f_tzsid_en` writer - "]
+pub type TZC_MMPERI_S1F_TZSID_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TZC_MM_BMX_S0_SPEC, u8, u8, 2, O>;
+impl R {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s10_tzsid_en(&self) -> TZC_MMPERI_S10_TZSID_EN_R {
+        TZC_MMPERI_S10_TZSID_EN_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s11_tzsid_en(&self) -> TZC_MMPERI_S11_TZSID_EN_R {
+        TZC_MMPERI_S11_TZSID_EN_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s12_tzsid_en(&self) -> TZC_MMPERI_S12_TZSID_EN_R {
+        TZC_MMPERI_S12_TZSID_EN_R::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 6:7"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s13_tzsid_en(&self) -> TZC_MMPERI_S13_TZSID_EN_R {
+        TZC_MMPERI_S13_TZSID_EN_R::new(((self.bits >> 6) & 3) as u8)
+    }
+    #[doc = "Bits 8:9"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s14_tzsid_en(&self) -> TZC_MMPERI_S14_TZSID_EN_R {
+        TZC_MMPERI_S14_TZSID_EN_R::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s15_tzsid_en(&self) -> TZC_MMPERI_S15_TZSID_EN_R {
+        TZC_MMPERI_S15_TZSID_EN_R::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Bits 12:13"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s16_tzsid_en(&self) -> TZC_MMPERI_S16_TZSID_EN_R {
+        TZC_MMPERI_S16_TZSID_EN_R::new(((self.bits >> 12) & 3) as u8)
+    }
+    #[doc = "Bits 14:15"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s17_tzsid_en(&self) -> TZC_MMPERI_S17_TZSID_EN_R {
+        TZC_MMPERI_S17_TZSID_EN_R::new(((self.bits >> 14) & 3) as u8)
+    }
+    #[doc = "Bits 16:17"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s18_tzsid_en(&self) -> TZC_MMPERI_S18_TZSID_EN_R {
+        TZC_MMPERI_S18_TZSID_EN_R::new(((self.bits >> 16) & 3) as u8)
+    }
+    #[doc = "Bits 18:19"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s19_tzsid_en(&self) -> TZC_MMPERI_S19_TZSID_EN_R {
+        TZC_MMPERI_S19_TZSID_EN_R::new(((self.bits >> 18) & 3) as u8)
+    }
+    #[doc = "Bits 20:21"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1a_tzsid_en(&self) -> TZC_MMPERI_S1A_TZSID_EN_R {
+        TZC_MMPERI_S1A_TZSID_EN_R::new(((self.bits >> 20) & 3) as u8)
+    }
+    #[doc = "Bits 22:23"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1b_tzsid_en(&self) -> TZC_MMPERI_S1B_TZSID_EN_R {
+        TZC_MMPERI_S1B_TZSID_EN_R::new(((self.bits >> 22) & 3) as u8)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1c_tzsid_en(&self) -> TZC_MMPERI_S1C_TZSID_EN_R {
+        TZC_MMPERI_S1C_TZSID_EN_R::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bits 26:27"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1d_tzsid_en(&self) -> TZC_MMPERI_S1D_TZSID_EN_R {
+        TZC_MMPERI_S1D_TZSID_EN_R::new(((self.bits >> 26) & 3) as u8)
+    }
+    #[doc = "Bits 28:29"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1e_tzsid_en(&self) -> TZC_MMPERI_S1E_TZSID_EN_R {
+        TZC_MMPERI_S1E_TZSID_EN_R::new(((self.bits >> 28) & 3) as u8)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn tzc_mmperi_s1f_tzsid_en(&self) -> TZC_MMPERI_S1F_TZSID_EN_R {
+        TZC_MMPERI_S1F_TZSID_EN_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
 impl W {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s10_tzsid_en(&mut self) -> TZC_MMPERI_S10_TZSID_EN_W<0> {
+        TZC_MMPERI_S10_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s11_tzsid_en(&mut self) -> TZC_MMPERI_S11_TZSID_EN_W<2> {
+        TZC_MMPERI_S11_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s12_tzsid_en(&mut self) -> TZC_MMPERI_S12_TZSID_EN_W<4> {
+        TZC_MMPERI_S12_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 6:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s13_tzsid_en(&mut self) -> TZC_MMPERI_S13_TZSID_EN_W<6> {
+        TZC_MMPERI_S13_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 8:9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s14_tzsid_en(&mut self) -> TZC_MMPERI_S14_TZSID_EN_W<8> {
+        TZC_MMPERI_S14_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s15_tzsid_en(&mut self) -> TZC_MMPERI_S15_TZSID_EN_W<10> {
+        TZC_MMPERI_S15_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 12:13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s16_tzsid_en(&mut self) -> TZC_MMPERI_S16_TZSID_EN_W<12> {
+        TZC_MMPERI_S16_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 14:15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s17_tzsid_en(&mut self) -> TZC_MMPERI_S17_TZSID_EN_W<14> {
+        TZC_MMPERI_S17_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 16:17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s18_tzsid_en(&mut self) -> TZC_MMPERI_S18_TZSID_EN_W<16> {
+        TZC_MMPERI_S18_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 18:19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s19_tzsid_en(&mut self) -> TZC_MMPERI_S19_TZSID_EN_W<18> {
+        TZC_MMPERI_S19_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 20:21"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1a_tzsid_en(&mut self) -> TZC_MMPERI_S1A_TZSID_EN_W<20> {
+        TZC_MMPERI_S1A_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 22:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1b_tzsid_en(&mut self) -> TZC_MMPERI_S1B_TZSID_EN_W<22> {
+        TZC_MMPERI_S1B_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1c_tzsid_en(&mut self) -> TZC_MMPERI_S1C_TZSID_EN_W<24> {
+        TZC_MMPERI_S1C_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 26:27"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1d_tzsid_en(&mut self) -> TZC_MMPERI_S1D_TZSID_EN_W<26> {
+        TZC_MMPERI_S1D_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 28:29"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1e_tzsid_en(&mut self) -> TZC_MMPERI_S1E_TZSID_EN_W<28> {
+        TZC_MMPERI_S1E_TZSID_EN_W::new(self)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tzc_mmperi_s1f_tzsid_en(&mut self) -> TZC_MMPERI_S1F_TZSID_EN_W<30> {
+        TZC_MMPERI_S1F_TZSID_EN_W::new(self)
+    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -57,7 +315,7 @@ impl crate::Writable for TZC_MM_BMX_S0_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_mm_bmx_s0 to value 0"]
+#[doc = "`reset()` method sets tzc_mm_bmx_s0 to value 0xffff_ffff"]
 impl crate::Resettable for TZC_MM_BMX_S0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

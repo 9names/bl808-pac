@@ -34,6 +34,92 @@ impl From<crate::W<TZC_XRAM_TZSRG_CTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `tzc_xram_tzsrg_r0_id_en` reader - "]
+pub type TZC_XRAM_TZSRG_R0_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_xram_tzsrg_r1_id_en` reader - "]
+pub type TZC_XRAM_TZSRG_R1_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_xram_tzsrg_r2_id_en` reader - "]
+pub type TZC_XRAM_TZSRG_R2_ID_EN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reserved_6_15` reader - "]
+pub type RESERVED_6_15_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `tzc_xram_tzsrg_r0_en` reader - "]
+pub type TZC_XRAM_TZSRG_R0_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_xram_tzsrg_r1_en` reader - "]
+pub type TZC_XRAM_TZSRG_R1_EN_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_xram_tzsrg_r2_en` reader - "]
+pub type TZC_XRAM_TZSRG_R2_EN_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_19_23` reader - "]
+pub type RESERVED_19_23_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tzc_xram_tzsrg_r0_lock` reader - "]
+pub type TZC_XRAM_TZSRG_R0_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_xram_tzsrg_r1_lock` reader - "]
+pub type TZC_XRAM_TZSRG_R1_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `tzc_xram_tzsrg_r2_lock` reader - "]
+pub type TZC_XRAM_TZSRG_R2_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `reserved_27_31` reader - "]
+pub type RESERVED_27_31_R = crate::FieldReader<u8, u8>;
+impl R {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r0_id_en(&self) -> TZC_XRAM_TZSRG_R0_ID_EN_R {
+        TZC_XRAM_TZSRG_R0_ID_EN_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r1_id_en(&self) -> TZC_XRAM_TZSRG_R1_ID_EN_R {
+        TZC_XRAM_TZSRG_R1_ID_EN_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r2_id_en(&self) -> TZC_XRAM_TZSRG_R2_ID_EN_R {
+        TZC_XRAM_TZSRG_R2_ID_EN_R::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 6:15"]
+    #[inline(always)]
+    pub fn reserved_6_15(&self) -> RESERVED_6_15_R {
+        RESERVED_6_15_R::new(((self.bits >> 6) & 0x03ff) as u16)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r0_en(&self) -> TZC_XRAM_TZSRG_R0_EN_R {
+        TZC_XRAM_TZSRG_R0_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r1_en(&self) -> TZC_XRAM_TZSRG_R1_EN_R {
+        TZC_XRAM_TZSRG_R1_EN_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r2_en(&self) -> TZC_XRAM_TZSRG_R2_EN_R {
+        TZC_XRAM_TZSRG_R2_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bits 19:23"]
+    #[inline(always)]
+    pub fn reserved_19_23(&self) -> RESERVED_19_23_R {
+        RESERVED_19_23_R::new(((self.bits >> 19) & 0x1f) as u8)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r0_lock(&self) -> TZC_XRAM_TZSRG_R0_LOCK_R {
+        TZC_XRAM_TZSRG_R0_LOCK_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r1_lock(&self) -> TZC_XRAM_TZSRG_R1_LOCK_R {
+        TZC_XRAM_TZSRG_R1_LOCK_R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26"]
+    #[inline(always)]
+    pub fn tzc_xram_tzsrg_r2_lock(&self) -> TZC_XRAM_TZSRG_R2_LOCK_R {
+        TZC_XRAM_TZSRG_R2_LOCK_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bits 27:31"]
+    #[inline(always)]
+    pub fn reserved_27_31(&self) -> RESERVED_27_31_R {
+        RESERVED_27_31_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -57,7 +143,7 @@ impl crate::Writable for TZC_XRAM_TZSRG_CTRL_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets tzc_xram_tzsrg_ctrl to value 0"]
+#[doc = "`reset()` method sets tzc_xram_tzsrg_ctrl to value 0x3f"]
 impl crate::Resettable for TZC_XRAM_TZSRG_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: Self::Ux = 0x3f;
 }

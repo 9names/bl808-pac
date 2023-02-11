@@ -44,6 +44,16 @@ pub type REG_ROUGH_SEL_O_ADQ8_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `reg_rough_sel_o_adq8` writer - "]
 pub type REG_ROUGH_SEL_O_ADQ8_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL6_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reg_rough_sel_o_adq_oen1` reader - "]
+pub type REG_ROUGH_SEL_O_ADQ_OEN1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_adq_oen1` writer - "]
+pub type REG_ROUGH_SEL_O_ADQ_OEN1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL6_SPEC, u8, u8, 8, O>;
+#[doc = "Field `reg_rough_sel_o_dqs1` reader - "]
+pub type REG_ROUGH_SEL_O_DQS1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `reg_rough_sel_o_dqs1` writer - "]
+pub type REG_ROUGH_SEL_O_DQS1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PSRAM_ROUGH_DELAY_CTRL6_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -54,6 +64,16 @@ impl R {
     #[inline(always)]
     pub fn reg_rough_sel_o_adq8(&self) -> REG_ROUGH_SEL_O_ADQ8_R {
         REG_ROUGH_SEL_O_ADQ8_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_adq_oen1(&self) -> REG_ROUGH_SEL_O_ADQ_OEN1_R {
+        REG_ROUGH_SEL_O_ADQ_OEN1_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn reg_rough_sel_o_dqs1(&self) -> REG_ROUGH_SEL_O_DQS1_R {
+        REG_ROUGH_SEL_O_DQS1_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
@@ -68,6 +88,18 @@ impl W {
     #[must_use]
     pub fn reg_rough_sel_o_adq8(&mut self) -> REG_ROUGH_SEL_O_ADQ8_W<8> {
         REG_ROUGH_SEL_O_ADQ8_W::new(self)
+    }
+    #[doc = "Bits 16:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_adq_oen1(&mut self) -> REG_ROUGH_SEL_O_ADQ_OEN1_W<16> {
+        REG_ROUGH_SEL_O_ADQ_OEN1_W::new(self)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_rough_sel_o_dqs1(&mut self) -> REG_ROUGH_SEL_O_DQS1_W<24> {
+        REG_ROUGH_SEL_O_DQS1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
